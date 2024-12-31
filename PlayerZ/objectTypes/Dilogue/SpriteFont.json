@@ -3,6 +3,7 @@
 	"plugin-id": "Spritefont2",
 	"sid": 612773229495242,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "ID",
@@ -29,6 +30,7 @@
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
+		"fileType": "image/png",
 		"imageSpriteId": 908186,
 		"useCollisionPoly": true,
 		"tag": ""

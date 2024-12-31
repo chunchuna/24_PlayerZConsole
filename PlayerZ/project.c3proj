@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 39900,
+	"savedWithRelease": 42002,
 	"name": "24_PlayerZ",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -62,6 +62,15 @@
 			"author": "Mikal",
 			"bundled": false,
 			"version": "2.65.1"
+		},
+		{
+			"type": "plugin",
+			"id": "MixonGames_EasyInGameConsole",
+			"name": "In-Game Console",
+			"author": "Mixon Games",
+			"bundled": false,
+			"version": "2.0.0.0",
+			"sdkVersion": 2
 		},
 		{
 			"type": "plugin",
@@ -248,6 +257,13 @@
 				],
 				"subfolders": [],
 				"name": "Obj"
+			},
+			{
+				"items": [
+					"InGameConsole"
+				],
+				"subfolders": [],
+				"name": "Console"
 			}
 		]
 	},
@@ -267,7 +283,6 @@
 			"Level",
 			"Lib",
 			"DilogueSystemUI",
-			"UILib",
 			"End",
 			"Menu",
 			"Fade"
@@ -283,7 +298,8 @@
 			"End",
 			"Menu",
 			"Load",
-			"Cursor"
+			"Cursor",
+			"Console"
 		],
 		"subfolders": []
 	},
@@ -349,12 +365,21 @@
 							"script-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "console.js",
+							"type": "application/javascript",
+							"sid": 433399054407722,
+							"script-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
 					"name": "game"
 				}
-			]
+			],
+			"autoReloadOnPreview": true
 		},
 		"sound": {
 			"items": [],
@@ -615,6 +640,7 @@
 	"properties": {
 		"description": "",
 		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",
 		"authorWebsite": "",
@@ -661,7 +687,6 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
-		"autoReloadScriptsOnPreview": true,
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},

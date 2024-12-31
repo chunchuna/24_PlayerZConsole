@@ -3,5 +3,6 @@
 	"plugin-id": "Arr",
 	"sid": 726746051548882,
 	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": []
 }

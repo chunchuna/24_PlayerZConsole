@@ -33,8 +33,13 @@
 					},
 					"instanceFolderItem": {
 						"sid": 901960185077544,
-						"expanded": true
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 487,
 						"y": 386,
@@ -87,7 +92,10 @@
 		"items": [
 			{
 				"sid": 901960185077544,
-				"expanded": true
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
 			}
 		],
 		"subfolders": []

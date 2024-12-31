@@ -52,26 +52,53 @@ declare namespace InstanceType {
 			ID: string
 		};
 	}
-	class ground extends ITiledBackgroundInstance {
+	class __AnykeyBehaviors<InstType> {
+		正弦运动: ISineBehaviorInstance<InstType>;
 	}
-	class __wallBehaviors<InstType> {
+	class Anykey extends ITextInstance {
+		behaviors: __AnykeyBehaviors<this>;
+	}
+	class EndTitle extends ITextInstance {
+	}
+	class FunctionOPT extends ITextInstance {
+		instVars: {
+			id: number,
+			name: string,
+			isSelected: boolean,
+			isEnable: boolean
+		};
+	}
+	class SpriteFont2 extends ITextInstance {
+		instVars: {
+			ID: number,
+			choiceFork: string
+		};
+	}
+	class Cursor extends ISpriteInstance {
+	}
+	class UIPanel extends IWorldInstance {
+	}
+	class UIPanelInventory extends IWorldInstance {
+	}
+	class CharacterGrid extends IWorldInstance {
+	}
+	class InventoryGrid extends IWorldInstance {
+	}
+	class MoveTypeButton extends ISpriteInstance {
+	}
+	class DetailsTypeButton extends ISpriteInstance {
+	}
+	class __AirventsBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;
 	}
-	class wall extends I3DShapeInstance {
-		behaviors: __wallBehaviors<this>;
+	class Airvents extends IWorldInstance {
+		behaviors: __AirventsBehaviors<this>;
 	}
-	class __prisonerMainBehaviors<InstType> {
-		"8Direction": I8DirectionBehaviorInstance<InstType>;
-		车: ICarBehaviorInstance<InstType>;
+	class __AmericanBehaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
 	}
-	class prisonerMain extends ISpriteInstance {
-		behaviors: __prisonerMainBehaviors<this>;
-	}
-	class prisoner3dobject extends IWorldInstance {
-	}
-	class CameraMain extends IInstance {
-	}
-	class Keyboard extends IInstance {
+	class American extends IWorldInstance {
+		behaviors: __AmericanBehaviors<this>;
 	}
 	class __bedBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;
@@ -79,23 +106,49 @@ declare namespace InstanceType {
 	class bed extends IWorldInstance {
 		behaviors: __bedBehaviors<this>;
 	}
+	class __boardBehaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
+	}
+	class board extends IWorldInstance {
+		behaviors: __boardBehaviors<this>;
+	}
+	class __camera_coverBehaviors<InstType> {
+		Orbit: IOrbitBehaviorInstance<InstType>;
+		Pin: IBehaviorInstance<InstType>;
+	}
+	class camera_cover extends ISpriteInstance {
+		behaviors: __camera_coverBehaviors<this>;
+	}
+	class CameraMain extends IInstance {
+	}
+	class EndingBackGround extends ISpriteInstance {
+	}
+	class EventHandler extends ISpriteInstance {
+	}
+	class __FadeSpriteBehaviors<InstType> {
+		Fading: IFadeBehaviorInstance<InstType>;
+	}
+	class FadeSprite extends ISpriteInstance {
+		behaviors: __FadeSpriteBehaviors<this>;
+	}
+	class FunctionWindow extends ISpriteInstance {
+		instVars: {
+			id: number
+		};
+	}
+	class ground extends ITiledBackgroundInstance {
+	}
 	class __guardBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;
 	}
 	class guard extends IWorldInstance {
 		behaviors: __guardBehaviors<this>;
 	}
-	class __toiletBehaviors<InstType> {
+	class __guardbutfakeBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;
 	}
-	class toilet extends IWorldInstance {
-		behaviors: __toiletBehaviors<this>;
-	}
-	class __washBehaviors<InstType> {
-		Solid: ISolidBehaviorInstance<InstType>;
-	}
-	class wash extends IWorldInstance {
-		behaviors: __washBehaviors<this>;
+	class guardbutfake extends IWorldInstance {
+		behaviors: __guardbutfakeBehaviors<this>;
 	}
 	class IntractBehaviorZone extends ISpriteInstance {
 		instVars: {
@@ -115,37 +168,46 @@ declare namespace InstanceType {
 			parameters5: string
 		};
 	}
-	class EventHandler extends ISpriteInstance {
+	class Keyboard extends IInstance {
 	}
-	class board extends IWorldInstance {
+	class MenuBackground extends ISpriteInstance {
 	}
-	class __camera_coverBehaviors<InstType> {
-		Orbit: IOrbitBehaviorInstance<InstType>;
-		Pin: IBehaviorInstance<InstType>;
+	class __NudePoliceBehaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
 	}
-	class camera_cover extends ISpriteInstance {
-		behaviors: __camera_coverBehaviors<this>;
+	class NudePolice extends IWorldInstance {
+		behaviors: __NudePoliceBehaviors<this>;
 	}
-	class guardbutfake extends IWorldInstance {
+	class Object3D extends IWorldInstance {
 	}
-	class FunctionWindow extends ISpriteInstance {
-		instVars: {
-			id: number
-		};
+	class prisoner3dobject extends IWorldInstance {
 	}
-	class FunctionOPT extends ITextInstance {
-		instVars: {
-			id: number,
-			name: string,
-			isSelected: boolean,
-			isEnable: boolean
-		};
+	class __prisonerMainBehaviors<InstType> {
+		"8Direction": I8DirectionBehaviorInstance<InstType>;
+		Pathfinding: IPathfindingBehaviorInstance<InstType>;
 	}
-	class __FadeSpriteBehaviors<InstType> {
-		Fading: IFadeBehaviorInstance<InstType>;
+	class prisonerMain extends ISpriteInstance {
+		behaviors: __prisonerMainBehaviors<this>;
 	}
-	class FadeSprite extends ISpriteInstance {
-		behaviors: __FadeSpriteBehaviors<this>;
+	class Prisonerother extends IWorldInstance {
+	}
+	class __StrawgroundBehaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
+	}
+	class Strawground extends IWorldInstance {
+		behaviors: __StrawgroundBehaviors<this>;
+	}
+	class __SuitcaseBehaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
+	}
+	class Suitcase extends IWorldInstance {
+		behaviors: __SuitcaseBehaviors<this>;
+	}
+	class __toiletBehaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
+	}
+	class toilet extends IWorldInstance {
+		behaviors: __toiletBehaviors<this>;
 	}
 	class TouchBehaviorZone extends ISpriteInstance {
 		instVars: {
@@ -157,51 +219,45 @@ declare namespace InstanceType {
 			isTestOverLapDoing: boolean
 		};
 	}
-	class Strawground extends IWorldInstance {
-	}
-	class Object3D extends IWorldInstance {
-	}
-	class Suitcase extends IWorldInstance {
-	}
 	class __TunnelentranceBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;
 	}
 	class Tunnelentrance extends IWorldInstance {
 		behaviors: __TunnelentranceBehaviors<this>;
 	}
-	class Airvents extends IWorldInstance {
-	}
-	class American extends IWorldInstance {
-	}
-	class NudePolice extends IWorldInstance {
-	}
-	class Prisonerother extends IWorldInstance {
-	}
-	class EndingBackGround extends ISpriteInstance {
-	}
-	class EndTitle extends ITextInstance {
-	}
-	class __AnykeyBehaviors<InstType> {
-		正弦运动: ISineBehaviorInstance<InstType>;
-	}
-	class Anykey extends ITextInstance {
-		behaviors: __AnykeyBehaviors<this>;
-	}
-	class MenuBackground extends ISpriteInstance {
-	}
-	class __f_cubeBehaviors<InstType> {
+	class __wallBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;
 	}
-	class f_cube extends I3DShapeInstance {
-		behaviors: __f_cubeBehaviors<this>;
+	class wall extends I3DShapeInstance {
+		behaviors: __wallBehaviors<this>;
 	}
-	class __f_cube2Behaviors<InstType> {
+	class __washBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;
 	}
-	class f_cube2 extends IWorldInstance {
-		behaviors: __f_cube2Behaviors<this>;
+	class wash extends IWorldInstance {
+		behaviors: __washBehaviors<this>;
+	}
+	class GroundGrid extends ITiledBackgroundInstance {
+	}
+	class Mouse extends IInstance {
+	}
+	class InGameConsole extends C3.Plugins.MixonGames_EasyInGameConsole.Instance {
+	}
+	class __f_3d_solidBehaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
+	}
+	class f_3d_solid extends I3DShapeInstance {
+		behaviors: __f_3d_solidBehaviors<this>;
+	}
+	class __f_3d_solid2Behaviors<InstType> {
+		Solid: ISolidBehaviorInstance<InstType>;
+	}
+	class f_3d_solid2 extends IWorldInstance {
+		behaviors: __f_3d_solid2Behaviors<this>;
 	}
 	class f_3d extends IWorldInstance {
+	}
+	class f_ground extends ITiledBackgroundInstance {
 	}
 
 }

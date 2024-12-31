@@ -1,0 +1,117 @@
+{
+	"name": "Console",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ConsoleFunction",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "ConsoleOpen",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "open",
+							"objectClass": "InGameConsole",
+							"sid": 840033097255886
+						}
+					],
+					"sid": 601386095548208
+				},
+				{
+					"functionName": "ConsoleClose",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "close",
+							"objectClass": "InGameConsole",
+							"sid": 183578511339479
+						}
+					],
+					"sid": 950508419443575
+				},
+				{
+					"functionName": "ConsoleBindEvent",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Command",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 370309624278562
+						},
+						{
+							"name": "Params",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 309167326088287
+						},
+						{
+							"name": "Description",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 405950127859090
+						},
+						{
+							"name": "Help",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 830237050269163
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "register-command",
+							"objectClass": "InGameConsole",
+							"sid": 607745801675410,
+							"parameters": {
+								"command": "Command",
+								"params": "Params",
+								"description": "Description",
+								"hide": false
+							}
+						}
+					],
+					"sid": 542142465609211
+				}
+			],
+			"sid": 297620783426543
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ConsoleBindEvent",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 865956852682665
+		}
+	],
+	"sid": 283483390158386
+}

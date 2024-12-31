@@ -26,8 +26,13 @@
 							"behaviors": {},
 							"instanceFolderItem": {
 								"sid": 385899601753135,
-								"expanded": true
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
 							},
+							"showing": true,
+							"locked": false,
 							"world": {
 								"x": 402,
 								"y": 302,
@@ -112,8 +117,13 @@
 							"behaviors": {},
 							"instanceFolderItem": {
 								"sid": 767870981910518,
-								"expanded": true
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
 							},
+							"showing": true,
+							"locked": false,
 							"world": {
 								"x": 45,
 								"y": 68,
@@ -178,8 +188,13 @@
 							},
 							"instanceFolderItem": {
 								"sid": 766082590463631,
-								"expanded": true
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
 							},
+							"showing": true,
+							"locked": false,
 							"world": {
 								"x": 271,
 								"y": 565,
@@ -279,8 +294,13 @@
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 120087560491101,
-						"expanded": true
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": -12,
 						"y": -71,
@@ -333,19 +353,31 @@
 		"items": [
 			{
 				"sid": 385899601753135,
-				"expanded": true
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
 			},
 			{
 				"sid": 767870981910518,
-				"expanded": true
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
 			},
 			{
 				"sid": 766082590463631,
-				"expanded": true
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
 			},
 			{
 				"sid": 120087560491101,
-				"expanded": true
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
 			}
 		],
 		"subfolders": []

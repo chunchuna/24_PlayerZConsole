@@ -26,4 +26,5 @@ declare class IConstructProjectGlobalVariables {
 	End_Des_Text3: string;
 	End_Des_Text4: string;
 	Load_is_LoadingState: boolean;
+	Action_Type: string;
 }

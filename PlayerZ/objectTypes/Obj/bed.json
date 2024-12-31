@@ -3,6 +3,7 @@
 	"plugin-id": "Mikal_3DObject",
 	"sid": 395878682866545,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
@@ -14,6 +15,7 @@
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
+		"fileType": "image/png",
 		"imageSpriteId": 2960653,
 		"useCollisionPoly": true,
 		"tag": ""

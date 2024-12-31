@@ -3,5 +3,6 @@
 	"plugin-id": "Dictionary",
 	"sid": 956530785203633,
 	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": []
 }

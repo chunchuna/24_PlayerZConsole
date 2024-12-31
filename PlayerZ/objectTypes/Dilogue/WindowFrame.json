@@ -3,6 +3,7 @@
 	"plugin-id": "NinePatch",
 	"sid": 463758093098818,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "ID",
@@ -22,6 +23,7 @@
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
+		"fileType": "image/png",
 		"imageSpriteId": 319002,
 		"useCollisionPoly": true,
 		"tag": ""
