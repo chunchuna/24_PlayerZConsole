@@ -5,6 +5,7 @@ import "./game/behavior.js";
 import "./game/level.js";
 import "./game/event.js";
 import "./game/fade.js";
+import "./game/console.js";
 runOnStartup(async (runtime) => {
     // Code to run on the loading screen.
     // Note layouts, objects etc. are not yet available.
