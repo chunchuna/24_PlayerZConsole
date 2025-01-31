@@ -99,6 +99,36 @@
 						}
 					],
 					"sid": 542142465609211
+				},
+				{
+					"functionName": "ConsolePrint",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Content",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 177980161804472
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "print",
+							"objectClass": "InGameConsole",
+							"sid": 465329197709899,
+							"parameters": {
+								"text": "Content"
+							}
+						}
+					],
+					"sid": 228164313927109
 				}
 			],
 			"sid": 297620783426543
@@ -111,6 +141,76 @@
 			"isActiveOnStart": true,
 			"children": [],
 			"sid": 865956852682665
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MenuC",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-command",
+							"objectClass": "InGameConsole",
+							"sid": 548665717941213,
+							"parameters": {
+								"command": "\"m_start\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "_c_menu.m_start()"
+						}
+					],
+					"sid": 357242400232550
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-command",
+							"objectClass": "InGameConsole",
+							"sid": 573605211267445,
+							"parameters": {
+								"command": "\"m_load\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "_c_menu.m_load()"
+						}
+					],
+					"sid": 570300117615085
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-command",
+							"objectClass": "InGameConsole",
+							"sid": 979583693903714,
+							"parameters": {
+								"command": "\"m_setting\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": ""
+						}
+					],
+					"sid": 257375416711265
+				}
+			],
+			"sid": 423107645457988
 		}
 	],
 	"sid": 283483390158386

@@ -4,11 +4,13 @@
 
 import "./engine.js"
 
+import "./game/menu.js"
 import "./game/behavior.js"
 import "./game/level.js"
 import "./game/event.js"
 import "./game/fade.js"
 import "./game/console.js"
+import "./game/menu.js"
 
 runOnStartup(async runtime => {
 	// Code to run on the loading screen.
