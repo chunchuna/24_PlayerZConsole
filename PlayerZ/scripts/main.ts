@@ -29,4 +29,5 @@ async function OnBeforeProjectStart(runtime: IRuntime) {
 
 function Tick(runtime: IRuntime) {
 	// Code to run every tick
+	
 }

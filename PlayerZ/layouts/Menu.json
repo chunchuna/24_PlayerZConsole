@@ -86,25 +86,21 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "UIPanel",
+							"type": "MenuBackgroundImage",
 							"properties": {
-								"left-margin": 16,
-								"right-margin": 16,
-								"top-margin": 16,
-								"bottom-margin": 16,
-								"edges": "stretch",
-								"fill": "stretch",
 								"initially-visible": true,
-								"origin": "top-left",
-								"seams": "overlap"
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
 							},
-							"uid": 112,
-							"sid": 166149145223658,
+							"uid": 14,
+							"sid": 461044384394925,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 166149145223658,
+								"sid": 461044384394925,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -113,17 +109,17 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 0,
-								"y": 0,
-								"width": 1024,
-								"height": 768,
-								"originX": 0,
-								"originY": 0,
+								"x": 514.0395807058092,
+								"y": 383.53958070580916,
+								"width": 1021.2216769342778,
+								"height": 764.2216769342778,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
 									1,
-									0.5
+									1
 								],
 								"angle": 0,
 								"zElevation": 0
@@ -259,8 +255,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -12,
-						"y": -51,
+						"x": -60.903149670868174,
+						"y": -43.590431868050274,
 						"width": 10.25,
 						"height": 10,
 						"originX": 0.513503445706836,
@@ -324,13 +320,6 @@
 			},
 			{
 				"sid": 153894004941201,
-				"expanded": true,
-				"folderName": "",
-				"indexInFolder": -1,
-				"folderNestingLevel": -1
-			},
-			{
-				"sid": 166149145223658,
 				"expanded": true,
 				"folderName": "",
 				"indexInFolder": -1,
