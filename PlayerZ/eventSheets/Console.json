@@ -129,6 +129,25 @@
 						}
 					],
 					"sid": 228164313927109
+				},
+				{
+					"functionName": "ConsoleClear",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "clear",
+							"objectClass": "InGameConsole",
+							"sid": 588206188343826
+						}
+					],
+					"sid": 819541714242596
 				}
 			],
 			"sid": 297620783426543
@@ -148,68 +167,7 @@
 			"title": "MenuC",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-command",
-							"objectClass": "InGameConsole",
-							"sid": 548665717941213,
-							"parameters": {
-								"command": "\"m_start\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "script",
-							"script": "_c_menu.m_start()"
-						}
-					],
-					"sid": 357242400232550
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-command",
-							"objectClass": "InGameConsole",
-							"sid": 573605211267445,
-							"parameters": {
-								"command": "\"m_load\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "script",
-							"script": "_c_menu.m_load()"
-						}
-					],
-					"sid": 570300117615085
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-command",
-							"objectClass": "InGameConsole",
-							"sid": 979583693903714,
-							"parameters": {
-								"command": "\"m_setting\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "script",
-							"script": ""
-						}
-					],
-					"sid": 257375416711265
-				}
-			],
+			"children": [],
 			"sid": 423107645457988
 		}
 	],

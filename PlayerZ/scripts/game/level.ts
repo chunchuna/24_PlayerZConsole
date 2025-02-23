@@ -1,8 +1,6 @@
-import { ENGINE_MUST } from "../engine.js";
-import { ConfigExecutor } from "./event.js";
-import { Fade } from "./fade.js"
-
-
+import {ENGINE_MUST} from "../engine.js";
+import {ConfigExecutor} from "./event.js";
+import {Fade} from "./fade.js"
 
 
 //-----------------------------------------------------------------------------
@@ -65,9 +63,9 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 // for debug
 
 ENGINE_MUST.init(async () => {
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_z_keydown", () => {
-        ENGINE_MUST.CORE.goToLayout("Menu")
-    })
+    // await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_z_keydown", () => {
+    //     ENGINE_MUST.CORE.goToLayout("Menu")
+    // })
 })
 
 
@@ -144,7 +142,6 @@ ENGINE_MUST.LEVEL_TICK(() => {
 })
 
 
-
 ENGINE_MUST.LEVEL_INIT(() => {
 
     // 记录相机默认参数
@@ -187,7 +184,6 @@ ENGINE_MUST.LEVEL_INIT(async () => {
     // })
 
 })
-
 
 
 ENGINE_MUST.LEVEL_INIT(async () => {
@@ -333,9 +329,6 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 // })
 
 
-
-
-
 // var CAMERA_COVER_INSTANCE: InstanceType.camera_cover;
 
 // ENGINE_MUST.LEVEL_INIT(() => {
@@ -372,8 +365,6 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 // })
 
 
-
-
 //-----------------------------------------------------------------------------
 // FunctionWindow
 // 
@@ -405,8 +396,6 @@ ENGINE_MUST.LEVEL_INIT(() => {
     // OPT3.instVars.isEnable = false;
     // OPT4.instVars.isEnable = false;
     // OPT5.instVars.isEnable = false;
-
-
 
 
 })
@@ -444,9 +433,7 @@ ENGINE_MUST.init(async () => {
     })
 
 
-
 })
-
 
 
 ENGINE_MUST.tick(() => {
@@ -471,7 +458,6 @@ ENGINE_MUST.tick(() => {
     }
 
 
-
 })
 
 function CreatFunctionWindow(pox: number, poy: number, windowID: number) {
@@ -479,14 +465,11 @@ function CreatFunctionWindow(pox: number, poy: number, windowID: number) {
     if (ENGINE_MUST.CORE.globalVars.Dialogue_IsRunning) return;
 
 
-
-
     var FunctionWindow = ENGINE_MUST.CORE.objects.FunctionWindow.createInstance("FunctionWindow", pox, poy, true, "mob")
 
     ENGINE_MUST.CORE.globalVars.Function_WindowEnable = true;
     ENGINE_MUST.CORE.globalVars.Function_WindowID = windowID;
     ENGINE_MUST.CORE.globalVars.Function_ID = 1;
-
 
 
     //@ts-ignoreleta
@@ -544,8 +527,6 @@ function CheckOPTCount() {
 }
 
 
-
-
 //-----------------------------------------------------------------------------
 // End
 //
@@ -562,7 +543,9 @@ ENGINE_MUST.LEVEL_TICK(async () => {
 
     if (GameVariblesInstance == null) return;
     var map = GameVariblesInstance.getDataMap();
-    if (map.get("EndingIndex") == 0) { return } else {
+    if (map.get("EndingIndex") == 0) {
+        return
+    } else {
 
         if (!ENGINE_MUST.CORE.globalVars.End_TriggerEnd) {
 
@@ -575,7 +558,6 @@ ENGINE_MUST.LEVEL_TICK(async () => {
 
 
     }
-
 
 
 })

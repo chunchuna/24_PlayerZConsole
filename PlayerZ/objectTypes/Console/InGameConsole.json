@@ -7,9 +7,9 @@
 		"properties": {
 			"enable": true,
 			"background-color": [
-				0,
-				1,
-				0.984313725490196,
+				0.1607843137254902,
+				0.1607843137254902,
+				0.1607843137254902,
 				1
 			],
 			"text-color": [
@@ -19,9 +19,9 @@
 				1
 			],
 			"font": "Arial",
-			"size": 12,
-			"transparency": 0.1,
-			"height": 0.8
+			"size": 5,
+			"transparency": 0.85,
+			"height": 0.2
 		},
 		"uid": 111,
 		"sid": 428994182708365,

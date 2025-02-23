@@ -48,6 +48,140 @@
 				}
 			],
 			"sid": 553295565089000
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MenuConsole",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-command",
+							"objectClass": "InGameConsole",
+							"sid": 483739699876411,
+							"parameters": {
+								"command": "\"m_start\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const event = new C3.Event(\"COMMAND_M_START\", false)\nconst handler =runtime.objects.EventHandler.getFirstInstance();\nhandler.dispatchEvent(event)\n"
+						}
+					],
+					"sid": 199393606172697
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-command",
+							"objectClass": "InGameConsole",
+							"sid": 527671868126238,
+							"parameters": {
+								"command": "\"m_load\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const event = new C3.Event(\"COMMAND_M_LOAD\", false)\nconst handler =runtime.objects.EventHandler.getFirstInstance();\nhandler.dispatchEvent(event)\n"
+						}
+					],
+					"sid": 935776502760237
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-command",
+							"objectClass": "InGameConsole",
+							"sid": 114205025926706,
+							"parameters": {
+								"command": "\"m_setting\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const event = new C3.Event(\"COMMAND_M_SETTING\", false)\nconst handler =runtime.objects.EventHandler.getFirstInstance();\nhandler.dispatchEvent(event)\n"
+						},
+						{
+							"type": "script",
+							"script": ""
+						}
+					],
+					"sid": 804271135337666
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-action",
+							"objectClass": "InGameConsole",
+							"sid": 606200941910357,
+							"parameters": {
+								"name": "\"m_start\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const event = new C3.Event(\"COMMAND_M_START\", false)\nconst handler =runtime.objects.EventHandler.getFirstInstance();\nhandler.dispatchEvent(event)\n"
+						}
+					],
+					"sid": 807457697973152
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-action",
+							"objectClass": "InGameConsole",
+							"sid": 659490290695625,
+							"parameters": {
+								"name": "\"m_load\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const event = new C3.Event(\"COMMAND_M_LOAD\", false)\nconst handler =runtime.objects.EventHandler.getFirstInstance();\nhandler.dispatchEvent(event)\n"
+						}
+					],
+					"sid": 988840089016332
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-action",
+							"objectClass": "InGameConsole",
+							"sid": 398658088145426,
+							"parameters": {
+								"name": "\"m_setting\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const event = new C3.Event(\"COMMAND_M_SETTING\", false)\nconst handler =runtime.objects.EventHandler.getFirstInstance();\nhandler.dispatchEvent(event)\n"
+						}
+					],
+					"sid": 797264383069143
+				}
+			],
+			"sid": 981510721889572
 		}
 	],
 	"sid": 906146033741382

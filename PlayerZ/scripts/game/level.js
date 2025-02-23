@@ -43,9 +43,9 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 });
 // for debug
 ENGINE_MUST.init(async () => {
-    await ENGINE_MUST.EVENT_HANDLER.addEventListener("input_z_keydown", () => {
-        ENGINE_MUST.CORE.goToLayout("Menu");
-    });
+    // await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_z_keydown", () => {
+    //     ENGINE_MUST.CORE.goToLayout("Menu")
+    // })
 });
 //-----------------------------------------------------------------------------
 // Dialogue 

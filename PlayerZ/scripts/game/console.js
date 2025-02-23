@@ -13,33 +13,10 @@ export class Console {
     static RegisterCommand(command, par, des, help) {
         ENGINE_MUST.CORE.callFunction("ConsoleBindEvent", command, par, des, help);
     }
+    static Clear() {
+        ENGINE_MUST.CORE.callFunction("ConsoleClear");
+    }
 }
-ENGINE_MUST.init(() => {
-    Console.RegisterCommand("m_start", "", "", "");
-    Console.RegisterCommand("m_setting", "", "", "");
-    Console.RegisterCommand("m_load", "", "", "");
-});
 ENGINE_MUST.init(() => {
     console.log(" console init");
 });
-// menu 
-export class c_menu {
-    static async m_start() {
-        Fade.Fade_Empty_to_black(1, 3);
-        ENGINE_MUST.waitTime(2500);
-        ENGINE_MUST.CORE.goToLayout("Level");
-        ENGINE_MUST.waitTime(2500);
-        Console.Print("正在讀取關卡....");
-    }
-    static async m_load() {
-        Fade.Fade_Empty_to_black(1, 3);
-        ENGINE_MUST.waitTime(2500);
-        ENGINE_MUST.CORE.globalVars.Load_is_LoadingState = true;
-        ENGINE_MUST.CORE.goToLayout("Level");
-        ENGINE_MUST.waitTime(2500);
-        Console.Print("正在讀取關卡....");
-    }
-    static async m_setting() {
-        alert("In development");
-    }
-}
