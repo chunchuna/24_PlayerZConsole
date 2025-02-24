@@ -583,7 +583,7 @@
 						"width": 39.455532948564155,
 						"height": 66.97185939851167,
 						"originX": 0.6547504980912836,
-						"originY": 0.4855565779003288,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -792,7 +792,7 @@
 						"width": 73.3150209598989,
 						"height": 42.26820337837581,
 						"originX": 0.46917283024989703,
-						"originY": 0.4894814062259693,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -850,7 +850,7 @@
 						"width": 65.06256529493328,
 						"height": 52.117440337084986,
 						"originX": 0.5076238132188052,
-						"originY": 0.48009953040755987,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -966,7 +966,7 @@
 						"width": 197.399754553409,
 						"height": 200.0000064723366,
 						"originX": 0.5115839440510965,
-						"originY": 0.4874644216373968,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1075,7 +1075,7 @@
 						"width": 99.99999688447474,
 						"height": 86.66299990425796,
 						"originX": 0.5401947466801106,
-						"originY": 0.4731792341591421,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1133,7 +1133,7 @@
 						"width": 93.40170166802295,
 						"height": 192.357935641121,
 						"originX": 0.5114906669603458,
-						"originY": 0.4943468740302844,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1249,7 +1249,7 @@
 						"width": 50.198373707595294,
 						"height": 95.68454959754013,
 						"originX": 0.5255960357935093,
-						"originY": 0.5154579531725548,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1307,7 +1307,7 @@
 						"width": 33.93761829468451,
 						"height": 147.3966865954893,
 						"originX": 0.5016140854063008,
-						"originY": 0.4946313901696624,
+						"originY": 0.5,
 						"color": [
 							0.45098039215686275,
 							0.45098039215686275,
@@ -2251,6 +2251,92 @@
 			"isTransparent": true,
 			"parallaxX": 0,
 			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "object2",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackpackMan",
+					"properties": {
+						"scale": "200",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 150,
+						"rotation-order": "xyz",
+						"gtlf-path": "BackpackMan.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 29,
+					"sid": 850985810826457,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 850985810826457,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 372,
+						"y": 305,
+						"width": 59.355008624544155,
+						"height": 84.64097622346219,
+						"originX": 0.599663769240562,
+						"originY": 0.5172166683531032,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 588143962937602,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
