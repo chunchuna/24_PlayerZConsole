@@ -676,7 +676,7 @@
 		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-scale",
+		"fullscreenMode": "scale-inner",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [

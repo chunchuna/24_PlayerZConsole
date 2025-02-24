@@ -520,15 +520,15 @@
 							}
 						},
 						{
-							"type": "bed",
+							"type": "BackpackMan",
 							"properties": {
 								"scale": "200",
 								"z-elevation": 0,
 								"angle-x": -90,
 								"angle-y": 0,
-								"angle-z": 0,
+								"angle-z": 231.77777099609375,
 								"rotation-order": "xyz",
-								"gtlf-path": "bed.glb",
+								"gtlf-path": "BackpackMan.glb",
 								"debug": false,
 								"animation-blend": 0,
 								"instance-model": false,
@@ -540,20 +540,13 @@
 								"worker-animation": false,
 								"cpu-xform": false
 							},
-							"uid": 8,
-							"sid": 310824300674844,
+							"uid": 187,
+							"sid": 114677770161772,
 							"tags": "",
 							"instanceVariables": {},
-							"behaviors": {
-								"Solid": {
-									"properties": {
-										"enabled": true,
-										"tags": ""
-									}
-								}
-							},
+							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 310824300674844,
+								"sid": 114677770161772,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -562,19 +555,172 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 7473.6086502603075,
-								"y": 8309.77943462121,
-								"width": 199.9999956555166,
-								"height": 99.88402674822464,
-								"originX": 0.5046506200152595,
-								"originY": 0.48958704636856526,
+								"x": 7577.772562509924,
+								"y": 8406.401310771553,
+								"width": 84.49072067445923,
+								"height": 61.29384472680613,
+								"originX": 0.47793753017502133,
+								"originY": 0.5746558899577094,
 								"color": [
 									1,
 									1,
 									1,
 									1
 								],
-								"zElevation": 48
+								"zElevation": 100
+							}
+						},
+						{
+							"type": "BackpackMan",
+							"properties": {
+								"scale": "200",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 231.77777099609375,
+								"rotation-order": "xyz",
+								"gtlf-path": "BackpackMan.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 189,
+							"sid": 366094528242441,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 366094528242441,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7672.952367313603,
+								"y": 8405.675403300225,
+								"width": 84.49072067445923,
+								"height": 61.29384472680613,
+								"originX": 0.47793753017502133,
+								"originY": 0.5746558899577094,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 100
+							}
+						},
+						{
+							"type": "BackpackMan",
+							"properties": {
+								"scale": "200",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 231.77777099609375,
+								"rotation-order": "xyz",
+								"gtlf-path": "BackpackMan.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 193,
+							"sid": 565362083180307,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 565362083180307,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7776.447011617173,
+								"y": 8403.415000887979,
+								"width": 84.49072067445923,
+								"height": 61.29384472680613,
+								"originX": 0.47793753017502133,
+								"originY": 0.5746558899577094,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 100
+							}
+						},
+						{
+							"type": "BackpackMan",
+							"properties": {
+								"scale": "200",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 231.77777099609375,
+								"rotation-order": "xyz",
+								"gtlf-path": "BackpackMan.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 194,
+							"sid": 942678233036569,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 942678233036569,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7898.159336210933,
+								"y": 8414.94168061062,
+								"width": 84.49072067445923,
+								"height": 61.29384472680613,
+								"originX": 0.47793753017502133,
+								"originY": 0.5746558899577094,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 100
 							}
 						},
 						{
@@ -1200,13 +1346,6 @@
 			},
 			{
 				"sid": 621705205419154,
-				"expanded": true,
-				"folderName": "",
-				"indexInFolder": -1,
-				"folderNestingLevel": -1
-			},
-			{
-				"sid": 310824300674844,
 				"expanded": true,
 				"folderName": "",
 				"indexInFolder": -1,
