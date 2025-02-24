@@ -342,22 +342,28 @@ function CreatFunctionWindow(pox, poy, windowID) {
     ENGINE_MUST.CORE.globalVars.Function_WindowEnable = true;
     ENGINE_MUST.CORE.globalVars.Function_WindowID = windowID;
     ENGINE_MUST.CORE.globalVars.Function_ID = 1;
+    console.log(FunctionWindow);
+    console.log(FunctionWindow.getChildAt(0)?.uid);
     //@ts-ignoreleta
     var opts = [FunctionWindow,
         //@ts-ignoreleta
-        GTBUID(FunctionWindow.getChildAt(0)?.uid),
+        GTBUID(FunctionWindow?.getChildAt(0).uid),
         //@ts-ignoreleta
-        GTBUID(FunctionWindow.getChildAt(1)?.uid),
+        GTBUID(FunctionWindow?.getChildAt(1).uid),
         //@ts-ignoreleta
-        GTBUID(FunctionWindow.getChildAt(2)?.uid),
+        GTBUID(FunctionWindow?.getChildAt(2).uid),
         //@ts-ignoreleta
-        GTBUID(FunctionWindow.getChildAt(3)?.uid),
+        GTBUID(FunctionWindow?.getChildAt(3).uid),
         //@ts-ignoreleta
-        GTBUID(FunctionWindow.getChildAt(4)?.uid)];
+        GTBUID(FunctionWindow?.getChildAt(4).uid)];
     return opts;
 }
 function GTBUID(UID) {
-    //@ts-ignoreleta
+    if (!isFinite(UID)) {
+        throw new TypeError("expected finite number");
+    }
+    console.log(UID);
+    //@ts-ignore
     return ENGINE_MUST.CORE.getInstanceByUid(UID);
 }
 function CloseFunctionWindow() {
