@@ -801,6 +801,108 @@
 								],
 								"zElevation": 103
 							}
+						},
+						{
+							"type": "BigHouse1",
+							"properties": {
+								"scale": "1000",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "bighouse.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 47,
+							"sid": 264392901026779,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 264392901026779,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 8389,
+								"y": 8055,
+								"width": 729.3478846549988,
+								"height": 952.4121582508087,
+								"originX": 0.5020728273048988,
+								"originY": 0.49809652768887974,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 278.55554149414064
+							}
+						},
+						{
+							"type": "BigHouse2",
+							"properties": {
+								"scale": "1000",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "bighouse2.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 50,
+							"sid": 152514186123686,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 152514186123686,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7110,
+								"y": 9299,
+								"width": 729.3478846549988,
+								"height": 952.4121582508087,
+								"originX": 0.5020728273048988,
+								"originY": 0.49809652768887974,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 321.33328148242185
+							}
 						}
 					],
 					"sid": 505304020417399,

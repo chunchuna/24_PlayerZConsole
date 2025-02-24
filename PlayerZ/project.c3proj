@@ -256,7 +256,9 @@
 					"GroundGrid",
 					"Mouse",
 					"AmericanModfi",
-					"BackpackMan"
+					"BackpackMan",
+					"BigHouse1",
+					"BigHouse2"
 				],
 				"subfolders": [],
 				"name": "Obj"
@@ -629,6 +631,22 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "bighouse.glb",
+					"type": "application/octet-stream",
+					"sid": 443937381042000,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bighouse2.glb",
+					"type": "application/octet-stream",
+					"sid": 284119401213039,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": [
@@ -645,6 +663,11 @@
 					],
 					"subfolders": [],
 					"name": "Dialogue"
+				},
+				{
+					"items": [],
+					"subfolders": [],
+					"name": "Buiding"
 				}
 			]
 		}
