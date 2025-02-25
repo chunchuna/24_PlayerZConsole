@@ -188,8 +188,8 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 2,
-							"sid": 868189807870948,
+							"uid": 3,
+							"sid": 894728229470853,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {
@@ -450,10 +450,10 @@
 							},
 							"sceneGraphData": {
 								"parent-uid": null,
-								"uid": 2,
+								"uid": 3,
 								"children": [
 									{
-										"uid": 3,
+										"uid": 2,
 										"flags": {
 											"x": true,
 											"y": true,
@@ -494,7 +494,7 @@
 								}
 							},
 							"instanceFolderItem": {
-								"sid": 868189807870948,
+								"sid": 894728229470853,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -503,9 +503,9 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 7700.01220703125,
-								"y": 8620.4951171875,
-								"width": 97.07046011207512,
+								"x": 7554.5,
+								"y": 8558,
+								"width": 98.07046011207512,
 								"height": 87.44426089410808,
 								"originX": 0.5,
 								"originY": 0.5,
@@ -516,6 +516,85 @@
 									1
 								],
 								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "ManUpdate",
+							"properties": {
+								"scale": "200",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "ThisMan.glb",
+								"debug": false,
+								"animation-blend": 0.23,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 2,
+							"sid": 120635309504516,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"sceneGraphData": {
+								"parent-uid": 3,
+								"uid": 2,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 120635309504516,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7555.18280980946,
+								"y": 8553.93951735402,
+								"width": 74.77654435773093,
+								"height": 99.24508599693036,
+								"originX": 0.5032580400836072,
+								"originY": 0.5014738004289152,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
 								"zElevation": 0
 							}
 						},
@@ -724,85 +803,6 @@
 							}
 						},
 						{
-							"type": "prisoner3dobject",
-							"properties": {
-								"scale": "200",
-								"z-elevation": 0,
-								"angle-x": -90,
-								"angle-y": 0,
-								"angle-z": 0,
-								"rotation-order": "xyz",
-								"gtlf-path": "prisoner.glb",
-								"debug": false,
-								"animation-blend": 0,
-								"instance-model": false,
-								"image-texture": false,
-								"x-scale": 1,
-								"y-scale": 1,
-								"z-scale": 1,
-								"wireframe": false,
-								"worker-animation": false,
-								"cpu-xform": false
-							},
-							"uid": 3,
-							"sid": 910584054175451,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"sceneGraphData": {
-								"parent-uid": 2,
-								"uid": 3,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								},
-								"preview": {
-									"transformX": 0,
-									"transformY": 0,
-									"transformZElevation": 0,
-									"transformW": 0,
-									"transformH": 0,
-									"transformA": 0,
-									"transformSX": 0,
-									"transformSY": 0,
-									"transformO": 0,
-									"previewSceneGraph": false
-								}
-							},
-							"instanceFolderItem": {
-								"sid": 910584054175451,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 7706.01220703125,
-								"y": 8616.4951171875,
-								"width": 39.455532948563814,
-								"height": 66.97185939851079,
-								"originX": 0.6547504980912777,
-								"originY": 0.48555657790033435,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 103
-							}
-						},
-						{
 							"type": "BigHouse1",
 							"properties": {
 								"scale": "1000",
@@ -838,8 +838,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 8389,
-								"y": 8055,
+								"x": 8428,
+								"y": 8051,
 								"width": 729.3478846549988,
 								"height": 952.4121582508087,
 								"originX": 0.5020728273048988,
@@ -891,10 +891,10 @@
 							"world": {
 								"x": 7110,
 								"y": 9299,
-								"width": 729.3478846549988,
-								"height": 952.4121582508087,
-								"originX": 0.5020728273048988,
-								"originY": 0.49809652768887974,
+								"width": 876.0207295417786,
+								"height": 951.4541923999786,
+								"originX": 0.5077922383661256,
+								"originY": 0.4984150133255527,
 								"color": [
 									1,
 									1,
@@ -1461,14 +1461,56 @@
 				"folderNestingLevel": -1
 			},
 			{
-				"sid": 868189807870948,
+				"sid": 298782491295047,
 				"expanded": true,
 				"folderName": "",
 				"indexInFolder": -1,
 				"folderNestingLevel": -1
 			},
 			{
-				"sid": 298782491295047,
+				"sid": 114677770161772,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 366094528242441,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 565362083180307,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 942678233036569,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 264392901026779,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 152514186123686,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 894728229470853,
 				"expanded": true,
 				"folderName": "",
 				"indexInFolder": -1,

@@ -1,7 +1,7 @@
 {
-	"name": "NudePolice",
+	"name": "Man",
 	"plugin-id": "Mikal_3DObject",
-	"sid": 136770149071430,
+	"sid": 820916815573365,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -16,7 +16,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 6783078,
+		"imageSpriteId": 1572778,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

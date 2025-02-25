@@ -13,7 +13,13 @@
 			"sid": 701882465749067
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "拖放",
+			"sid": 867823169908188
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

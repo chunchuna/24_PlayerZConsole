@@ -27,6 +27,34 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Animation",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 535541748289447
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-animation",
+									"objectClass": "ManUpdate",
+									"sid": 332750470725493
+								}
+							],
+							"sid": 269519172220846
+						}
+					],
+					"sid": 289932277791127
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "PointMove",
 					"description": "",
 					"isActiveOnStart": true,
@@ -92,8 +120,8 @@
 							"actions": [
 								{
 									"id": "set-rotation",
-									"objectClass": "prisoner3dobject",
-									"sid": 465446090336577,
+									"objectClass": "ManUpdate",
+									"sid": 868267965659610,
 									"parameters": {
 										"x": "-90",
 										"y": "0",
@@ -102,7 +130,73 @@
 									}
 								}
 							],
-							"sid": 634668311273955
+							"sid": 634668311273955,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 990945381726843
+										}
+									],
+									"actions": [
+										{
+											"id": "play-animation",
+											"objectClass": "ManUpdate",
+											"sid": 994384959899459,
+											"parameters": {
+												"animation": "\"run\"",
+												"loop": true
+											}
+										}
+									],
+									"sid": 741389658433835
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-arrived",
+									"objectClass": "prisonerMain",
+									"sid": 662747832152807,
+									"behaviorType": "Pathfinding"
+								}
+							],
+							"actions": [],
+							"sid": 976906541833590,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 200521093217831
+										}
+									],
+									"actions": [
+										{
+											"id": "stop-animation",
+											"objectClass": "ManUpdate",
+											"sid": 463584035097676
+										},
+										{
+											"id": "play-animation",
+											"objectClass": "ManUpdate",
+											"sid": 541808658309215,
+											"parameters": {
+												"animation": "\"idle\"",
+												"loop": true
+											}
+										}
+									],
+									"sid": 834469156584935
+								}
+							]
 						}
 					],
 					"sid": 741996451509626
@@ -147,17 +241,6 @@
 										"z": "180",
 										"rotation-order": "zxy"
 									}
-								},
-								{
-									"id": "set-rotation",
-									"objectClass": "guardbutfake",
-									"sid": 631070285829388,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "180",
-										"rotation-order": "zxy"
-									}
 								}
 							],
 							"sid": 491891685501439,
@@ -190,17 +273,6 @@
 									"id": "set-rotation",
 									"objectClass": "prisoner3dobject",
 									"sid": 661941720237873,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "0",
-										"rotation-order": "zxy"
-									}
-								},
-								{
-									"id": "set-rotation",
-									"objectClass": "guardbutfake",
-									"sid": 984804708637070,
 									"parameters": {
 										"x": "-90",
 										"y": "0",
@@ -245,17 +317,6 @@
 										"z": "90",
 										"rotation-order": "zxy"
 									}
-								},
-								{
-									"id": "set-rotation",
-									"objectClass": "guardbutfake",
-									"sid": 659267588401229,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "90",
-										"rotation-order": "zxy"
-									}
 								}
 							],
 							"sid": 196340537069686,
@@ -288,17 +349,6 @@
 									"id": "set-rotation",
 									"objectClass": "prisoner3dobject",
 									"sid": 474934987246769,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "270",
-										"rotation-order": "zxy"
-									}
-								},
-								{
-									"id": "set-rotation",
-									"objectClass": "guardbutfake",
-									"sid": 581406899019503,
 									"parameters": {
 										"x": "-90",
 										"y": "0",
@@ -1498,6 +1548,15 @@
 				}
 			],
 			"sid": 921667178401188
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 660317092987418
 		}
 	],
 	"sid": 474519730387322

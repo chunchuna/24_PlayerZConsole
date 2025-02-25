@@ -130,6 +130,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "拖放",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "EightDir",
 			"name": "八方向",
 			"author": "Scirra",
@@ -226,39 +233,20 @@
 			},
 			{
 				"items": [
-					"Airvents",
-					"American",
-					"bed",
-					"board",
 					"camera_cover",
 					"CameraMain",
 					"EndingBackGround",
 					"EventHandler",
 					"FadeSprite",
 					"ground",
-					"guard",
-					"guardbutfake",
 					"IntractBehaviorZone",
 					"Keyboard",
 					"MenuBackground",
-					"NudePolice",
-					"Object3D",
-					"prisoner3dobject",
 					"prisonerMain",
-					"Prisonerother",
-					"Strawground",
-					"Suitcase",
-					"toilet",
 					"TouchBehaviorZone",
-					"Tunnelentrance",
 					"wall",
-					"wash",
 					"GroundGrid",
-					"Mouse",
-					"AmericanModfi",
-					"BackpackMan",
-					"BigHouse1",
-					"BigHouse2"
+					"Mouse"
 				],
 				"subfolders": [],
 				"name": "Obj"
@@ -269,6 +257,18 @@
 				],
 				"subfolders": [],
 				"name": "Console"
+			},
+			{
+				"items": [
+					"BackpackMan",
+					"BigHouse1",
+					"BigHouse2",
+					"prisoner3dobject",
+					"Man",
+					"ManUpdate"
+				],
+				"subfolders": [],
+				"name": "3DObject"
 			}
 		]
 	},
@@ -497,129 +497,9 @@
 		"general": {
 			"items": [
 				{
-					"name": "board.glb",
-					"type": "application/octet-stream",
-					"sid": 822866383129592,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "prisoner.glb",
 					"type": "application/octet-stream",
 					"sid": 552656223121998,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "guard.glb",
-					"type": "application/octet-stream",
-					"sid": 220951565797201,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "bed.glb",
-					"type": "application/octet-stream",
-					"sid": 987506982475343,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "door.glb",
-					"type": "application/octet-stream",
-					"sid": 510817934884284,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "wash.glb",
-					"type": "application/octet-stream",
-					"sid": 148328408214761,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "toilet.glb",
-					"type": "application/octet-stream",
-					"sid": 834953682057631,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Suitcase.glb",
-					"type": "application/octet-stream",
-					"sid": 539207327643724,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Tunnelentrance.glb",
-					"type": "application/octet-stream",
-					"sid": 768197706834656,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Strawground.glb",
-					"type": "application/octet-stream",
-					"sid": 906278882992948,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Airvents.glb",
-					"type": "application/octet-stream",
-					"sid": 342518364469547,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "NudePolice.glb",
-					"type": "application/octet-stream",
-					"sid": 986156710667819,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "American.glb",
-					"type": "application/octet-stream",
-					"sid": 920350962589132,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Prisonerother.glb",
-					"type": "application/octet-stream",
-					"sid": 753803071658679,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Prisonguard.glb",
-					"type": "application/octet-stream",
-					"sid": 893296703056789,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "MODFI_American.glb",
-					"type": "application/octet-stream",
-					"sid": 105721309458092,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -644,6 +524,22 @@
 					"name": "bighouse2.glb",
 					"type": "application/octet-stream",
 					"sid": 284119401213039,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "man.glb",
+					"type": "application/octet-stream",
+					"sid": 874054401987411,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ThisMan.glb",
+					"type": "application/octet-stream",
+					"sid": 544523601566026,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -700,7 +596,7 @@
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "scale-inner",
-		"fullscreenQuality": "low",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -727,9 +623,9 @@
 		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"sampling": "nearest",
-		"downscaling": "medium",
-		"renderingMode": "auto",
-		"anisotropicFiltering": "auto",
+		"downscaling": "high",
+		"renderingMode": "3d",
+		"anisotropicFiltering": "16x",
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,

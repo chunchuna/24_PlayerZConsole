@@ -196,7 +196,7 @@ ENGINE_MUST.LEVEL_INIT(async () => {
         } else {
 
 
-            var CameraDebugWindowOPT = CreatFunctionWindow(652, 200, 999);
+            var CameraDebugWindowOPT = CreatFunctionWindow(800, 600, 999);
 
             //@ts-ignoreleta
             var OPT1: InstanceType.FunctionOPT = CameraDebugWindowOPT[1];

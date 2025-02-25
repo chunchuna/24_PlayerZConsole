@@ -6,21 +6,7 @@
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"bed",
 		"door",
-		"guard",
-		"board",
-		"toilet",
-		"prisoner3dobject",
-		"wash",
-		"guardbutfake",
-		"Airvents",
-		"American",
-		"NudePolice",
-		"Prisonerother",
-		"Strawground",
-		"Suitcase",
-		"Tunnelentrance",
-		"Object3D"
+		"prisoner3dobject"
 	]
 }

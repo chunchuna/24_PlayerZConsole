@@ -12,18 +12,6 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"toilet",
-		"door",
-		"bed",
-		"wash",
-		"Tunnelentrance",
-		"guard",
-		"American",
-		"Airvents",
-		"board",
-		"NudePolice",
-		"Suitcase",
-		"guardbutfake",
-		"Strawground"
+		"door"
 	]
 }
