@@ -1,2 +1,2 @@
-import { ConfigExecutor } from "./game/event.js"
+import { ConfigExecutor } from "./Grailux/GLEvent.js"
 var _configExecutor = ConfigExecutor;

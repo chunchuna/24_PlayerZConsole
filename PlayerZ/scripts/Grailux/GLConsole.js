@@ -1,5 +1,5 @@
 import { ENGINE_MUST } from "../engine.js";
-import { Fade } from "./fade.js";
+import { Fade } from "./GLFade.js";
 export class Console {
     static OpenConsole() {
         ENGINE_MUST.CORE.callFunction("ConsoleOpen");

@@ -1,7 +1,7 @@
 import { ENGINE_MUST } from "../engine.js";
-import { StartDialogue } from "./level.js"
+import { StartDialogue } from "./GLevel.js"
 
-import { Fade } from "./fade.js";
+import { Fade } from "./GLFade.js";
 
 
 const functionMap: { [key: string]: (...args: any[]) => void } = {

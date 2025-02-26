@@ -1,11 +1,12 @@
 import { ENGINE_MUST } from "../engine.js";
-import { Console } from "./console.js";
-import { Fade } from "./fade.js";
+import { Console } from "./GLConsole.js";
+import { Fade } from "./GLFade.js";
 ENGINE_MUST.init(() => {
     if (ENGINE_MUST.CORE.globalVars.GameType != "Menu")
         return;
     Console.OpenConsole();
     MenuCommand.ShowMenuConsoleHelp();
+    Console.Print("new file name active");
 });
 export class MenuCommand {
     static ShowMenuConsoleHelp() {
