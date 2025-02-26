@@ -7,6 +7,11 @@
 	"effectTypes": [],
 	"members": [
 		"door",
-		"prisoner3dobject"
+		"prisoner3dobject",
+		"BackpackMan",
+		"BigHouse2",
+		"BigHouse1",
+		"ManUpdate",
+		"Man"
 	]
 }

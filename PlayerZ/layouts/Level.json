@@ -528,7 +528,7 @@
 								"angle-y": 0,
 								"angle-z": 0,
 								"rotation-order": "xyz",
-								"gtlf-path": "ThisMan.glb",
+								"gtlf-path": "Object/ThisMan.glb",
 								"debug": false,
 								"animation-blend": 0.23,
 								"instance-model": false,
@@ -541,7 +541,7 @@
 								"cpu-xform": false
 							},
 							"uid": 2,
-							"sid": 120635309504516,
+							"sid": 247525694710552,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
@@ -574,7 +574,7 @@
 								}
 							},
 							"instanceFolderItem": {
-								"sid": 120635309504516,
+								"sid": 247525694710552,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -607,160 +607,7 @@
 								"angle-y": 0,
 								"angle-z": 231.77777099609375,
 								"rotation-order": "xyz",
-								"gtlf-path": "BackpackMan.glb",
-								"debug": false,
-								"animation-blend": 0,
-								"instance-model": false,
-								"image-texture": false,
-								"x-scale": 1,
-								"y-scale": 1,
-								"z-scale": 1,
-								"wireframe": false,
-								"worker-animation": false,
-								"cpu-xform": false
-							},
-							"uid": 187,
-							"sid": 114677770161772,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 114677770161772,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 7577.772562509924,
-								"y": 8406.401310771553,
-								"width": 84.49072067445923,
-								"height": 61.29384472680613,
-								"originX": 0.47793753017502133,
-								"originY": 0.5746558899577094,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 100
-							}
-						},
-						{
-							"type": "BackpackMan",
-							"properties": {
-								"scale": "200",
-								"z-elevation": 0,
-								"angle-x": -90,
-								"angle-y": 0,
-								"angle-z": 231.77777099609375,
-								"rotation-order": "xyz",
-								"gtlf-path": "BackpackMan.glb",
-								"debug": false,
-								"animation-blend": 0,
-								"instance-model": false,
-								"image-texture": false,
-								"x-scale": 1,
-								"y-scale": 1,
-								"z-scale": 1,
-								"wireframe": false,
-								"worker-animation": false,
-								"cpu-xform": false
-							},
-							"uid": 189,
-							"sid": 366094528242441,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 366094528242441,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 7672.952367313603,
-								"y": 8405.675403300225,
-								"width": 84.49072067445923,
-								"height": 61.29384472680613,
-								"originX": 0.47793753017502133,
-								"originY": 0.5746558899577094,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 100
-							}
-						},
-						{
-							"type": "BackpackMan",
-							"properties": {
-								"scale": "200",
-								"z-elevation": 0,
-								"angle-x": -90,
-								"angle-y": 0,
-								"angle-z": 231.77777099609375,
-								"rotation-order": "xyz",
-								"gtlf-path": "BackpackMan.glb",
-								"debug": false,
-								"animation-blend": 0,
-								"instance-model": false,
-								"image-texture": false,
-								"x-scale": 1,
-								"y-scale": 1,
-								"z-scale": 1,
-								"wireframe": false,
-								"worker-animation": false,
-								"cpu-xform": false
-							},
-							"uid": 193,
-							"sid": 565362083180307,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 565362083180307,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 7776.447011617173,
-								"y": 8403.415000887979,
-								"width": 84.49072067445923,
-								"height": 61.29384472680613,
-								"originX": 0.47793753017502133,
-								"originY": 0.5746558899577094,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 100
-							}
-						},
-						{
-							"type": "BackpackMan",
-							"properties": {
-								"scale": "200",
-								"z-elevation": 0,
-								"angle-x": -90,
-								"angle-y": 0,
-								"angle-z": 231.77777099609375,
-								"rotation-order": "xyz",
-								"gtlf-path": "BackpackMan.glb",
+								"gtlf-path": "Object/BackpackMan.glb",
 								"debug": false,
 								"animation-blend": 0,
 								"instance-model": false,
@@ -803,57 +650,6 @@
 							}
 						},
 						{
-							"type": "BigHouse1",
-							"properties": {
-								"scale": "1000",
-								"z-elevation": 0,
-								"angle-x": -90,
-								"angle-y": 0,
-								"angle-z": 0,
-								"rotation-order": "xyz",
-								"gtlf-path": "bighouse.glb",
-								"debug": false,
-								"animation-blend": 0,
-								"instance-model": false,
-								"image-texture": false,
-								"x-scale": 1,
-								"y-scale": 1,
-								"z-scale": 1,
-								"wireframe": false,
-								"worker-animation": false,
-								"cpu-xform": false
-							},
-							"uid": 47,
-							"sid": 264392901026779,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 264392901026779,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 8428,
-								"y": 8051,
-								"width": 729.3478846549988,
-								"height": 952.4121582508087,
-								"originX": 0.5020728273048988,
-								"originY": 0.49809652768887974,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 278.55554149414064
-							}
-						},
-						{
 							"type": "BigHouse2",
 							"properties": {
 								"scale": "1000",
@@ -862,7 +658,7 @@
 								"angle-y": 0,
 								"angle-z": 0,
 								"rotation-order": "xyz",
-								"gtlf-path": "bighouse2.glb",
+								"gtlf-path": "Object/bighouse2.glb",
 								"debug": false,
 								"animation-blend": 0,
 								"instance-model": false,
@@ -902,6 +698,57 @@
 									1
 								],
 								"zElevation": 321.33328148242185
+							}
+						},
+						{
+							"type": "BigHouse1",
+							"properties": {
+								"scale": "1500",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/bighouse.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 47,
+							"sid": 264392901026779,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 264392901026779,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 8618,
+								"y": 7971,
+								"width": 1094.0218269824982,
+								"height": 1428.618237376213,
+								"originX": 0.5020728273048988,
+								"originY": 0.49809652768887974,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 448.5555257412109
 							}
 						}
 					],
@@ -971,6 +818,95 @@
 			],
 			"instances": [],
 			"sid": 680461834150460,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "VFX",
+			"overriden": 0,
+			"subLayers": [
+				{
+					"name": "vignette",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [],
+					"sid": 185050886876866,
+					"effectTypes": [
+						{
+							"effectId": "darken",
+							"name": "变暗",
+							"instance": {
+								"isEnabled": true,
+								"parameters": {}
+							}
+						},
+						{
+							"effectId": "vignette",
+							"name": "暗角",
+							"instance": {
+								"isEnabled": false,
+								"parameters": {
+									"start-radius": 0.3,
+									"end-radius": 0.75
+								}
+							}
+						}
+					],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.6901960784313725,
+						0.6901960784313725,
+						0.6901960784313725,
+						1
+					],
+					"isTransparent": false,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
+			"instances": [],
+			"sid": 226090852672577,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1462,27 +1398,6 @@
 			},
 			{
 				"sid": 298782491295047,
-				"expanded": true,
-				"folderName": "",
-				"indexInFolder": -1,
-				"folderNestingLevel": -1
-			},
-			{
-				"sid": 114677770161772,
-				"expanded": true,
-				"folderName": "",
-				"indexInFolder": -1,
-				"folderNestingLevel": -1
-			},
-			{
-				"sid": 366094528242441,
-				"expanded": true,
-				"folderName": "",
-				"indexInFolder": -1,
-				"folderNestingLevel": -1
-			},
-			{
-				"sid": 565362083180307,
 				"expanded": true,
 				"folderName": "",
 				"indexInFolder": -1,

@@ -183,6 +183,20 @@
 			"name": "实体",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "darken",
+			"name": "变暗",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "vignette",
+			"name": "暗角",
+			"author": "Brad Larson",
+			"bundled": false
 		}
 	],
 	"uniqueId": "7pekmmpcw4g",
@@ -495,56 +509,7 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [
-				{
-					"name": "prisoner.glb",
-					"type": "application/octet-stream",
-					"sid": 552656223121998,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "BackpackMan.glb",
-					"type": "application/octet-stream",
-					"sid": 155223463539951,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "bighouse.glb",
-					"type": "application/octet-stream",
-					"sid": 443937381042000,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "bighouse2.glb",
-					"type": "application/octet-stream",
-					"sid": 284119401213039,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "man.glb",
-					"type": "application/octet-stream",
-					"sid": 874054401987411,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "ThisMan.glb",
-					"type": "application/octet-stream",
-					"sid": 544523601566026,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": [
 				{
 					"items": [
@@ -561,9 +526,58 @@
 					"name": "Dialogue"
 				},
 				{
-					"items": [],
+					"items": [
+						{
+							"name": "BackpackMan.glb",
+							"type": "application/octet-stream",
+							"sid": 155223463539951,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "bighouse.glb",
+							"type": "application/octet-stream",
+							"sid": 443937381042000,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "bighouse2.glb",
+							"type": "application/octet-stream",
+							"sid": 284119401213039,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "man.glb",
+							"type": "application/octet-stream",
+							"sid": 874054401987411,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "prisoner.glb",
+							"type": "application/octet-stream",
+							"sid": 552656223121998,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ThisMan.glb",
+							"type": "application/octet-stream",
+							"sid": 544523601566026,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
 					"subfolders": [],
-					"name": "Buiding"
+					"name": "Object"
 				}
 			]
 		}

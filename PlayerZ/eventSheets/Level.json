@@ -1545,6 +1545,56 @@
 							"sid": 956822214017673
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 727602300130088
+						}
+					],
+					"actions": [
+						{
+							"id": "set-static-geometry",
+							"objectClass": "f_3d",
+							"sid": 780249454347578,
+							"disabled": true,
+							"parameters": {
+								"enable": true
+							}
+						},
+						{
+							"id": "enable-wireframe",
+							"objectClass": "f_3d",
+							"sid": 976099796013067,
+							"disabled": true,
+							"parameters": {
+								"enable": true
+							}
+						},
+						{
+							"id": "set-wireframe-widths",
+							"objectClass": "f_3d",
+							"sid": 464383713275787,
+							"disabled": true,
+							"parameters": {
+								"x-wireframe-width": "5",
+								"y-wireframe-width": "5",
+								"z-wireframe-width": "5"
+							}
+						},
+						{
+							"id": "set-bbox-scale",
+							"objectClass": "f_3d",
+							"sid": 697253910162641,
+							"parameters": {
+								"scale": "2"
+							}
+						}
+					],
+					"sid": 643691930281096
 				}
 			],
 			"sid": 921667178401188
