@@ -1,7 +1,7 @@
 {
-	"name": "ManUpdate",
+	"name": "RolePlayerUse",
 	"plugin-id": "Mikal_3DObject",
-	"sid": 597613019714902,
+	"sid": 360551403043300,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -16,7 +16,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 5286026,
+		"imageSpriteId": 3286665,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

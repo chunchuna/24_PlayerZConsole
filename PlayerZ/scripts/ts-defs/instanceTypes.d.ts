@@ -142,12 +142,12 @@ declare namespace InstanceType {
 	}
 	class MenuBackground extends ISpriteInstance {
 	}
-	class __prisonerMainBehaviors<InstType> {
+	class __PlayerRoleInstanceMainBehaviors<InstType> {
 		"8Direction": I8DirectionBehaviorInstance<InstType>;
 		Pathfinding: IPathfindingBehaviorInstance<InstType>;
 	}
-	class prisonerMain extends ISpriteInstance {
-		behaviors: __prisonerMainBehaviors<this>;
+	class PlayerRoleInstanceMain extends ISpriteInstance {
+		behaviors: __PlayerRoleInstanceMainBehaviors<this>;
 	}
 	class TouchBehaviorZone extends ISpriteInstance {
 		instVars: {
@@ -182,6 +182,8 @@ declare namespace InstanceType {
 	class Man extends IWorldInstance {
 	}
 	class ManUpdate extends IWorldInstance {
+	}
+	class ManSEC extends IWorldInstance {
 	}
 	class __f_3d_solidBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;

@@ -39,7 +39,7 @@ declare class IConstructProjectObjects {
 	readonly IntractBehaviorZone: IObjectType<InstanceType.IntractBehaviorZone>;
 	readonly Keyboard: IKeyboardObjectType<InstanceType.Keyboard>;
 	readonly MenuBackground: IObjectType<InstanceType.MenuBackground>;
-	readonly prisonerMain: IObjectType<InstanceType.prisonerMain>;
+	readonly PlayerRoleInstanceMain: IObjectType<InstanceType.PlayerRoleInstanceMain>;
 	readonly TouchBehaviorZone: IObjectType<InstanceType.TouchBehaviorZone>;
 	readonly wall: IObjectType<InstanceType.wall>;
 	readonly GroundGrid: IObjectType<InstanceType.GroundGrid>;
@@ -51,6 +51,7 @@ declare class IConstructProjectObjects {
 	readonly prisoner3dobject: IObjectType<InstanceType.prisoner3dobject>;
 	readonly Man: IObjectType<InstanceType.Man>;
 	readonly ManUpdate: IObjectType<InstanceType.ManUpdate>;
+	readonly ManSEC: IObjectType<InstanceType.ManSEC>;
 	readonly f_3d_solid: IFamily<InstanceType.f_3d_solid>;
 	readonly f_3d_solid2: IFamily<InstanceType.f_3d_solid2>;
 	readonly f_3d: IFamily<InstanceType.f_3d>;

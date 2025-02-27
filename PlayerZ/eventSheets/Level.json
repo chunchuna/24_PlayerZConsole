@@ -42,8 +42,17 @@
 							],
 							"actions": [
 								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 592678580854560,
+									"parameters": {
+										"seconds": "1",
+										"use-timescale": true
+									}
+								},
+								{
 									"id": "stop-animation",
-									"objectClass": "ManUpdate",
+									"objectClass": "RolePlayerUse",
 									"sid": 332750470725493
 								}
 							],
@@ -76,7 +85,7 @@
 							"actions": [
 								{
 									"id": "find-path",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 313321511148153,
 									"behaviorType": "Pathfinding",
 									"parameters": {
@@ -92,7 +101,7 @@
 							"conditions": [
 								{
 									"id": "on-path-found",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 275577783101796,
 									"behaviorType": "Pathfinding"
 								}
@@ -100,7 +109,7 @@
 							"actions": [
 								{
 									"id": "move-along-path",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 825837394115842,
 									"behaviorType": "Pathfinding"
 								}
@@ -112,7 +121,7 @@
 							"conditions": [
 								{
 									"id": "is-moving-along-path",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 977355646991172,
 									"behaviorType": "Pathfinding"
 								}
@@ -120,12 +129,12 @@
 							"actions": [
 								{
 									"id": "set-rotation",
-									"objectClass": "ManUpdate",
+									"objectClass": "RolePlayerUse",
 									"sid": 868267965659610,
 									"parameters": {
 										"x": "-90",
 										"y": "0",
-										"z": "prisonerMain.Angle",
+										"z": "PlayerRoleInstanceMain.Angle",
 										"rotation-order": "zxy"
 									}
 								}
@@ -144,10 +153,10 @@
 									"actions": [
 										{
 											"id": "play-animation",
-											"objectClass": "ManUpdate",
-											"sid": 994384959899459,
+											"objectClass": "RolePlayerUse",
+											"sid": 946130362840006,
 											"parameters": {
-												"animation": "\"run\"",
+												"animation": "\"walk\"",
 												"loop": true
 											}
 										}
@@ -161,7 +170,7 @@
 							"conditions": [
 								{
 									"id": "on-arrived",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 662747832152807,
 									"behaviorType": "Pathfinding"
 								}
@@ -181,12 +190,12 @@
 									"actions": [
 										{
 											"id": "stop-animation",
-											"objectClass": "ManUpdate",
+											"objectClass": "RolePlayerUse",
 											"sid": 463584035097676
 										},
 										{
 											"id": "play-animation",
-											"objectClass": "ManUpdate",
+											"objectClass": "RolePlayerUse",
 											"sid": 541808658309215,
 											"parameters": {
 												"animation": "\"idle\"",
@@ -224,25 +233,13 @@
 									"objectClass": "System",
 									"sid": 680629554858342,
 									"parameters": {
-										"first-value": "prisonerMain.8Direction.VectorX",
+										"first-value": "PlayerRoleInstanceMain.8Direction.VectorX",
 										"comparison": 2,
 										"second-value": "0"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "set-rotation",
-									"objectClass": "prisoner3dobject",
-									"sid": 554086602061688,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "180",
-										"rotation-order": "zxy"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 491891685501439,
 							"disabled": true
 						},
@@ -262,25 +259,13 @@
 									"objectClass": "System",
 									"sid": 606244567668267,
 									"parameters": {
-										"first-value": "prisonerMain.8Direction.VectorX",
+										"first-value": "PlayerRoleInstanceMain.8Direction.VectorX",
 										"comparison": 4,
 										"second-value": "0"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "set-rotation",
-									"objectClass": "prisoner3dobject",
-									"sid": 661941720237873,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "0",
-										"rotation-order": "zxy"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 913709481926929,
 							"disabled": true
 						},
@@ -300,25 +285,13 @@
 									"objectClass": "System",
 									"sid": 915757068088939,
 									"parameters": {
-										"first-value": "prisonerMain.8Direction.VectorY",
+										"first-value": "PlayerRoleInstanceMain.8Direction.VectorY",
 										"comparison": 4,
 										"second-value": "0"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "set-rotation",
-									"objectClass": "prisoner3dobject",
-									"sid": 288985765407161,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "90",
-										"rotation-order": "zxy"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 196340537069686,
 							"disabled": true
 						},
@@ -338,25 +311,13 @@
 									"objectClass": "System",
 									"sid": 376163876437703,
 									"parameters": {
-										"first-value": "prisonerMain.8Direction.VectorY",
+										"first-value": "PlayerRoleInstanceMain.8Direction.VectorY",
 										"comparison": 2,
 										"second-value": "0"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "set-rotation",
-									"objectClass": "prisoner3dobject",
-									"sid": 474934987246769,
-									"parameters": {
-										"x": "-90",
-										"y": "0",
-										"z": "270",
-										"rotation-order": "zxy"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 352468165332662,
 							"disabled": true
 						},
@@ -475,7 +436,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 705994909948285,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -501,7 +462,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 860600001233091,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -527,7 +488,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 711003974976947,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -553,7 +514,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 705806659439163,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -951,7 +912,7 @@
 								},
 								{
 									"id": "set-vector-x",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 956262595416812,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -960,7 +921,7 @@
 								},
 								{
 									"id": "set-vector-y",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 119998922541427,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -986,7 +947,7 @@
 							"actions": [
 								{
 									"id": "set-vector-x",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 746812264260106,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -995,7 +956,7 @@
 								},
 								{
 									"id": "set-vector-y",
-									"objectClass": "prisonerMain",
+									"objectClass": "PlayerRoleInstanceMain",
 									"sid": 990539487823122,
 									"behaviorType": "8Direction",
 									"parameters": {
@@ -1034,11 +995,11 @@
 							"objectClass": "CameraMain",
 							"sid": 984754339149734,
 							"parameters": {
-								"cam-x": "prisonerMain.x",
-								"cam-y": "prisonerMain.Y+Camera_Y_Offest",
+								"cam-x": "PlayerRoleInstanceMain.x",
+								"cam-y": "PlayerRoleInstanceMain.Y+Camera_Y_Offest",
 								"cam-z": "Camera_Z",
-								"look-x": "prisonerMain.x",
-								"look-y": "prisonerMain.Y",
+								"look-x": "PlayerRoleInstanceMain.x",
+								"look-y": "PlayerRoleInstanceMain.Y",
 								"look-z": "50",
 								"up-x": "0",
 								"up-y": "1",

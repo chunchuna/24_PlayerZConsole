@@ -25,10 +25,10 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 //
 // 
 // 
-export var PrisonerMain: InstanceType.prisonerMain; // player
+export var PrisonerMain: InstanceType.PlayerRoleInstanceMain; // player
 
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
-    PrisonerMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.prisonerMain.getFirstInstance()!;
+    PrisonerMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.PlayerRoleInstanceMain.getFirstInstance()!;
 })
 
 

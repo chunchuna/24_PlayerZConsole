@@ -1,7 +1,7 @@
 {
-	"name": "prisoner3dobject",
+	"name": "ManWithBackpackNPCUse",
 	"plugin-id": "Mikal_3DObject",
-	"sid": 222875586889874,
+	"sid": 597613019714902,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -16,7 +16,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 1362682,
+		"imageSpriteId": 5286026,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

@@ -180,7 +180,7 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "prisonerMain",
+							"type": "PlayerRoleInstanceMain",
 							"properties": {
 								"initially-visible": false,
 								"initial-animation": "Animation 1",
@@ -520,7 +520,7 @@
 							}
 						},
 						{
-							"type": "ManUpdate",
+							"type": "RolePlayerUse",
 							"properties": {
 								"scale": "200",
 								"z-elevation": 0,
@@ -528,7 +528,7 @@
 								"angle-y": 0,
 								"angle-z": 0,
 								"rotation-order": "xyz",
-								"gtlf-path": "Object/ThisMan.glb",
+								"gtlf-path": "Object/NakedManBackpack.glb",
 								"debug": false,
 								"animation-blend": 0.23,
 								"instance-model": false,
@@ -537,11 +537,11 @@
 								"y-scale": 1,
 								"z-scale": 1,
 								"wireframe": false,
-								"worker-animation": false,
+								"worker-animation": true,
 								"cpu-xform": false
 							},
 							"uid": 2,
-							"sid": 247525694710552,
+							"sid": 321931993076952,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
@@ -574,7 +574,7 @@
 								}
 							},
 							"instanceFolderItem": {
-								"sid": 247525694710552,
+								"sid": 321931993076952,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -583,12 +583,12 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 7555.18280980946,
-								"y": 8553.93951735402,
-								"width": 74.77654435773093,
-								"height": 99.24508599693036,
-								"originX": 0.5032580400836072,
-								"originY": 0.5014738004289152,
+								"x": 7557.5,
+								"y": 8559,
+								"width": 75.52388617236102,
+								"height": 85.38691989671133,
+								"originX": 0.49991936868115666,
+								"originY": 0.4982567382077563,
 								"color": [
 									1,
 									1,
@@ -599,7 +599,7 @@
 							}
 						},
 						{
-							"type": "BackpackMan",
+							"type": "BackpackManNPCUse",
 							"properties": {
 								"scale": "200",
 								"z-elevation": 0,

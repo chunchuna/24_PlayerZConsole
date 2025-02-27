@@ -256,7 +256,7 @@
 					"IntractBehaviorZone",
 					"Keyboard",
 					"MenuBackground",
-					"prisonerMain",
+					"PlayerRoleInstanceMain",
 					"TouchBehaviorZone",
 					"wall",
 					"GroundGrid",
@@ -274,12 +274,11 @@
 			},
 			{
 				"items": [
-					"BackpackMan",
+					"BackpackManNPCUse",
 					"BigHouse1",
 					"BigHouse2",
-					"prisoner3dobject",
-					"Man",
-					"ManUpdate"
+					"ManWithBackpackNPCUse",
+					"RolePlayerUse"
 				],
 				"subfolders": [],
 				"name": "3DObject"
@@ -552,14 +551,6 @@
 							}
 						},
 						{
-							"name": "man.glb",
-							"type": "application/octet-stream",
-							"sid": 874054401987411,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
 							"name": "prisoner.glb",
 							"type": "application/octet-stream",
 							"sid": 552656223121998,
@@ -568,9 +559,17 @@
 							}
 						},
 						{
-							"name": "ThisMan.glb",
+							"name": "HangBagMan.glb",
 							"type": "application/octet-stream",
 							"sid": 544523601566026,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NakedManBackpack.glb",
+							"type": "application/octet-stream",
+							"sid": 245682320835865,
 							"file-info": {
 								"purpose": "none"
 							}

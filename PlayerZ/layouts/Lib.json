@@ -145,539 +145,6 @@
 			"global": false
 		},
 		{
-			"name": "objects",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
-				{
-					"type": "prisonerMain",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 23,
-					"sid": 957388058476991,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"8Direction": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-4",
-								"set-angle": "no",
-								"allow-sliding": false,
-								"default-controls": true,
-								"enabled": true
-							}
-						},
-						"Pathfinding": {
-							"properties": {
-								"cell-size": 30,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 600,
-								"acceleration": 1000,
-								"deceleration": 2000,
-								"rotate-speed": 1000,
-								"rotate-object": true,
-								"diagonals": true,
-								"direct-movement": "to-destination",
-								"enabled": true
-							}
-						}
-					},
-					"template": {
-						"mode": "template",
-						"templateName": "mob",
-						"sourceTemplateName": "mob",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												false
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": []
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": [
-									{
-										"key": "8Direction",
-										"state": [
-											[
-												"max-speed",
-												true
-											],
-											[
-												"acceleration",
-												true
-											],
-											[
-												"deceleration",
-												true
-											],
-											[
-												"directions",
-												true
-											],
-											[
-												"set-angle",
-												true
-											],
-											[
-												"allow-sliding",
-												true
-											],
-											[
-												"default-controls",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Pathfinding",
-										"state": [
-											[
-												"cell-size",
-												true
-											],
-											[
-												"cell-border",
-												true
-											],
-											[
-												"obstacles",
-												true
-											],
-											[
-												"max-speed",
-												true
-											],
-											[
-												"acceleration",
-												true
-											],
-											[
-												"deceleration",
-												true
-											],
-											[
-												"rotate-speed",
-												false
-											],
-											[
-												"rotate-object",
-												false
-											],
-											[
-												"diagonals",
-												true
-											],
-											[
-												"direct-movement",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												false
-											],
-											[
-												"h",
-												false
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												false
-											],
-											[
-												"sy",
-												false
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 23,
-						"children": [
-							{
-								"uid": 13,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 957388058476991,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 433.22803802438676,
-						"y": 297.77550309858555,
-						"width": 97.07046011207512,
-						"height": 87.44426089410808,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "ManUpdate",
-					"properties": {
-						"scale": "200",
-						"z-elevation": 0,
-						"angle-x": -90,
-						"angle-y": 0,
-						"angle-z": 0,
-						"rotation-order": "xyz",
-						"gtlf-path": "Object/ThisMan.glb",
-						"debug": false,
-						"animation-blend": 0.23,
-						"instance-model": false,
-						"image-texture": false,
-						"x-scale": 1,
-						"y-scale": 1,
-						"z-scale": 1,
-						"wireframe": false,
-						"worker-animation": false,
-						"cpu-xform": false
-					},
-					"uid": 13,
-					"sid": 321723647544432,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 23,
-						"uid": 13,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 321723647544432,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 433.91084783384736,
-						"y": 293.7150204526055,
-						"width": 74.77654435773115,
-						"height": 99.2450859969311,
-						"originX": 0.5032580400836095,
-						"originY": 0.5014738004289201,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "prisoner3dobject",
-					"properties": {
-						"scale": "200",
-						"z-elevation": 0,
-						"angle-x": -90,
-						"angle-y": 0,
-						"angle-z": 0,
-						"rotation-order": "xyz",
-						"gtlf-path": "prisoner.glb",
-						"debug": false,
-						"animation-blend": 0,
-						"instance-model": false,
-						"image-texture": false,
-						"x-scale": 1,
-						"y-scale": 1,
-						"z-scale": 1,
-						"wireframe": false,
-						"worker-animation": false,
-						"cpu-xform": false
-					},
-					"uid": 25,
-					"sid": 641196814722672,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 25,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 641196814722672,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 123,
-						"y": 82,
-						"width": 39.4555329485641,
-						"height": 66.97185939851167,
-						"originX": 0.6547504980912838,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"zElevation": 103
-					}
-				}
-			],
-			"sid": 599517784640595,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
 			"name": "behavior",
 			"overriden": 0,
 			"subLayers": [],
@@ -1561,12 +1028,12 @@
 			"global": false
 		},
 		{
-			"name": "object2",
+			"name": "object",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "BackpackMan",
+					"type": "BackpackManNPCUse",
 					"properties": {
 						"scale": "200",
 						"z-elevation": 0,
@@ -1717,6 +1184,504 @@
 						],
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "PlayerRoleInstanceMain",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 23,
+					"sid": 957388058476991,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-4",
+								"set-angle": "no",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 150,
+								"acceleration": 150,
+								"deceleration": 2000,
+								"rotate-speed": 1000,
+								"rotate-object": true,
+								"diagonals": true,
+								"direct-movement": "to-destination",
+								"enabled": true
+							}
+						}
+					},
+					"template": {
+						"mode": "template",
+						"templateName": "mob",
+						"sourceTemplateName": "mob",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": true,
+						"replicaIgnoreTemplateHierarchyChanges": false,
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												false
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "8Direction",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"directions",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"allow-sliding",
+												true
+											],
+											[
+												"default-controls",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Pathfinding",
+										"state": [
+											[
+												"cell-size",
+												true
+											],
+											[
+												"cell-border",
+												true
+											],
+											[
+												"obstacles",
+												true
+											],
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"rotate-speed",
+												false
+											],
+											[
+												"rotate-object",
+												false
+											],
+											[
+												"diagonals",
+												true
+											],
+											[
+												"direct-movement",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												false
+											],
+											[
+												"h",
+												false
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												false
+											],
+											[
+												"sy",
+												false
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 23,
+						"children": [
+							{
+								"uid": 16,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 957388058476991,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 328,
+						"y": 423,
+						"width": 97.07046011207512,
+						"height": 87.44426089410808,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "RolePlayerUse",
+					"properties": {
+						"scale": "200",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "Object/NakedManBackpack.glb",
+						"debug": false,
+						"animation-blend": 0.23,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": true,
+						"cpu-xform": false
+					},
+					"uid": 16,
+					"sid": 426162414048470,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 23,
+						"uid": 16,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 426162414048470,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 331,
+						"y": 424,
+						"width": 75.52388617236141,
+						"height": 85.38691989671042,
+						"originX": 0.4999193686811555,
+						"originY": 0.4982567382077523,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ManWithBackpackNPCUse",
+					"properties": {
+						"scale": "200",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "Object/HangBagMan.glb",
+						"debug": false,
+						"animation-blend": 0.23,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 13,
+					"sid": 321723647544432,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 13,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 321723647544432,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 212,
+						"y": 424,
+						"width": 74.77654435773118,
+						"height": 99.2450859969311,
+						"originX": 0.5032580400836093,
+						"originY": 0.5014738004289201,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 588143962937602,
@@ -1773,13 +1738,6 @@
 				"folderNestingLevel": -1
 			},
 			{
-				"sid": 641196814722672,
-				"expanded": true,
-				"folderName": "",
-				"indexInFolder": -1,
-				"folderNestingLevel": -1
-			},
-			{
 				"sid": 957388058476991,
 				"expanded": true,
 				"folderName": "",
@@ -1802,6 +1760,13 @@
 			},
 			{
 				"sid": 252261507542815,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 321723647544432,
 				"expanded": true,
 				"folderName": "",
 				"indexInFolder": -1,

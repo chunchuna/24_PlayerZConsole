@@ -1,23 +1,23 @@
 import {GetChunchunFuckWayfarerccSDK} from "../engine.js";
-import {Console} from "./GLConsole.js";
+import {CommandPlatform} from "./GLConsole.js";
 
 import {Fade} from "./GLFade.js";
 
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu") return;
-    Console.OpenConsole();
+    CommandPlatform.OpenConsolePlatformPanel();
 
     MenuCommand.ShowMenuConsoleHelp();
-    Console.Print("new file name active")
+    CommandPlatform.Print("new file name active")
 
 
 })
 
 export class MenuCommand {
     static ShowMenuConsoleHelp() {
-        Console.Print("[background=blue] [action name=m_start color=red] m_start -> 開始游戲[/action][/background]")
-        Console.Print("[background=blue][action name=m_laod color=red] m_load -> 讀取上一個存檔 [/action][/background]")
-        Console.Print("[background=blue] [action name=m_setting color=red] m_setting -> 設置[/action] [/background]")
+        CommandPlatform.Print("[background=blue] [action name=m_start color=red] m_start -> 開始游戲[/action][/background]")
+        CommandPlatform.Print("[background=blue][action name=m_laod color=red] m_load -> 讀取上一個存檔 [/action][/background]")
+        CommandPlatform.Print("[background=blue] [action name=m_setting color=red] m_setting -> 設置[/action] [/background]")
 
     }
 }
@@ -26,9 +26,9 @@ export class MenuCommand {
 
 
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
-    Console.RegisterCommand("m_start", "", "", "");
-    Console.RegisterCommand("m_setting", "", "", "");
-    Console.RegisterCommand("m_load", "", "", "",);
+    CommandPlatform.RegisterCommand("m_start", "", "", "");
+    CommandPlatform.RegisterCommand("m_setting", "", "", "");
+    CommandPlatform.RegisterCommand("m_load", "", "", "",);
 })
 
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
@@ -43,9 +43,9 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
         GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("Level")
 
         GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500)
-        Console.Print("正在讀取關卡....")
-        Console.Clear();
-        Console.CloseConsole();
+        CommandPlatform.Print("正在讀取關卡....")
+        CommandPlatform.ClearAllInfomation();
+        CommandPlatform.CloseConsolePlatformPanel();
         await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1000)
 
 
@@ -62,10 +62,10 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
         GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("Level")
 
         GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500)
-        Console.Print("正在讀取關卡....")
-        Console.Clear();
+        CommandPlatform.Print("正在讀取關卡....")
+        CommandPlatform.ClearAllInfomation();
 
-        Console.CloseConsole();
+        CommandPlatform.CloseConsolePlatformPanel();
         await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1000)
 
     })

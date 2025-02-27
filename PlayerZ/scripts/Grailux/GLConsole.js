@@ -1,10 +1,10 @@
 import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { Fade } from "./GLFade.js";
-export class Console {
-    static OpenConsole() {
+export class CommandPlatform {
+    static OpenConsolePlatformPanel() {
         GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleOpen");
     }
-    static CloseConsole() {
+    static CloseConsolePlatformPanel() {
         GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleClose");
     }
     static Print(cont) {
@@ -13,7 +13,7 @@ export class Console {
     static RegisterCommand(command, par, des, help) {
         GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleBindEvent", command, par, des, help);
     }
-    static Clear() {
+    static ClearAllInfomation() {
         GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleClear");
     }
 }

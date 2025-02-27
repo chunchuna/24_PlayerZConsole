@@ -20,7 +20,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 // 
 export var PrisonerMain; // player
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
-    PrisonerMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.prisonerMain.getFirstInstance();
+    PrisonerMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.PlayerRoleInstanceMain.getFirstInstance();
 });
 //-----------------------------------------------------------------------------
 // Save & Load
