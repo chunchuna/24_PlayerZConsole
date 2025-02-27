@@ -1586,6 +1586,15 @@
 			"isActiveOnStart": true,
 			"children": [],
 			"sid": 660317092987418
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Layer",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 974841092518525
 		}
 	],
 	"sid": 474519730387322

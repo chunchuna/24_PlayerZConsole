@@ -18,6 +18,7 @@ GetChunchunFuckWayfarerccSDK.OntheFuckEverTickFrame = (func) => {
         runtime.addEventListener("tick", func);
     });
 };
+// ********************************************************************************************************************
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame = (func) => {
     runOnStartup(async (runtime) => {
         runtime.addEventListener("afteranylayoutstart", () => {

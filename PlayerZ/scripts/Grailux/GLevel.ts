@@ -1,7 +1,7 @@
-import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
-import { ConfigExecutor } from "./GLEvent.js";
-import { LayoutTransitionScreenEffect } from "./GLFade.js"
-import { CommandPlatform } from "./GLConsole.js";
+import {GetChunchunFuckWayfarerccSDK} from "../engine.js";
+import {ConfigExecutor} from "./GLEvent.js";
+import {LayoutTransitionScreenEffect} from "./GLFade.js"
+import {CommandPlatform} from "./GLConsole.js";
 
 
 //-----------------------------------------------------------------------------
@@ -30,13 +30,14 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
 
     var LevelLayer = GetChunchunFuckWayfarerccSDK.Runtime.layout.getLayer("level");
     if (LevelLayer == null) return;
-
-    var FogexponentialEffect: IEffectInstance | undefined = LevelLayer.effects["Fogexponential"];
+    // @ts-ignore
+    var FogexponentialEffect: IEffectInstance | undefined = LevelLayer.effects[0];
     console.log(FogexponentialEffect);
-    FogexponentialEffect?.setParameter(3, 1800);
+    FogexponentialEffect?.setParameter(2, 1800);
+    FogexponentialEffect?.setParameter(0, [0 / 255, 0 / 255, 0 / 255])
 
     CommandPlatform.Print("[Fogexponential] 重新设置场景雾距离参数")
-    CommandPlatform.Print(String(FogexponentialEffect?.getParameter(3)));
+    CommandPlatform.Print(String(FogexponentialEffect?.getParameter(2)));
 
 
 })
