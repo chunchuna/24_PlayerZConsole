@@ -16,57 +16,57 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "数组",
+			"name": "Array",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Audio",
-			"name": "音频",
+			"name": "Audio",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Browser",
-			"name": "浏览器",
+			"name": "Browser",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Camera3D",
-			"name": "3D相机",
+			"name": "3D camera",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Dictionary",
-			"name": "字典",
+			"name": "Dictionary",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "键盘",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Mikal_3DObject",
-			"name": "[3D Object]",
+			"name": "3D object",
 			"author": "Mikal",
 			"bundled": false,
-			"version": "2.74.3"
+			"version": "2.65.1"
 		},
 		{
 			"type": "plugin",
 			"id": "MixonGames_EasyInGameConsole",
-			"name": "[In-Game Console]",
+			"name": "In-Game Console",
 			"author": "Mixon Games",
 			"bundled": false,
 			"version": "2.0.0.0",
@@ -75,126 +75,126 @@
 		{
 			"type": "plugin",
 			"id": "Mouse",
-			"name": "鼠标",
+			"name": "Mouse",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "NinePatch",
-			"name": "九宫图",
+			"name": "9-patch",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Shape3D",
-			"name": "3D形状",
+			"name": "3D shape",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Sprite",
-			"name": "精灵",
+			"name": "Sprite",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Spritefont2",
-			"name": "位图字体",
+			"name": "Sprite font",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "文本",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "平铺图",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "触控",
+			"name": "Touch",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "拖放",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "八方向",
+			"name": "8 Direction",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Fade",
-			"name": "淡入淡出",
+			"name": "Fade",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Orbit",
-			"name": "环绕",
+			"name": "Orbit",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pathfinding",
-			"name": "寻路",
+			"name": "Pathfinding",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pin",
-			"name": "固定",
+			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Sin",
-			"name": "正弦运动",
+			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "实体",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "darken",
-			"name": "变暗",
+			"name": "Darken",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "vignette",
-			"name": "暗角",
+			"name": "Vignette",
 			"author": "Brad Larson",
 			"bundled": false
 		}

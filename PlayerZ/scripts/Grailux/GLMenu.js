@@ -1,8 +1,8 @@
-import { ENGINE_MUST } from "../engine.js";
+import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { Console } from "./GLConsole.js";
 import { Fade } from "./GLFade.js";
-ENGINE_MUST.init(() => {
-    if (ENGINE_MUST.CORE.globalVars.GameType != "Menu")
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
         return;
     Console.OpenConsole();
     MenuCommand.ShowMenuConsoleHelp();
@@ -16,41 +16,41 @@ export class MenuCommand {
     }
 }
 // ConsoleCommand
-ENGINE_MUST.init(() => {
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     Console.RegisterCommand("m_start", "", "", "");
     Console.RegisterCommand("m_setting", "", "", "");
     Console.RegisterCommand("m_load", "", "", "");
 });
-ENGINE_MUST.init(async () => {
-    if (ENGINE_MUST.CORE.globalVars.GameType != "Menu")
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
         return;
-    await ENGINE_MUST.EVENT_HANDLER.addEventListener("COMMAND_M_START", async () => {
-        if (ENGINE_MUST.CORE.globalVars.GameType != "Menu")
+    await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("COMMAND_M_START", async () => {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
             return;
         Fade.Fade_Empty_to_black(1, 3);
-        await ENGINE_MUST.waitTime(2500);
-        ENGINE_MUST.CORE.goToLayout("Level");
-        ENGINE_MUST.waitTime(2500);
+        await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500);
+        GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("Level");
+        GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500);
         Console.Print("正在讀取關卡....");
         Console.Clear();
         Console.CloseConsole();
-        await ENGINE_MUST.waitTime(1000);
+        await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1000);
     });
-    await ENGINE_MUST.EVENT_HANDLER.addEventListener("COMMAND_M_LOAD", async () => {
-        if (ENGINE_MUST.CORE.globalVars.GameType != "Menu")
+    await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("COMMAND_M_LOAD", async () => {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
             return;
         Fade.Fade_Empty_to_black(1, 3);
-        await ENGINE_MUST.waitTime(2500);
-        ENGINE_MUST.CORE.globalVars.Load_is_LoadingState = true;
-        ENGINE_MUST.CORE.goToLayout("Level");
-        ENGINE_MUST.waitTime(2500);
+        await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500);
+        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState = true;
+        GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("Level");
+        GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500);
         Console.Print("正在讀取關卡....");
         Console.Clear();
         Console.CloseConsole();
-        await ENGINE_MUST.waitTime(1000);
+        await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1000);
     });
-    await ENGINE_MUST.EVENT_HANDLER.addEventListener("COMMAND_M_SETTING", async () => {
-        if (ENGINE_MUST.CORE.globalVars.GameType != "Menu")
+    await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("COMMAND_M_SETTING", async () => {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
             return;
         alert("In development");
     });

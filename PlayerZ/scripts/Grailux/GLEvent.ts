@@ -1,4 +1,4 @@
-import { ENGINE_MUST } from "../engine.js";
+import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { StartDialogue } from "./GLevel.js"
 
 import { Fade } from "./GLFade.js";

@@ -1,60 +1,46 @@
-export class ENGINE_MUST {
-    //-----------------------------------------------------------------------------
-    // Math
-    //
-    // 数学相关
-    static lerp(start, end, t) {
-        return (1 - t) * start + t * end;
-    }
-    static calculateDistance(x1, y1, x2, y2) {
-        const deltaX = x2 - x1;
-        const deltaY = y2 - y1;
-        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    }
+// Engine here
+var _a;
+export class GetChunchunFuckWayfarerccSDK {
 }
-ENGINE_MUST.waitTime = (ms) => {
-    return new Promise(res => setTimeout(res, ms));
+_a = GetChunchunFuckWayfarerccSDK;
+GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime = (ms) => new Promise(res => setTimeout(res, ms));
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame = (func) => {
+    runOnStartup(async (runtime) => {
+        runtime.addEventListener("afteranylayoutstart", func);
+    });
 };
-ENGINE_MUST.init = function (func) {
+GetChunchunFuckWayfarerccSDK.OntheFuckEverTickFrame = (func) => {
+    runOnStartup(async (runtime) => {
+        runtime.addEventListener("tick", func);
+    });
+};
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame = (func) => {
     runOnStartup(async (runtime) => {
         runtime.addEventListener("afteranylayoutstart", () => {
-            func();
+            if (runtime.globalVars.GameType === "Level")
+                func();
         });
     });
 };
-ENGINE_MUST.tick = function (func) {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame = (func) => {
     runOnStartup(async (runtime) => {
         runtime.addEventListener("tick", () => {
-            func();
+            if (runtime.globalVars.GameType === "Level")
+                func();
         });
     });
 };
-//-----------------------------------------------------------------------------
-// 自定义
-//
-// 这里可以申明一些自定义的函数
-ENGINE_MUST.LEVEL_INIT = function (func) {
-    runOnStartup(async (runtime) => {
-        runtime.addEventListener("afteranylayoutstart", () => {
-            if (runtime.globalVars.GameType != "Level")
-                return;
-            func();
-        });
-    });
-};
-ENGINE_MUST.LEVEL_TICK = function (func) {
-    runOnStartup(async (runtime) => {
-        runtime.addEventListener("tick", () => {
-            if (runtime.globalVars.GameType != "Level")
-                return;
-            func();
-        });
-    });
+// Math
+GetChunchunFuckWayfarerccSDK.Justlerp = (start, end, t) => (1 - t) * start + t * end;
+GetChunchunFuckWayfarerccSDK.CalculateDistancehahaShitCode = (x1, y1, x2, y2) => {
+    const deltaX = x2 - x1;
+    const deltaY = y2 - y1;
+    return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 };
 runOnStartup(async (runtime) => {
-    ENGINE_MUST.CORE = runtime;
+    GetChunchunFuckWayfarerccSDK.Runtime = runtime;
 });
-ENGINE_MUST.init(() => {
-    //@ts-ignoreleta
-    ENGINE_MUST.EVENT_HANDLER = ENGINE_MUST.CORE.objects.EventHandler.getFirstInstance();
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+    //@ts-ignore
+    GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EventHandler.getFirstInstance();
 });

@@ -1,4 +1,4 @@
-import { ENGINE_MUST } from "../engine.js";
+import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { PrisonerMain } from "./GLevel.js";
 import { ConfigExecutor } from "./GLEvent.js";
 import { StartDialogue } from "./GLevel.js";
@@ -9,10 +9,10 @@ import { StartDialogue } from "./GLevel.js";
 // 
 // 
 
-ENGINE_MUST.LEVEL_TICK(() => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
     if (PrisonerMain == null) return;
 
-    for (var touchBehaviorZones of ENGINE_MUST.CORE.objects.TouchBehaviorZone.instances()) {
+    for (var touchBehaviorZones of GetChunchunFuckWayfarerccSDK.Runtime.objects.TouchBehaviorZone.instances()) {
         if (PrisonerMain.testOverlap(touchBehaviorZones)) {
             if (touchBehaviorZones.instVars.isTestOverLapDoing) { return } else {
                 touchBehaviorZones.instVars.isTestOverLapDoing = true;
@@ -33,7 +33,7 @@ ENGINE_MUST.LEVEL_TICK(() => {
 
     }
 
-    for (var touchBehaviorZones of ENGINE_MUST.CORE.objects.TouchBehaviorZone.instances()) {
+    for (var touchBehaviorZones of GetChunchunFuckWayfarerccSDK.Runtime.objects.TouchBehaviorZone.instances()) {
         if (!PrisonerMain.testOverlap(touchBehaviorZones)) {
             touchBehaviorZones.instVars.isTestOverLapDoing = false;
         }
@@ -61,25 +61,25 @@ function TouchThisZone(Zone: InstanceType.TouchBehaviorZone) {
 var IntractBehaviorZone_close_group: InstanceType.IntractBehaviorZone[];
 
 
-ENGINE_MUST.LEVEL_INIT(() => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
     IntractBehaviorZone_close_group = [];
 
 })
 
 
 
-ENGINE_MUST.LEVEL_TICK(() => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
     if (PrisonerMain == null) return;
 
     // 实时计算与玩家的距离
-    for (var behaviors of ENGINE_MUST.CORE.objects.IntractBehaviorZone.instances()) {
-        behaviors.instVars.DistancefromPlayer = ENGINE_MUST.calculateDistance(behaviors.x, behaviors.y, PrisonerMain.x, PrisonerMain.y)
+    for (var behaviors of GetChunchunFuckWayfarerccSDK.Runtime.objects.IntractBehaviorZone.instances()) {
+        behaviors.instVars.DistancefromPlayer = GetChunchunFuckWayfarerccSDK.CalculateDistancehahaShitCode(behaviors.x, behaviors.y, PrisonerMain.x, PrisonerMain.y)
 
     }
 
 
     // 把距离在触发范围内的互动物加入数组，大于触发范围内的移除数组
-    for (var behaviors of ENGINE_MUST.CORE.objects.IntractBehaviorZone.instances()) {
+    for (var behaviors of GetChunchunFuckWayfarerccSDK.Runtime.objects.IntractBehaviorZone.instances()) {
         if (behaviors.instVars.DistancefromPlayer <= 200) {
             IntractBehaviorZone_close_group.push(behaviors);
         }
@@ -99,28 +99,28 @@ ENGINE_MUST.LEVEL_TICK(() => {
     }, IntractBehaviorZone_close_group[0]);
 
     if (closeBehavior) {
-        ENGINE_MUST.CORE.globalVars.BehaviorInstanceUid = closeBehavior.uid;
+        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.BehaviorInstanceUid = closeBehavior.uid;
     }
 
     // 在数组没有互动物时，清空UID
     if (IntractBehaviorZone_close_group.length == 0) {
-        ENGINE_MUST.CORE.globalVars.BehaviorInstanceUid = 0
+        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.BehaviorInstanceUid = 0
     }
 
 
 })
 
-ENGINE_MUST.LEVEL_INIT(async () => {
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_space_keydown", () => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_space_keydown", () => {
         //console.log("Press Space to Intruct")
 
-        if (ENGINE_MUST.CORE.globalVars.BehaviorInstanceUid == 0) return;
-        if (ENGINE_MUST.CORE.globalVars.Dialogue_IsRunning) return
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.BehaviorInstanceUid == 0) return;
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning) return
 
         console.log("Behavior: type:IntractBehaviorZone is run")
 
         //@ts-ignoreleta
-        var behaviorInstance: InstanceType.IntractBehaviorZone = ENGINE_MUST.CORE.getInstanceByUid(ENGINE_MUST.CORE.globalVars.BehaviorInstanceUid);
+        var behaviorInstance: InstanceType.IntractBehaviorZone = GetChunchunFuckWayfarerccSDK.Runtime.getInstanceByUid(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.BehaviorInstanceUid);
         if (behaviorInstance == null) return;
 
         var is_touch_once = behaviorInstance.instVars.isTouceOnce;
@@ -154,7 +154,7 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 
     function StartBehavior(type: string, dialogue_name: string, npc_uid: number, function_name: string) {
         if (type == "dialogue") {
-            if (ENGINE_MUST.CORE.globalVars.Dialogue_IsRunning) return;
+            if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning) return;
             StartDialogue(dialogue_name, npc_uid)
         }
         if (type == "function") {

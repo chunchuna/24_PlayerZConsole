@@ -1,4 +1,4 @@
-import { ENGINE_MUST } from "../engine.js";
+import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { ConfigExecutor } from "./GLEvent.js";
 import { Fade } from "./GLFade.js"
 
@@ -10,11 +10,11 @@ import { Fade } from "./GLFade.js"
 // 
 
 // Fade 
-ENGINE_MUST.init(() => {
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     Fade.Fade_black_to_empty(2, 2);
 })
 
-ENGINE_MUST.LEVEL_INIT(() => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 
     console.log("Level Init Now")
 
@@ -27,8 +27,8 @@ ENGINE_MUST.LEVEL_INIT(() => {
 // 
 export var PrisonerMain: InstanceType.prisonerMain; // player
 
-ENGINE_MUST.LEVEL_INIT(() => {
-    PrisonerMain = ENGINE_MUST.CORE.objects.prisonerMain.getFirstInstance()!;
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+    PrisonerMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.prisonerMain.getFirstInstance()!;
 })
 
 
@@ -40,20 +40,20 @@ ENGINE_MUST.LEVEL_INIT(() => {
 
 var Save_Load_key = "game_save_key_default"
 
-ENGINE_MUST.LEVEL_INIT(async () => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_number0_keydown", () => {
-        ENGINE_MUST.CORE.callFunction("SaveGame", Save_Load_key)
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_number0_keydown", () => {
+        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("SaveGame", Save_Load_key)
         console.log("Game already save")
     })
 })
 
 
-ENGINE_MUST.LEVEL_INIT(async () => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 
-    if (ENGINE_MUST.CORE.globalVars.Load_is_LoadingState) {
-        ENGINE_MUST.CORE.callFunction("LoadGame", Save_Load_key)
-        ENGINE_MUST.CORE.globalVars.Load_is_LoadingState = false;
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState) {
+        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("LoadGame", Save_Load_key)
+        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState = false;
         console.log("Game already load")
 
     }
@@ -62,7 +62,7 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 
 // for debug
 
-ENGINE_MUST.init(async () => {
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
     // await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_z_keydown", () => {
     //     ENGINE_MUST.CORE.goToLayout("Menu")
     // })
@@ -76,22 +76,22 @@ ENGINE_MUST.init(async () => {
 //
 
 
-ENGINE_MUST.LEVEL_INIT(() => {
-    ENGINE_MUST.CORE.globalVars.Dialogue_IsRunning = false;
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning = false;
 })
 
 
-ENGINE_MUST.LEVEL_INIT(async () => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_space_keydown", () => {
-        if (ENGINE_MUST.CORE.globalVars.Dialogue_IsRunning) {
-            if (ENGINE_MUST.CORE.globalVars.Dialogue_WaitForInput == 1) {
-                ENGINE_MUST.CORE.callFunction("Dialogue_Continue");
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_space_keydown", () => {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning) {
+            if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_WaitForInput == 1) {
+                GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_Continue");
             } else {
-                if (ENGINE_MUST.CORE.globalVars.Dialogue_WaitForChoice == 1) {
-                    ENGINE_MUST.CORE.callFunction("Dialogue_ChoiceSelect", -1);
+                if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_WaitForChoice == 1) {
+                    GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_ChoiceSelect", -1);
                 } else {
-                    ENGINE_MUST.CORE.callFunction("Dialogue_SkipSequence")
+                    GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_SkipSequence")
 
                 }
 
@@ -104,8 +104,8 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 
 export async function StartDialogue(key: string, npc_uid: number) {
 
-    await ENGINE_MUST.waitTime(1);
-    ENGINE_MUST.CORE.callFunction("Dialogue_StartDialogue", key);
+    await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1);
+    GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_StartDialogue", key);
 
 }
 
@@ -121,17 +121,17 @@ var CAMERA_Z;
 
 var CAMERA_ANGEL;
 
-ENGINE_MUST.LEVEL_TICK(() => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
 
-    CAMERA_Z = ENGINE_MUST.CORE.globalVars.Camera_Z;
-    CAMERA_Y_OFFSET = ENGINE_MUST.CORE.globalVars.Camera_Y_Offest;
-    CAMERA_X_OFFSET = ENGINE_MUST.CORE.globalVars.Camera_X_Offest;
-    CAMERA_ANGEL = ENGINE_MUST.CORE.globalVars.Camera_Angel;
+    CAMERA_Z = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z;
+    CAMERA_Y_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest;
+    CAMERA_X_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
+    CAMERA_ANGEL = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Angel;
 
-    var CameraMain = ENGINE_MUST.CORE.objects.CameraMain;
+    var CameraMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.CameraMain;
     if (PrisonerMain == null) return;
 
-    var CameraOver = ENGINE_MUST.CORE.objects.camera_cover.getFirstInstance()!;
+    var CameraOver = GetChunchunFuckWayfarerccSDK.Runtime.objects.camera_cover.getFirstInstance()!;
 
     if (CameraMain) {
         //console.log("camera tick")
@@ -142,17 +142,17 @@ ENGINE_MUST.LEVEL_TICK(() => {
 })
 
 
-ENGINE_MUST.LEVEL_INIT(() => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 
     // 记录相机默认参数
-    ENGINE_MUST.CORE.globalVars.Camera_Angel_De = ENGINE_MUST.CORE.globalVars.Camera_Angel;
-    ENGINE_MUST.CORE.globalVars.Camera_X_Offest_De = ENGINE_MUST.CORE.globalVars.Camera_X_Offest;
-    ENGINE_MUST.CORE.globalVars.Camera_Y_Offest_De = ENGINE_MUST.CORE.globalVars.Camera_Y_Offest;
-    ENGINE_MUST.CORE.globalVars.Camera_Z_De = ENGINE_MUST.CORE.globalVars.Camera_Z;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Angel_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Angel;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z;
 })
 
 
-ENGINE_MUST.LEVEL_INIT(async () => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
     // debug 
     // await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_q_keydown", () => {
 
@@ -186,12 +186,12 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 })
 
 
-ENGINE_MUST.LEVEL_INIT(async () => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
     // 一个DEBUG窗口 用于相机的参数设置
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_q_keydown", () => {
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_q_keydown", () => {
 
 
-        if (ENGINE_MUST.CORE.globalVars.Function_WindowID == 999) {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
             CloseFunctionWindow();
         } else {
 
@@ -208,9 +208,9 @@ ENGINE_MUST.LEVEL_INIT(async () => {
             var OPT4: InstanceType.FunctionOPT = CameraDebugWindowOPT[4];
             //@ts-ignoreleta
             var OPT5: InstanceType.FunctionOPT = CameraDebugWindowOPT[5];
-            OPT1.text = "SET CAMERA_X  " + ENGINE_MUST.CORE.globalVars.Camera_X_Offest;
-            OPT2.text = "SET CAMERA_Y  " + ENGINE_MUST.CORE.globalVars.Camera_Y_Offest
-            OPT3.text = "SET CAMERA_Z  " + ENGINE_MUST.CORE.globalVars.Camera_Z
+            OPT1.text = "SET CAMERA_X  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
+            OPT2.text = "SET CAMERA_Y  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest
+            OPT3.text = "SET CAMERA_Z  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z
             OPT4.instVars.isEnable = false;
             OPT5.instVars.isEnable = false;
 
@@ -223,63 +223,63 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 
     var Scale = 60
 
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_a_keydown", () => {
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_a_keydown", () => {
 
-        var ChooseID = ENGINE_MUST.CORE.globalVars.Function_ID;
+        var ChooseID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID;
 
 
-        if (ENGINE_MUST.CORE.globalVars.Function_WindowID == 999) {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
 
             if (ChooseID == 1) {
-                ENGINE_MUST.CORE.globalVars.Camera_X_Offest -= Scale
+                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest -= Scale
 
             }
             if (ChooseID == 2) {
-                ENGINE_MUST.CORE.globalVars.Camera_Y_Offest -= Scale
+                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest -= Scale
             }
             if (ChooseID == 3) {
-                ENGINE_MUST.CORE.globalVars.Camera_Z -= Scale;
+                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z -= Scale;
             }
 
-            for (var Lables of ENGINE_MUST.CORE.objects.FunctionOPT.instances()) {
+            for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
                 if (Lables.instVars.id == 1) {
-                    Lables.text = "Set CAMERA_X  " + ENGINE_MUST.CORE.globalVars.Camera_X_Offest;
+                    Lables.text = "Set CAMERA_X  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
                 }
                 if (Lables.instVars.id == 2) {
-                    Lables.text = "Set CAMERA_Y  " + ENGINE_MUST.CORE.globalVars.Camera_Y_Offest
+                    Lables.text = "Set CAMERA_Y  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest
                 }
                 if (Lables.instVars.id == 3) {
-                    Lables.text = "Set CAMERA_Z  " + ENGINE_MUST.CORE.globalVars.Camera_Z
+                    Lables.text = "Set CAMERA_Z  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z
                 }
             }
         }
 
     })
 
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_d_keydown", () => {
-        var ChooseID = ENGINE_MUST.CORE.globalVars.Function_ID;
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_d_keydown", () => {
+        var ChooseID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID;
 
-        if (ENGINE_MUST.CORE.globalVars.Function_WindowID == 999) {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
 
             if (ChooseID == 1) {
-                ENGINE_MUST.CORE.globalVars.Camera_X_Offest += Scale
+                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest += Scale
             }
             if (ChooseID == 2) {
-                ENGINE_MUST.CORE.globalVars.Camera_Y_Offest += Scale
+                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest += Scale
             }
             if (ChooseID == 3) {
-                ENGINE_MUST.CORE.globalVars.Camera_Z += Scale;
+                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z += Scale;
             }
 
-            for (var Lables of ENGINE_MUST.CORE.objects.FunctionOPT.instances()) {
+            for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
                 if (Lables.instVars.id == 1) {
-                    Lables.text = "Set CAMERA_X  " + ENGINE_MUST.CORE.globalVars.Camera_X_Offest;
+                    Lables.text = "Set CAMERA_X  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
                 }
                 if (Lables.instVars.id == 2) {
-                    Lables.text = "Set CAMERA_Y  " + ENGINE_MUST.CORE.globalVars.Camera_Y_Offest
+                    Lables.text = "Set CAMERA_Y  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest
                 }
                 if (Lables.instVars.id == 3) {
-                    Lables.text = "Set CAMERA_Z  " + ENGINE_MUST.CORE.globalVars.Camera_Z
+                    Lables.text = "Set CAMERA_Z  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z
                 }
             }
         }
@@ -374,7 +374,7 @@ ENGINE_MUST.LEVEL_INIT(async () => {
 var FunctionWindow_LABLES: InstanceType.FunctionOPT[];
 
 
-ENGINE_MUST.LEVEL_INIT(() => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
     CloseFunctionWindow();
 
     // 创建窗口范例
@@ -401,33 +401,33 @@ ENGINE_MUST.LEVEL_INIT(() => {
 })
 
 
-ENGINE_MUST.init(async () => {
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
 
     FunctionWindow_LABLES = [];
 
 
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_w_keydown", () => {
-        if (ENGINE_MUST.CORE.globalVars.Function_WindowID == 0) return;
-        if (!ENGINE_MUST.CORE.globalVars.Function_WindowEnable) return;
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_w_keydown", () => {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 0) return;
+        if (!GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable) return;
 
-        if (ENGINE_MUST.CORE.globalVars.Function_ID > 1) {
-            ENGINE_MUST.CORE.globalVars.Function_ID -= 1;
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID > 1) {
+            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID -= 1;
 
         } else {
-            ENGINE_MUST.CORE.globalVars.Function_ID = ENGINE_MUST.CORE.globalVars.Function_OPT_Count
+            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_OPT_Count
         }
 
 
     })
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_s_keydown", () => {
-        if (ENGINE_MUST.CORE.globalVars.Function_WindowID == 0) return;
-        if (!ENGINE_MUST.CORE.globalVars.Function_WindowEnable) return;
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_s_keydown", () => {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 0) return;
+        if (!GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable) return;
 
-        if (ENGINE_MUST.CORE.globalVars.Function_ID < ENGINE_MUST.CORE.globalVars.Function_OPT_Count) {
-            ENGINE_MUST.CORE.globalVars.Function_ID += 1;
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID < GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_OPT_Count) {
+            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID += 1;
 
         } else {
-            ENGINE_MUST.CORE.globalVars.Function_ID = 1;
+            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = 1;
         }
 
     })
@@ -436,11 +436,11 @@ ENGINE_MUST.init(async () => {
 })
 
 
-ENGINE_MUST.tick(() => {
+GetChunchunFuckWayfarerccSDK.OntheFuckEverTickFrame(() => {
 
-    ENGINE_MUST.CORE.globalVars.Function_OPT_Count = FunctionWindow_LABLES.length;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_OPT_Count = FunctionWindow_LABLES.length;
 
-    for (var Lables of ENGINE_MUST.CORE.objects.FunctionOPT.instances()) {
+    for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
 
         if (Lables.instVars.isEnable) {
             Lables.isVisible = true;
@@ -449,7 +449,7 @@ ENGINE_MUST.tick(() => {
         }
 
 
-        if (Lables.instVars.id == ENGINE_MUST.CORE.globalVars.Function_ID) {
+        if (Lables.instVars.id == GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID) {
             Lables.fontColor = [241 / 256, 254 / 256, 52 / 256]
         } else {
             Lables.fontColor = [1, 1, 1]
@@ -461,15 +461,15 @@ ENGINE_MUST.tick(() => {
 })
 
 function CreatFunctionWindow(pox: number, poy: number, windowID: number) {
-    if (ENGINE_MUST.CORE.globalVars.Function_WindowEnable) return;
-    if (ENGINE_MUST.CORE.globalVars.Dialogue_IsRunning) return;
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable) return;
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning) return;
 
 
-    var FunctionWindow = ENGINE_MUST.CORE.objects.FunctionWindow.createInstance("FunctionWindow", pox, poy, true, "mob")
+    var FunctionWindow = GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionWindow.createInstance("FunctionWindow", pox, poy, true, "mob")
 
-    ENGINE_MUST.CORE.globalVars.Function_WindowEnable = true;
-    ENGINE_MUST.CORE.globalVars.Function_WindowID = windowID;
-    ENGINE_MUST.CORE.globalVars.Function_ID = 1;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable = true;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID = windowID;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = 1;
 
     console.log(FunctionWindow);
     console.log(FunctionWindow.getChildAt(0)?.uid);
@@ -503,17 +503,17 @@ function GTBUID(UID: number): InstanceType.FunctionOPT {
 
     console.log(UID);
     //@ts-ignore
-    return ENGINE_MUST.CORE.getInstanceByUid(UID);
+    return GetChunchunFuckWayfarerccSDK.Runtime.getInstanceByUid(UID);
 }
 
 
 function CloseFunctionWindow() {
-    var FunctionWindow = ENGINE_MUST.CORE.objects.FunctionWindow.getFirstInstance();
+    var FunctionWindow = GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionWindow.getFirstInstance();
     FunctionWindow?.destroy();
 
-    ENGINE_MUST.CORE.globalVars.Function_WindowEnable = false;
-    ENGINE_MUST.CORE.globalVars.Function_WindowID = 0;
-    ENGINE_MUST.CORE.globalVars.Function_ID = 0;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable = false;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID = 0;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = 0;
     if (FunctionWindow_LABLES) {
         FunctionWindow_LABLES.length = 0;
     }
@@ -523,7 +523,7 @@ function CloseFunctionWindow() {
 
 function CheckOPTCount() {
 
-    for (var Lables of ENGINE_MUST.CORE.objects.FunctionOPT.instances()) {
+    for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
 
         if (Lables.instVars.isEnable) {
             FunctionWindow_LABLES.push(Lables);
@@ -544,12 +544,12 @@ function CheckOPTCount() {
 //
 var GameVariblesInstance: InstanceType.GameVariables;
 
-ENGINE_MUST.LEVEL_INIT(() => {
-    GameVariblesInstance = ENGINE_MUST.CORE.objects.GameVariables.getFirstInstance()!;
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+    GameVariblesInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.GameVariables.getFirstInstance()!;
 
 })
 
-ENGINE_MUST.LEVEL_TICK(async () => {
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(async () => {
 
     if (GameVariblesInstance == null) return;
     var map = GameVariblesInstance.getDataMap();
@@ -557,12 +557,12 @@ ENGINE_MUST.LEVEL_TICK(async () => {
         return
     } else {
 
-        if (!ENGINE_MUST.CORE.globalVars.End_TriggerEnd) {
+        if (!GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd) {
 
-            ENGINE_MUST.CORE.globalVars.End_TriggerEnd = true;
+            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd = true;
             Fade.Fade_Empty_to_black(2, 3)
-            await ENGINE_MUST.waitTime(3500)
-            ENGINE_MUST.CORE.goToLayout("End");
+            await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(3500)
+            GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("End");
 
         }
 
@@ -576,16 +576,16 @@ ENGINE_MUST.LEVEL_TICK(async () => {
 
 var EndingTitleTextInstance: InstanceType.EndTitle;
 
-ENGINE_MUST.init(() => {
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
 
-    ENGINE_MUST.CORE.globalVars.End_TriggerEnd = false;
+    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd = false;
 })
 
-ENGINE_MUST.init(() => {
-    if (ENGINE_MUST.CORE.globalVars.GameType != "End") return;
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "End") return;
 
     //@ts-ignoreleta
-    EndingTitleTextInstance = ENGINE_MUST.CORE.objects.EndTitle.getFirstPickedInstance();
+    EndingTitleTextInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EndTitle.getFirstPickedInstance();
 
     if (GameVariblesInstance == null) return;
     var map = GameVariblesInstance.getDataMap();
@@ -594,38 +594,38 @@ ENGINE_MUST.init(() => {
 
     if (endindex != 0) {
         if (endindex == 1) {
-            EndingTitleTextInstance.typewriterText(ENGINE_MUST.CORE.globalVars.End_Des_Text1, 8)
+            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text1, 8)
         }
 
         if (endindex == 2) {
-            EndingTitleTextInstance.typewriterText(ENGINE_MUST.CORE.globalVars.End_Des_Text2, 12)
+            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text2, 12)
         }
 
         if (endindex == 3) {
-            EndingTitleTextInstance.typewriterText(ENGINE_MUST.CORE.globalVars.End_Des_Text3, 8)
+            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text3, 8)
         }
         if (endindex == 4) {
-            EndingTitleTextInstance.typewriterText(ENGINE_MUST.CORE.globalVars.End_Des_Text4, 8)
+            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text4, 8)
         }
     }
 
 })
 
-ENGINE_MUST.init(async () => {
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
 
-    if (ENGINE_MUST.CORE.globalVars.GameType != "End") return;
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "End") return;
     //console.log(ENGINE_MUST.EVENT_HANDLER)
-    await ENGINE_MUST.waitTime(2000);
+    await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2000);
 
 
-    await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_anykey_keydown", async () => {
-        if (ENGINE_MUST.CORE.globalVars.GameType != "End") return;
+    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_anykey_keydown", async () => {
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "End") return;
 
-        if (ENGINE_MUST.CORE.globalVars.Fade_is_Fading) return;
+        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading) return;
 
         Fade.Fade_Empty_to_black(1, 3);
-        await ENGINE_MUST.waitTime(3000);
-        ENGINE_MUST.CORE.goToLayout("MENU");
+        await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(3000);
+        GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("MENU");
 
     })
 
