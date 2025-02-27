@@ -61,7 +61,7 @@
 							}
 						},
 						{
-							"type": "ground",
+							"type": "Dirt_03",
 							"properties": {
 								"initially-visible": true,
 								"origin": "top-left",
@@ -80,12 +80,12 @@
 								"blend-margin-y": 0.1
 							},
 							"uid": 21,
-							"sid": 298782491295047,
+							"sid": 606032382566684,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 298782491295047,
+								"sid": 606032382566684,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -94,10 +94,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 7925,
-								"y": 7004,
-								"width": 1496,
-								"height": 1876,
+								"x": 6204,
+								"y": 7020,
+								"width": 3910,
+								"height": 3574,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -678,6 +678,822 @@
 							}
 						},
 						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 28,
+							"sid": 511969467366194,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 511969467366194,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7442,
+								"y": 8882,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject2",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree2.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 49,
+							"sid": 189041405848523,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 189041405848523,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7813,
+								"y": 8960,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 51,
+							"sid": 338914110511988,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 338914110511988,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7519,
+								"y": 9244,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 52,
+							"sid": 740927726599066,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 740927726599066,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 8156,
+								"y": 9324,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 53,
+							"sid": 332009336833218,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 332009336833218,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 8600,
+								"y": 8756,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 54,
+							"sid": 894143043672042,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 894143043672042,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 8671,
+								"y": 9218,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 55,
+							"sid": 635681245364430,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 635681245364430,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 6901,
+								"y": 8081,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 56,
+							"sid": 826858521694099,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 826858521694099,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7281,
+								"y": 8050,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 57,
+							"sid": 758753137809407,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 758753137809407,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 6408,
+								"y": 8285,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 58,
+							"sid": 489572287335591,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 489572287335591,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 6541,
+								"y": 8012,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 59,
+							"sid": 373182281106437,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 373182281106437,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 6636,
+								"y": 8201,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 60,
+							"sid": 702788385913674,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 702788385913674,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 6143,
+								"y": 8518,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 61,
+							"sid": 573632738564402,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 573632738564402,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 6132,
+								"y": 8145,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 62,
+							"sid": 996277974669495,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 996277974669495,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 6367,
+								"y": 8522,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 63,
+							"sid": 259186292407639,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 259186292407639,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7120,
+								"y": 9388,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "TreeObject",
+							"properties": {
+								"scale": "40",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/Tree1.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 64,
+							"sid": 366589760003187,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 366589760003187,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 7291,
+								"y": 9170,
+								"width": 622.5749588012695,
+								"height": 563.1635093688965,
+								"originX": -0.69253522686199,
+								"originY": 0.6431970250477994,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
 							"type": "BackpackManNPCUse",
 							"properties": {
 								"scale": "200",
@@ -729,6 +1545,57 @@
 							}
 						},
 						{
+							"type": "BigHouse1",
+							"properties": {
+								"scale": "1000",
+								"z-elevation": 0,
+								"angle-x": -90,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "Object/bighouse.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 47,
+							"sid": 264392901026779,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 264392901026779,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 9034,
+								"y": 7769,
+								"width": 729.3478846549988,
+								"height": 952.4121582508087,
+								"originX": 0.5020728273048988,
+								"originY": 0.49809652768887974,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 273.22213498828125
+							}
+						},
+						{
 							"type": "BigHouse2",
 							"properties": {
 								"scale": "1000",
@@ -764,8 +1631,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 7110,
-								"y": 9299,
+								"x": 6905,
+								"y": 9582,
 								"width": 876.0207295417786,
 								"height": 951.4541923999786,
 								"originX": 0.5077922383661256,
@@ -776,58 +1643,7 @@
 									1,
 									1
 								],
-								"zElevation": 321.33328148242185
-							}
-						},
-						{
-							"type": "BigHouse1",
-							"properties": {
-								"scale": "1500",
-								"z-elevation": 0,
-								"angle-x": -90,
-								"angle-y": 0,
-								"angle-z": 0,
-								"rotation-order": "xyz",
-								"gtlf-path": "Object/bighouse.glb",
-								"debug": false,
-								"animation-blend": 0,
-								"instance-model": false,
-								"image-texture": false,
-								"x-scale": 1,
-								"y-scale": 1,
-								"z-scale": 1,
-								"wireframe": false,
-								"worker-animation": false,
-								"cpu-xform": false
-							},
-							"uid": 47,
-							"sid": 264392901026779,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 264392901026779,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 8618,
-								"y": 7971,
-								"width": 1094.0218269824982,
-								"height": 1428.618237376213,
-								"originX": 0.5020728273048988,
-								"originY": 0.49809652768887974,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 448.5555257412109
+								"zElevation": 332.6665479882812
 							}
 						}
 					],
@@ -1494,13 +2310,6 @@
 				"folderNestingLevel": -1
 			},
 			{
-				"sid": 298782491295047,
-				"expanded": true,
-				"folderName": "",
-				"indexInFolder": -1,
-				"folderNestingLevel": -1
-			},
-			{
 				"sid": 942678233036569,
 				"expanded": true,
 				"folderName": "",
@@ -1530,6 +2339,125 @@
 			},
 			{
 				"sid": 608313481097411,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 511969467366194,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 259186292407639,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 366589760003187,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 635681245364430,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 826858521694099,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 758753137809407,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 489572287335591,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 373182281106437,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 702788385913674,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 573632738564402,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 996277974669495,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 338914110511988,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 740927726599066,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 332009336833218,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 894143043672042,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 189041405848523,
+				"expanded": true,
+				"folderName": "",
+				"indexInFolder": -1,
+				"folderNestingLevel": -1
+			},
+			{
+				"sid": 606032382566684,
 				"expanded": true,
 				"folderName": "",
 				"indexInFolder": -1,

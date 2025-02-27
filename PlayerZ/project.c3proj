@@ -267,7 +267,8 @@
 					"TouchBehaviorZone",
 					"wall",
 					"GroundGrid",
-					"Mouse"
+					"Mouse",
+					"Dirt_03"
 				],
 				"subfolders": [],
 				"name": "Obj"
@@ -285,7 +286,9 @@
 					"BigHouse1",
 					"BigHouse2",
 					"ManWithBackpackNPCUse",
-					"RolePlayerUse"
+					"RolePlayerUse",
+					"TreeObject",
+					"TreeObject2"
 				],
 				"subfolders": [],
 				"name": "3DObject"
@@ -569,6 +572,22 @@
 							"name": "NakedManBackpack.glb",
 							"type": "application/octet-stream",
 							"sid": 245682320835865,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Tree1.glb",
+							"type": "application/octet-stream",
+							"sid": 119462918186182,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Tree2.glb",
+							"type": "application/octet-stream",
+							"sid": 597299300297913,
 							"file-info": {
 								"purpose": "none"
 							}

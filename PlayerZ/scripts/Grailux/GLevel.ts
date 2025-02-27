@@ -42,7 +42,7 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     var FogexponentialEffect: IEffectInstance | undefined = LevelLayer.effects[0];
     console.log(FogexponentialEffect);
     FogexponentialEffect?.setParameter(2, 1800);
-    FogexponentialEffect?.setParameter(0, RGB_Cyberpunk)
+    FogexponentialEffect?.setParameter(0, RGB_DAY)
 
     CommandPlatform.Print("[Fog exponential] 重新设置场景雾距离参数")
     CommandPlatform.Print(String(FogexponentialEffect?.getParameter(2)));
@@ -56,7 +56,7 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     if (vignetteLayer == null) return;
 // @ts-ignore
     var VignetteEffect: IEffectInstance | undefined = vignetteLayer.effects[0];
-    vignetteLayer.backgroundColor = RGB_Cyberpunk;
+    vignetteLayer.backgroundColor = RGB_DAY;
 
 
 })
