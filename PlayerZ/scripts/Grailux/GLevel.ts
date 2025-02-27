@@ -156,30 +156,53 @@ export async function StartDialogue(key: string, npc_uid: number) {
 // Camera 3D
 //
 // 
-// 
+//
+
 var CAMERA_X_OFFSET;
 var CAMERA_Y_OFFSET;
 var CAMERA_Z;
 
-var CAMERA_ANGEL;
+export class TakeAbsoluteControlOf3DCamera {
+    public static JsutHookCameraAngelSettingForFun(X: number, Y: number, Z: number) {
+        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest = X
+        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest = Y
+        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z = Z
+    }
+
+    public static CameraFocusPlayerWithDistanceAndAngle() {
+        CAMERA_Z = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z;
+        CAMERA_Y_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest;
+        CAMERA_X_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
+
+        var CameraMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.CameraMain;
+        if (PlayerMainInstance == null) return;
+
+        var CameraOver = GetChunchunFuckWayfarerccSDK.Runtime.objects.camera_cover.getFirstInstance()!;
+
+        if (CameraMain) {
+            //console.log("camera tick")
+            CameraMain.lookAtPosition(PlayerMainInstance.x + CAMERA_X_OFFSET, PlayerMainInstance.y + CAMERA_Y_OFFSET, CAMERA_Z, PlayerMainInstance.x, PlayerMainInstance.y, 50, 0, 0, 1)
+
+        }
+    }
+}
+
 
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
+    TakeAbsoluteControlOf3DCamera.CameraFocusPlayerWithDistanceAndAngle();
+})
 
-    CAMERA_Z = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z;
-    CAMERA_Y_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest;
-    CAMERA_X_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
-    CAMERA_ANGEL = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Angel;
 
-    var CameraMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.CameraMain;
-    if (PlayerMainInstance == null) return;
+GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+    /** 注入自定义相机参数 **/
 
-    var CameraOver = GetChunchunFuckWayfarerccSDK.Runtime.objects.camera_cover.getFirstInstance()!;
+    var CAMERA_SETTING_SUPPER_LOW_FOV = [0, 480, 230]
+    var CAMERA_SETTING_SUPPER_LOW_FOV_ANGEL = [180, 480, 230]
+    var CAMERA_SETTING_MIDDLE_FOV = [0, 780, 530]
+    var CAMERA_SETTING_TOP_VIEW_FOV = [0, 780, 1070]
+    var CAMERA_SETTING_TOP_DOWN_VIEW_FOV = [0, 60, 1490]
 
-    if (CameraMain) {
-        //console.log("camera tick")
-        CameraMain.lookAtPosition(PlayerMainInstance.x + CAMERA_X_OFFSET, PlayerMainInstance.y + CAMERA_Y_OFFSET, CAMERA_Z, PlayerMainInstance.x, PlayerMainInstance.y, 50, 0, 0, 1)
-
-    }
+    TakeAbsoluteControlOf3DCamera.JsutHookCameraAngelSettingForFun(CAMERA_SETTING_SUPPER_LOW_FOV[0], CAMERA_SETTING_SUPPER_LOW_FOV[1], CAMERA_SETTING_MIDDLE_FOV[2])
 
 })
 
