@@ -14,8 +14,12 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
     console.log("[Level Layout] Level Init Now");
 });
-// Fog
+// VFX
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+    /** FOG **/
+    var RGB_DAY = [255 / 255, 255 / 255, 255 / 255];
+    var RGB_NIGHT = [0 / 255, 0 / 255, 0 / 255];
+    var RGB_Cyberpunk = [255 / 255, 255 / 2555, 255 / 255];
     if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Level")
         return;
     var LevelLayer = GetChunchunFuckWayfarerccSDK.Runtime.layout.getLayer("level");
@@ -25,9 +29,17 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     var FogexponentialEffect = LevelLayer.effects[0];
     console.log(FogexponentialEffect);
     FogexponentialEffect?.setParameter(2, 1800);
-    FogexponentialEffect?.setParameter(0, [0 / 255, 0 / 255, 0 / 255]);
-    CommandPlatform.Print("[Fogexponential] 重新设置场景雾距离参数");
+    FogexponentialEffect?.setParameter(0, RGB_Cyberpunk);
+    CommandPlatform.Print("[Fog exponential] 重新设置场景雾距离参数");
     CommandPlatform.Print(String(FogexponentialEffect?.getParameter(2)));
+    /** VIGNETTE **/
+    var RGB_NIGHT_FORVIGNETTE = [69 / 255, 69 / 255, 69 / 255];
+    var vignetteLayer = GetChunchunFuckWayfarerccSDK.Runtime.layout.getLayer("vignette");
+    if (vignetteLayer == null)
+        return;
+    // @ts-ignore
+    var VignetteEffect = vignetteLayer.effects[0];
+    vignetteLayer.backgroundColor = RGB_Cyberpunk;
 });
 //-----------------------------------------------------------------------------
 // Player
