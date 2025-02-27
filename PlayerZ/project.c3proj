@@ -186,16 +186,9 @@
 		},
 		{
 			"type": "effect",
-			"id": "darken",
-			"name": "Darken",
+			"id": "fogexponential",
+			"name": "Fog (exponential)",
 			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "effect",
-			"id": "vignette",
-			"name": "Vignette",
-			"author": "Brad Larson",
 			"bundled": false
 		}
 	],
@@ -546,14 +539,6 @@
 							"name": "bighouse2.glb",
 							"type": "application/octet-stream",
 							"sid": 284119401213039,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "prisoner.glb",
-							"type": "application/octet-stream",
-							"sid": 552656223121998,
 							"file-info": {
 								"purpose": "none"
 							}

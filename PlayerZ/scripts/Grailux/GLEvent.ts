@@ -1,7 +1,7 @@
 import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { StartDialogue } from "./GLevel.js"
 
-import { Fade } from "./GLFade.js";
+import { LayoutTransitionScreenEffect } from "./GLFade.js";
 
 
 const functionMap: { [key: string]: (...args: any[]) => void } = {
@@ -12,7 +12,7 @@ const functionMap: { [key: string]: (...args: any[]) => void } = {
 // Function that calls another function based on a string key, with arguments
 export function ConfigExecutor(functionName: string, ...args: any[]) {
     const func = functionMap[functionName];
-    console.log("正在执行conifg:" + functionName)
+    console.log("[ConfigExecutor] 正在执行conifg:" + functionName)
     if (func) {
         func(...args);
     } else {

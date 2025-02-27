@@ -1,5 +1,5 @@
 import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
-import { PrisonerMain } from "./GLevel.js";
+import { PlayerMainInstance } from "./GLevel.js";
 import { ConfigExecutor } from "./GLEvent.js";
 import { StartDialogue } from "./GLevel.js";
 
@@ -10,10 +10,10 @@ import { StartDialogue } from "./GLevel.js";
 // 
 
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
-    if (PrisonerMain == null) return;
+    if (PlayerMainInstance == null) return;
 
     for (var touchBehaviorZones of GetChunchunFuckWayfarerccSDK.Runtime.objects.TouchBehaviorZone.instances()) {
-        if (PrisonerMain.testOverlap(touchBehaviorZones)) {
+        if (PlayerMainInstance.testOverlap(touchBehaviorZones)) {
             if (touchBehaviorZones.instVars.isTestOverLapDoing) { return } else {
                 touchBehaviorZones.instVars.isTestOverLapDoing = true;
                 if (touchBehaviorZones.instVars.isTouchOnce) {
@@ -34,7 +34,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
     }
 
     for (var touchBehaviorZones of GetChunchunFuckWayfarerccSDK.Runtime.objects.TouchBehaviorZone.instances()) {
-        if (!PrisonerMain.testOverlap(touchBehaviorZones)) {
+        if (!PlayerMainInstance.testOverlap(touchBehaviorZones)) {
             touchBehaviorZones.instVars.isTestOverLapDoing = false;
         }
     }
@@ -69,11 +69,11 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 
 
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
-    if (PrisonerMain == null) return;
+    if (PlayerMainInstance == null) return;
 
     // 实时计算与玩家的距离
     for (var behaviors of GetChunchunFuckWayfarerccSDK.Runtime.objects.IntractBehaviorZone.instances()) {
-        behaviors.instVars.DistancefromPlayer = GetChunchunFuckWayfarerccSDK.CalculateDistancehahaShitCode(behaviors.x, behaviors.y, PrisonerMain.x, PrisonerMain.y)
+        behaviors.instVars.DistancefromPlayer = GetChunchunFuckWayfarerccSDK.CalculateDistancehahaShitCode(behaviors.x, behaviors.y, PlayerMainInstance.x, PlayerMainInstance.y)
 
     }
 
@@ -111,6 +111,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
 })
 
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+    // @ts-ignore
     await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_space_keydown", () => {
         //console.log("Press Space to Intruct")
 

@@ -1,6 +1,10 @@
 // Engine here
 var _a;
 export class GetChunchunFuckWayfarerccSDK {
+    // 手动重新获取Handler
+    static TryGetHandlerAgainFuckThisHandler() {
+        _a.GetConstruct3EventHandlerInstance = _a.Runtime.objects.EventHandler.getFirstInstance();
+    }
 }
 _a = GetChunchunFuckWayfarerccSDK;
 GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime = (ms) => new Promise(res => setTimeout(res, ms));
@@ -39,8 +43,14 @@ GetChunchunFuckWayfarerccSDK.CalculateDistancehahaShitCode = (x1, y1, x2, y2) =>
 };
 runOnStartup(async (runtime) => {
     GetChunchunFuckWayfarerccSDK.Runtime = runtime;
+    GetChunchunFuckWayfarerccSDK.TryGetHandlerAgainFuckThisHandler();
 });
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     //@ts-ignore
     GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EventHandler.getFirstInstance();
+    console.log("[engine] handler" + GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance);
+    if (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance == null) {
+        GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EventHandler.getFirstInstance();
+        console.log("[engine] try agagin get handler");
+    }
 });

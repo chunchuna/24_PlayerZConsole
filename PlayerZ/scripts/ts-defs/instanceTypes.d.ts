@@ -171,19 +171,15 @@ declare namespace InstanceType {
 	}
 	class InGameConsole extends C3.Plugins.MixonGames_EasyInGameConsole.Instance {
 	}
-	class BackpackMan extends IWorldInstance {
+	class BackpackManNPCUse extends IWorldInstance {
 	}
 	class BigHouse1 extends IWorldInstance {
 	}
 	class BigHouse2 extends IWorldInstance {
 	}
-	class prisoner3dobject extends IWorldInstance {
+	class ManWithBackpackNPCUse extends IWorldInstance {
 	}
-	class Man extends IWorldInstance {
-	}
-	class ManUpdate extends IWorldInstance {
-	}
-	class ManSEC extends IWorldInstance {
+	class RolePlayerUse extends IWorldInstance {
 	}
 	class __f_3d_solidBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;

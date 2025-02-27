@@ -1536,7 +1536,7 @@
 						"rotation-order": "xyz",
 						"gtlf-path": "Object/NakedManBackpack.glb",
 						"debug": false,
-						"animation-blend": 0.23,
+						"animation-blend": 0.12,
 						"instance-model": false,
 						"image-texture": false,
 						"x-scale": 1,

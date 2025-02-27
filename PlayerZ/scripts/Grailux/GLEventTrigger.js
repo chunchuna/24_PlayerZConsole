@@ -1,5 +1,5 @@
 import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
-import { PrisonerMain } from "./GLevel.js";
+import { PlayerMainInstance } from "./GLevel.js";
 import { ConfigExecutor } from "./GLEvent.js";
 import { StartDialogue } from "./GLevel.js";
 //-----------------------------------------------------------------------------
@@ -8,10 +8,10 @@ import { StartDialogue } from "./GLevel.js";
 // 
 // 
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
-    if (PrisonerMain == null)
+    if (PlayerMainInstance == null)
         return;
     for (var touchBehaviorZones of GetChunchunFuckWayfarerccSDK.Runtime.objects.TouchBehaviorZone.instances()) {
-        if (PrisonerMain.testOverlap(touchBehaviorZones)) {
+        if (PlayerMainInstance.testOverlap(touchBehaviorZones)) {
             if (touchBehaviorZones.instVars.isTestOverLapDoing) {
                 return;
             }
@@ -32,7 +32,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
         }
     }
     for (var touchBehaviorZones of GetChunchunFuckWayfarerccSDK.Runtime.objects.TouchBehaviorZone.instances()) {
-        if (!PrisonerMain.testOverlap(touchBehaviorZones)) {
+        if (!PlayerMainInstance.testOverlap(touchBehaviorZones)) {
             touchBehaviorZones.instVars.isTestOverLapDoing = false;
         }
     }
@@ -55,11 +55,11 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
     IntractBehaviorZone_close_group = [];
 });
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
-    if (PrisonerMain == null)
+    if (PlayerMainInstance == null)
         return;
     // 实时计算与玩家的距离
     for (var behaviors of GetChunchunFuckWayfarerccSDK.Runtime.objects.IntractBehaviorZone.instances()) {
-        behaviors.instVars.DistancefromPlayer = GetChunchunFuckWayfarerccSDK.CalculateDistancehahaShitCode(behaviors.x, behaviors.y, PrisonerMain.x, PrisonerMain.y);
+        behaviors.instVars.DistancefromPlayer = GetChunchunFuckWayfarerccSDK.CalculateDistancehahaShitCode(behaviors.x, behaviors.y, PlayerMainInstance.x, PlayerMainInstance.y);
     }
     // 把距离在触发范围内的互动物加入数组，大于触发范围内的移除数组
     for (var behaviors of GetChunchunFuckWayfarerccSDK.Runtime.objects.IntractBehaviorZone.instances()) {
@@ -85,6 +85,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
     }
 });
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_space_keydown", () => {
         //console.log("Press Space to Intruct")
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.BehaviorInstanceUid == 0)

@@ -7,25 +7,25 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     if (FadeSprite == null) return;
     FadeSprite?.behaviors.Fading.addEventListener("fadeinend", () => {
         GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading = false;
-        console.log("Fadein is end")
+        console.log("[LayoutTransitionScreenEffect] Fadein is end")
 
     })
 
     FadeSprite?.behaviors.Fading.addEventListener("fadeoutend", () => {
         GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading = false;
-        console.log("Fadeoutis end")
+        console.log("[LayoutTransitionScreenEffect] Fade out is end")
 
     })
 
 })
 
 
-export class Fade {
+export class LayoutTransitionScreenEffect {
 
-    static Fade_black_to_empty(time: number, waittime: number) {
+    static BlackToEmptyEffect(time: number, waittime: number) {
         FadeSprite = GetChunchunFuckWayfarerccSDK.Runtime.objects.FadeSprite.getFirstInstance();
         if (FadeSprite == null) {
-            console.log("FadeSprite not found");
+            console.log("[LayoutTransitionScreenEffect] FadeSprite not found");
             return
         }
 
@@ -38,11 +38,11 @@ export class Fade {
         GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading = true;
     }
 
-    static Fade_Empty_to_black(time: number, waittime: number) {
+    static EmptyToBlackEffect(time: number, waittime: number) {
 
         FadeSprite = GetChunchunFuckWayfarerccSDK.Runtime.objects.FadeSprite.getFirstInstance();
         if (FadeSprite == null) {
-            console.log("FadeSprite not found");
+            console.log("[LayoutTransitionScreenEffect] FadeSprite not found");
             return
         }
 

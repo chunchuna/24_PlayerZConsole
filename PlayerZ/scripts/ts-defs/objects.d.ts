@@ -45,13 +45,11 @@ declare class IConstructProjectObjects {
 	readonly GroundGrid: IObjectType<InstanceType.GroundGrid>;
 	readonly Mouse: IMouseObjectType<InstanceType.Mouse>;
 	readonly InGameConsole: C3.Plugins.MixonGames_EasyInGameConsole.Type<InstanceType.InGameConsole>;
-	readonly BackpackMan: IObjectType<InstanceType.BackpackMan>;
+	readonly BackpackManNPCUse: IObjectType<InstanceType.BackpackManNPCUse>;
 	readonly BigHouse1: IObjectType<InstanceType.BigHouse1>;
 	readonly BigHouse2: IObjectType<InstanceType.BigHouse2>;
-	readonly prisoner3dobject: IObjectType<InstanceType.prisoner3dobject>;
-	readonly Man: IObjectType<InstanceType.Man>;
-	readonly ManUpdate: IObjectType<InstanceType.ManUpdate>;
-	readonly ManSEC: IObjectType<InstanceType.ManSEC>;
+	readonly ManWithBackpackNPCUse: IObjectType<InstanceType.ManWithBackpackNPCUse>;
+	readonly RolePlayerUse: IObjectType<InstanceType.RolePlayerUse>;
 	readonly f_3d_solid: IFamily<InstanceType.f_3d_solid>;
 	readonly f_3d_solid2: IFamily<InstanceType.f_3d_solid2>;
 	readonly f_3d: IFamily<InstanceType.f_3d>;

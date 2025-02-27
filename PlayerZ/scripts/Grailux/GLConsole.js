@@ -1,5 +1,5 @@
 import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
-import { Fade } from "./GLFade.js";
+import { LayoutTransitionScreenEffect } from "./GLFade.js";
 export class CommandPlatform {
     static OpenConsolePlatformPanel() {
         GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleOpen");
@@ -18,5 +18,5 @@ export class CommandPlatform {
     }
 }
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
-    console.log(" console init");
+    console.log(" [CommandPlatform] console init");
 });

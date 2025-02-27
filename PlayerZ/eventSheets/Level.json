@@ -42,21 +42,30 @@
 							],
 							"actions": [
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 592678580854560,
-									"parameters": {
-										"seconds": "1",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "stop-animation",
+									"id": "play-animation",
 									"objectClass": "RolePlayerUse",
-									"sid": 332750470725493
+									"sid": 622339226797332,
+									"parameters": {
+										"animation": "\"idle\"",
+										"loop": true
+									}
 								}
 							],
-							"sid": 269519172220846
+							"sid": 269519172220846,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 878201132548733
+										}
+									],
+									"actions": [],
+									"sid": 628604456812708
+								}
+							]
 						}
 					],
 					"sid": 289932277791127
@@ -1549,9 +1558,18 @@
 						{
 							"id": "set-bbox-scale",
 							"objectClass": "f_3d",
-							"sid": 697253910162641,
+							"sid": 540667858311418,
 							"parameters": {
-								"scale": "2"
+								"scale": "6"
+							}
+						},
+						{
+							"id": "set-vertex-rounding",
+							"objectClass": "f_3d",
+							"sid": 809660132328754,
+							"disabled": true,
+							"parameters": {
+								"round": "2"
 							}
 						}
 					],

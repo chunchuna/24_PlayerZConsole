@@ -1,6 +1,7 @@
 import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { ConfigExecutor } from "./GLEvent.js";
-import { Fade } from "./GLFade.js";
+import { LayoutTransitionScreenEffect } from "./GLFade.js";
+import { CommandPlatform } from "./GLConsole.js";
 //-----------------------------------------------------------------------------
 // LevelInit
 //
@@ -8,19 +9,32 @@ import { Fade } from "./GLFade.js";
 // 
 // Fade 
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
-    Fade.Fade_black_to_empty(2, 2);
+    LayoutTransitionScreenEffect.BlackToEmptyEffect(2, 2);
 });
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
-    console.log("Level Init Now");
+    console.log("[Level Layout] Level Init Now");
+});
+// Fog
+GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Level")
+        return;
+    var LevelLayer = GetChunchunFuckWayfarerccSDK.Runtime.layout.getLayer("level");
+    if (LevelLayer == null)
+        return;
+    var FogexponentialEffect = LevelLayer.effects["Fogexponential"];
+    console.log(FogexponentialEffect);
+    FogexponentialEffect?.setParameter(3, 1800);
+    CommandPlatform.Print("[Fogexponential] 重新设置场景雾距离参数");
+    CommandPlatform.Print(String(FogexponentialEffect?.getParameter(3)));
 });
 //-----------------------------------------------------------------------------
-// Playr
+// Player
 //
 // 
 // 
-export var PrisonerMain; // player
+export var PlayerMainInstance; // player
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
-    PrisonerMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.PlayerRoleInstanceMain.getFirstInstance();
+    PlayerMainInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.PlayerRoleInstanceMain.getFirstInstance();
 });
 //-----------------------------------------------------------------------------
 // Save & Load
@@ -29,16 +43,17 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 // 
 var Save_Load_key = "game_save_key_default";
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_number0_keydown", () => {
         GetChunchunFuckWayfarerccSDK.Runtime.callFunction("SaveGame", Save_Load_key);
-        console.log("Game already save");
+        console.log("[Load] Game already save");
     });
 });
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
     if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState) {
         GetChunchunFuckWayfarerccSDK.Runtime.callFunction("LoadGame", Save_Load_key);
         GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState = false;
-        console.log("Game already load");
+        console.log("[Load] Game already load");
     }
 });
 // for debug
@@ -56,6 +71,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
     GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning = false;
 });
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_space_keydown", () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning) {
             if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_WaitForInput == 1) {
@@ -91,12 +107,12 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
     CAMERA_X_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
     CAMERA_ANGEL = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Angel;
     var CameraMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.CameraMain;
-    if (PrisonerMain == null)
+    if (PlayerMainInstance == null)
         return;
     var CameraOver = GetChunchunFuckWayfarerccSDK.Runtime.objects.camera_cover.getFirstInstance();
     if (CameraMain) {
         //console.log("camera tick")
-        CameraMain.lookAtPosition(PrisonerMain.x + CAMERA_X_OFFSET, PrisonerMain.y + CAMERA_Y_OFFSET, CAMERA_Z, PrisonerMain.x, PrisonerMain.y, 50, 0, 0, 1);
+        CameraMain.lookAtPosition(PlayerMainInstance.x + CAMERA_X_OFFSET, PlayerMainInstance.y + CAMERA_Y_OFFSET, CAMERA_Z, PlayerMainInstance.x, PlayerMainInstance.y, 50, 0, 0, 1);
     }
 });
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
@@ -131,6 +147,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 });
 GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
     // 一个DEBUG窗口 用于相机的参数设置
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_q_keydown", () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
             CloseFunctionWindow();
@@ -156,6 +173,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
         }
     });
     var Scale = 60;
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_a_keydown", () => {
         var ChooseID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID;
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
@@ -181,6 +199,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
             }
         }
     });
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_d_keydown", () => {
         var ChooseID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID;
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
@@ -291,6 +310,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 });
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
     FunctionWindow_LABLES = [];
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_w_keydown", () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 0)
             return;
@@ -303,6 +323,7 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
             GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_OPT_Count;
         }
     });
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_s_keydown", () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 0)
             return;
@@ -407,7 +428,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(async () => {
     else {
         if (!GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd) {
             GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd = true;
-            Fade.Fade_Empty_to_black(2, 3);
+            LayoutTransitionScreenEffect.EmptyToBlackEffect(2, 3);
             await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(3500);
             GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("End");
         }
@@ -447,12 +468,13 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
         return;
     //console.log(ENGINE_MUST.EVENT_HANDLER)
     await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2000);
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("input_anykey_keydown", async () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "End")
             return;
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading)
             return;
-        Fade.Fade_Empty_to_black(1, 3);
+        LayoutTransitionScreenEffect.EmptyToBlackEffect(1, 3);
         await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(3000);
         GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("MENU");
     });

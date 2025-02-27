@@ -1,6 +1,6 @@
 import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
 import { CommandPlatform } from "./GLConsole.js";
-import { Fade } from "./GLFade.js";
+import { LayoutTransitionScreenEffect } from "./GLFade.js";
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
         return;
@@ -24,10 +24,11 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
     if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
         return;
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("COMMAND_M_START", async () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
             return;
-        Fade.Fade_Empty_to_black(1, 3);
+        LayoutTransitionScreenEffect.EmptyToBlackEffect(1, 3);
         await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500);
         GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("Level");
         GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500);
@@ -36,10 +37,11 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
         CommandPlatform.CloseConsolePlatformPanel();
         await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1000);
     });
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("COMMAND_M_LOAD", async () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
             return;
-        Fade.Fade_Empty_to_black(1, 3);
+        LayoutTransitionScreenEffect.EmptyToBlackEffect(1, 3);
         await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2500);
         GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState = true;
         GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("Level");
@@ -49,6 +51,7 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
         CommandPlatform.CloseConsolePlatformPanel();
         await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1000);
     });
+    // @ts-ignore
     await GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener("COMMAND_M_SETTING", async () => {
         if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Menu")
             return;

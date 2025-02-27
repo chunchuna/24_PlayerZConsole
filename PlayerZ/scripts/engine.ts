@@ -3,7 +3,7 @@
 export class GetChunchunFuckWayfarerccSDK {
 
     public static Runtime: IRuntime;
-    public static GetConstruct3EventHandlerInstance: InstanceType.EventHandler;
+    public static GetConstruct3EventHandlerInstance: InstanceType.EventHandler | null;
     public static HaaWaitSomeTime = (ms: number) => new Promise(res => setTimeout(res, ms));
 
     public static OntheFuckFirstFrame = (func: () => void) => {
@@ -19,6 +19,8 @@ export class GetChunchunFuckWayfarerccSDK {
     };
 
     public static OnLevelLayoutFirstFrame = (func: () => void) => {
+
+
         runOnStartup(async runtime => {
             runtime.addEventListener("afteranylayoutstart", () => {
                 if (runtime.globalVars.GameType === "Level") func();
@@ -43,13 +45,27 @@ export class GetChunchunFuckWayfarerccSDK {
         const deltaY = y2 - y1;
         return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
     }
+
+
+    // 手动重新获取Handler
+
+    public static TryGetHandlerAgainFuckThisHandler() {
+        GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EventHandler.getFirstInstance();
+    }
 }
 
 runOnStartup(async runtime => {
     GetChunchunFuckWayfarerccSDK.Runtime = runtime;
+    GetChunchunFuckWayfarerccSDK.TryGetHandlerAgainFuckThisHandler();
+
 });
 
 GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     //@ts-ignore
     GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EventHandler.getFirstInstance();
+    console.log("[engine] handler" + GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance)
+    if (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance == null) {
+        GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EventHandler.getFirstInstance();
+        console.log("[engine] try agagin get handler")
+    }
 });
