@@ -1,0 +1,23 @@
+{
+	"name": "NongChangShuiJingObject",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 854834788951279,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 7292262,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -16,57 +16,57 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Array",
+			"name": "数组",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Audio",
-			"name": "Audio",
+			"name": "音频",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Browser",
-			"name": "Browser",
+			"name": "浏览器",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Camera3D",
-			"name": "3D camera",
+			"name": "3D相机",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Dictionary",
-			"name": "Dictionary",
+			"name": "字典",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Keyboard",
+			"name": "键盘",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Mikal_3DObject",
-			"name": "3D object",
+			"name": "[3D Object]",
 			"author": "Mikal",
 			"bundled": false,
-			"version": "2.65.1"
+			"version": "2.74.3"
 		},
 		{
 			"type": "plugin",
 			"id": "MixonGames_EasyInGameConsole",
-			"name": "In-Game Console",
+			"name": "[In-Game Console]",
 			"author": "Mixon Games",
 			"bundled": false,
 			"version": "2.0.0.0",
@@ -75,133 +75,133 @@
 		{
 			"type": "plugin",
 			"id": "Mouse",
-			"name": "Mouse",
+			"name": "鼠标",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "NinePatch",
-			"name": "9-patch",
+			"name": "九宫图",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Shape3D",
-			"name": "3D shape",
+			"name": "3D形状",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Sprite",
-			"name": "Sprite",
+			"name": "精灵",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Spritefont2",
-			"name": "Sprite font",
+			"name": "位图字体",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Text",
+			"name": "文本",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Tiled Background",
+			"name": "平铺图",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Touch",
+			"name": "触控",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"name": "拖放",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Direction",
+			"name": "八方向",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Fade",
-			"name": "Fade",
+			"name": "淡入淡出",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Orbit",
-			"name": "Orbit",
+			"name": "环绕",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pathfinding",
-			"name": "Pathfinding",
+			"name": "寻路",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pin",
-			"name": "Pin",
+			"name": "固定",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Sin",
-			"name": "Sine",
+			"name": "正弦运动",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
+			"name": "实体",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "fogexponential",
-			"name": "Fog (exponential)",
+			"name": "雾场",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "multiply",
-			"name": "Multiply",
+			"name": "正片叠底",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "vignette",
-			"name": "Vignette",
+			"name": "暗角",
 			"author": "Brad Larson",
 			"bundled": false
 		}
@@ -288,7 +288,9 @@
 					"ManWithBackpackNPCUse",
 					"RolePlayerUse",
 					"TreeObject",
-					"TreeObject2"
+					"TreeObject2",
+					"NongChangShuiJingObject",
+					"JunYongPiKa3DObject"
 				],
 				"subfolders": [],
 				"name": "3DObject"
@@ -588,6 +590,22 @@
 							"name": "Tree2.glb",
 							"type": "application/octet-stream",
 							"sid": 597299300297913,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NongChangShuiJingFIXglb.glb",
+							"type": "application/octet-stream",
+							"sid": 700123064991594,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "JunYongPiKa.glb",
+							"type": "application/octet-stream",
+							"sid": 389589691479315,
 							"file-info": {
 								"purpose": "none"
 							}

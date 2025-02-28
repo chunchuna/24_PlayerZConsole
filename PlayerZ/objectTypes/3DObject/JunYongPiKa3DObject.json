@@ -1,0 +1,23 @@
+{
+	"name": "JunYongPiKa3DObject",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 420189081625394,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 6952767,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}
