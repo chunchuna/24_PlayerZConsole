@@ -1,31 +1,31 @@
-import {GetChunchunFuckWayfarerccSDK} from "../engine.js";
-import {LayoutTransitionScreenEffect} from "./GLFade.js";
+import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../engine.js";
+import { LayoutTransitionScreenEffect } from "./GLFade.js";
 
-export class CommandPlatform {
-    static OpenConsolePlatformPanel() {
-        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleOpen")
+export class GL_COMMAND_ {
+    static ACTION_OPEN_() {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("ConsoleOpen")
     }
 
-    static CloseConsolePlatformPanel() {
-        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleClose")
+    static ACTION_CLOSE_() {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("ConsoleClose")
     }
 
-    static Print(cont: string) {
-        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsolePrint", cont)
+    static _LOG(cont: string) {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("ConsolePrint", cont)
 
     }
 
-    static RegisterCommand(command: string, par: string, des: string, help: string) {
-        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleBindEvent", command, par, des, help)
+    static _REGISTER_COMMAND_(command: string, par: string, des: string, help: string) {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("ConsoleBindEvent", command, par, des, help)
     }
 
-    public static ClearAllInfomation() {
-        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("ConsoleClear");
+    public static _CLEAR_ALL_CONTENT_FROM_COMMAND() {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("ConsoleClear");
     }
 }
 
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
-    console.log(" [CommandPlatform] console init")
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
+    console.log(" [GL_COMMAND] console init")
 })
 

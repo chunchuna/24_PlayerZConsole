@@ -1,7 +1,6 @@
 // Import any other script files here, e.g.:
 // import * as myModule from "./mymodule.js";
 import "./engine.js";
-import "./Grailux/GLMenu.js";
 import "./Grailux/GLEventTrigger.js";
 import "./Grailux/GLevel.js";
 import "./Grailux/GLEvent.js";

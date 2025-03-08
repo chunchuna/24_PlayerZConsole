@@ -1,7 +1,7 @@
-import {GetChunchunFuckWayfarerccSDK} from "../engine.js";
+import {pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit} from "../engine.js";
 import {ConfigExecutor} from "./GLEvent.js";
 import {LayoutTransitionScreenEffect} from "./GLFade.js"
-import {CommandPlatform} from "./GLConsole.js";
+import {GL_COMMAND_} from "./GLConsole.js";
 
 
 //-----------------------------------------------------------------------------
@@ -11,11 +11,11 @@ import {CommandPlatform} from "./GLConsole.js";
 // 
 
 // Fade 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
     LayoutTransitionScreenEffect.BlackToEmptyEffect(2, 2);
 })
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
 
     console.log("[Level Layout] Level Init Now")
 
@@ -24,7 +24,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 
 // VFX
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
 
 
     /** FOG **/
@@ -34,25 +34,27 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
     var RGB_Cyberpunk = [255 / 255, 255 / 2555, 255 / 255];
 
 
-    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "Level") return;
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "Level") return;
 
-    var LevelLayer = GetChunchunFuckWayfarerccSDK.Runtime.layout.getLayer("level");
+    var LevelLayer = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.layout.getLayer("level");
     if (LevelLayer == null) return;
     // @ts-ignore
-    var FogexponentialEffect: IEffectInstance | undefined = LevelLayer.effects[0];
-    console.log(FogexponentialEffect);
-    FogexponentialEffect?.setParameter(2, 1800);
-    FogexponentialEffect?.setParameter(0, RGB_DAY)
+    var ExponentialEffect: IEffectInstance | undefined = LevelLayer.effects[0];
+    console.log(ExponentialEffect);
+    ExponentialEffect?.setParameter(2, 1800);
+    ExponentialEffect?.setParameter(0, RGB_DAY)
 
-    CommandPlatform.Print("[Fog exponential] 重新设置场景雾距离参数")
-    CommandPlatform.Print(String(FogexponentialEffect?.getParameter(2)));
+    GL_COMMAND_._LOG("[Fog exponential] 重新设置场景雾距离参数")
+    GL_COMMAND_._LOG(String(ExponentialEffect?.getParameter(2)));
+
+
 
 
     /** VIGNETTE **/
 
     var RGB_NIGHT_FORVIGNETTE = [69 / 255, 69 / 255, 69 / 255];
 
-    var vignetteLayer = GetChunchunFuckWayfarerccSDK.Runtime.layout.getLayer("vignette");
+    var vignetteLayer = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.layout.getLayer("vignette");
     if (vignetteLayer == null) return;
 // @ts-ignore
     var VignetteEffect: IEffectInstance | undefined = vignetteLayer.effects[0];
@@ -69,8 +71,8 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
 // 
 export var PlayerMainInstance: InstanceType.PlayerRoleInstanceMain; // player
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
-    PlayerMainInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.PlayerRoleInstanceMain.getFirstInstance()!;
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
+    PlayerMainInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.PlayerRoleInstanceMain.getFirstInstance()!;
 })
 
 
@@ -82,20 +84,20 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 
 var Save_Load_key = "game_save_key_default"
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
 // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_number0_keydown", () => {
-        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("SaveGame", Save_Load_key)
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_number0_keydown", () => {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("SaveGame", Save_Load_key)
         console.log("[Load] Game already save")
     })
 })
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
 
-    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState) {
-        GetChunchunFuckWayfarerccSDK.Runtime.callFunction("LoadGame", Save_Load_key)
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Load_is_LoadingState = false;
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Load_is_LoadingState) {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("LoadGame", Save_Load_key)
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Load_is_LoadingState = false;
         console.log("[Load] Game already load")
 
     }
@@ -104,7 +106,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 
 // for debug
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(async () => {
     // await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_z_keydown", () => {
     //     ENGINE_MUST.CORE.goToLayout("Menu")
     // })
@@ -118,22 +120,22 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
 //
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning = false;
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_IsRunning = false;
 })
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
 // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_space_keydown", () => {
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning) {
-            if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_WaitForInput == 1) {
-                GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_Continue");
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_space_keydown", () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_IsRunning) {
+            if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_WaitForInput == 1) {
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_Continue");
             } else {
-                if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_WaitForChoice == 1) {
-                    GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_ChoiceSelect", -1);
+                if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_WaitForChoice == 1) {
+                    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_ChoiceSelect", -1);
                 } else {
-                    GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_SkipSequence")
+                    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_SkipSequence")
 
                 }
 
@@ -146,8 +148,8 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 
 export async function StartDialogue(key: string, npc_uid: number) {
 
-    await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(1);
-    GetChunchunFuckWayfarerccSDK.Runtime.callFunction("Dialogue_StartDialogue", key);
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(1);
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_StartDialogue", key);
 
 }
 
@@ -162,22 +164,22 @@ var CAMERA_X_OFFSET;
 var CAMERA_Y_OFFSET;
 var CAMERA_Z;
 
-export class TakeAbsoluteControlOf3DCamera {
+export class GL3DCameraManager {
     public static JsutHookCameraAngelSettingForFun(X: number, Y: number, Z: number) {
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest = X
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest = Y
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z = Z
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest = X
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest = Y
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z = Z
     }
 
     public static CameraFocusPlayerWithDistanceAndAngle() {
-        CAMERA_Z = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z;
-        CAMERA_Y_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest;
-        CAMERA_X_OFFSET = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
+        CAMERA_Z = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z;
+        CAMERA_Y_OFFSET = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest;
+        CAMERA_X_OFFSET = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
 
-        var CameraMain = GetChunchunFuckWayfarerccSDK.Runtime.objects.CameraMain;
+        var CameraMain = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.CameraMain;
         if (PlayerMainInstance == null) return;
 
-        var CameraOver = GetChunchunFuckWayfarerccSDK.Runtime.objects.camera_cover.getFirstInstance()!;
+        var CameraOver = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.camera_cover.getFirstInstance()!;
 
         if (CameraMain) {
             //console.log("camera tick")
@@ -188,12 +190,12 @@ export class TakeAbsoluteControlOf3DCamera {
 }
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(() => {
-    TakeAbsoluteControlOf3DCamera.CameraFocusPlayerWithDistanceAndAngle();
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.fl_ubu_update$$LEVEL(() => {
+    GL3DCameraManager.CameraFocusPlayerWithDistanceAndAngle();
 })
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
     /** 注入自定义相机参数 **/
 
     var CAMERA_SETTING_SUPPER_LOW_FOV = [0, 480, 230]
@@ -202,22 +204,23 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
     var CAMERA_SETTING_TOP_VIEW_FOV = [0, 780, 1070]
     var CAMERA_SETTING_TOP_DOWN_VIEW_FOV = [0, 60, 1490]
 
-    TakeAbsoluteControlOf3DCamera.JsutHookCameraAngelSettingForFun(CAMERA_SETTING_SUPPER_LOW_FOV[0], CAMERA_SETTING_SUPPER_LOW_FOV[1], CAMERA_SETTING_MIDDLE_FOV[2])
+    GL3DCameraManager.JsutHookCameraAngelSettingForFun(CAMERA_SETTING_SUPPER_LOW_FOV[0], CAMERA_SETTING_SUPPER_LOW_FOV[1], CAMERA_SETTING_MIDDLE_FOV[2])
+    
 
 })
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
 
     // 记录相机默认参数
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Angel_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Angel;
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest;
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z_De = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Angel_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Angel;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z;
 })
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
     // debug 
     // await (ENGINE_MUST.EVENT_HANDLER.addEventListener as any)("input_q_keydown", () => {
 
@@ -251,13 +254,13 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 })
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
     // 一个DEBUG窗口 用于相机的参数设置
     // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_q_keydown", () => {
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_q_keydown", () => {
 
 
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 999) {
             CloseFunctionWindow();
         } else {
 
@@ -274,9 +277,9 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
             var OPT4: InstanceType.FunctionOPT = CameraDebugWindowOPT[4];
             //@ts-ignoreleta
             var OPT5: InstanceType.FunctionOPT = CameraDebugWindowOPT[5];
-            OPT1.text = "SET CAMERA_X  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
-            OPT2.text = "SET CAMERA_Y  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest
-            OPT3.text = "SET CAMERA_Z  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z
+            OPT1.text = "SET CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
+            OPT2.text = "SET CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest
+            OPT3.text = "SET CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z
             OPT4.instVars.isEnable = false;
             OPT5.instVars.isEnable = false;
 
@@ -289,63 +292,63 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 
     var Scale = 60
 // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_a_keydown", () => {
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_a_keydown", () => {
 
-        var ChooseID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID;
+        var ChooseID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID;
 
 
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 999) {
 
             if (ChooseID == 1) {
-                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest -= Scale
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest -= Scale
 
             }
             if (ChooseID == 2) {
-                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest -= Scale
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest -= Scale
             }
             if (ChooseID == 3) {
-                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z -= Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z -= Scale;
             }
 
-            for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
+            for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
                 if (Lables.instVars.id == 1) {
-                    Lables.text = "Set CAMERA_X  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
+                    Lables.text = "Set CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
                 }
                 if (Lables.instVars.id == 2) {
-                    Lables.text = "Set CAMERA_Y  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest
+                    Lables.text = "Set CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest
                 }
                 if (Lables.instVars.id == 3) {
-                    Lables.text = "Set CAMERA_Z  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z
+                    Lables.text = "Set CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z
                 }
             }
         }
 
     })
 // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_d_keydown", () => {
-        var ChooseID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID;
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_d_keydown", () => {
+        var ChooseID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID;
 
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 999) {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 999) {
 
             if (ChooseID == 1) {
-                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest += Scale
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest += Scale
             }
             if (ChooseID == 2) {
-                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest += Scale
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest += Scale
             }
             if (ChooseID == 3) {
-                GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z += Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z += Scale;
             }
 
-            for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
+            for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
                 if (Lables.instVars.id == 1) {
-                    Lables.text = "Set CAMERA_X  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_X_Offest;
+                    Lables.text = "Set CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
                 }
                 if (Lables.instVars.id == 2) {
-                    Lables.text = "Set CAMERA_Y  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Y_Offest
+                    Lables.text = "Set CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest
                 }
                 if (Lables.instVars.id == 3) {
-                    Lables.text = "Set CAMERA_Z  " + GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Camera_Z
+                    Lables.text = "Set CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z
                 }
             }
         }
@@ -440,7 +443,7 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(async () => {
 var FunctionWindow_LABLES: InstanceType.FunctionOPT[];
 
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
     CloseFunctionWindow();
 
     // 创建窗口范例
@@ -467,34 +470,34 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
 })
 
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(async () => {
 
     FunctionWindow_LABLES = [];
 
 // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_w_keydown", () => {
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 0) return;
-        if (!GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable) return;
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_w_keydown", () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 0) return;
+        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable) return;
 
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID > 1) {
-            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID -= 1;
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID > 1) {
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID -= 1;
 
         } else {
-            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_OPT_Count
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_OPT_Count
         }
 
 
     })
     // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_s_keydown", () => {
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID == 0) return;
-        if (!GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable) return;
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_s_keydown", () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 0) return;
+        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable) return;
 
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID < GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_OPT_Count) {
-            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID += 1;
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID < pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_OPT_Count) {
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID += 1;
 
         } else {
-            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = 1;
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = 1;
         }
 
     })
@@ -503,11 +506,11 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
 })
 
 
-GetChunchunFuckWayfarerccSDK.OntheFuckEverTickFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_update(() => {
 
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_OPT_Count = FunctionWindow_LABLES.length;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_OPT_Count = FunctionWindow_LABLES.length;
 
-    for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
+    for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
 
         if (Lables.instVars.isEnable) {
             Lables.isVisible = true;
@@ -516,7 +519,7 @@ GetChunchunFuckWayfarerccSDK.OntheFuckEverTickFrame(() => {
         }
 
 
-        if (Lables.instVars.id == GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID) {
+        if (Lables.instVars.id == pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID) {
             Lables.fontColor = [241 / 256, 254 / 256, 52 / 256]
         } else {
             Lables.fontColor = [1, 1, 1]
@@ -528,15 +531,15 @@ GetChunchunFuckWayfarerccSDK.OntheFuckEverTickFrame(() => {
 })
 
 function CreatFunctionWindow(pox: number, poy: number, windowID: number) {
-    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable) return;
-    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Dialogue_IsRunning) return;
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable) return;
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_IsRunning) return;
 
 
-    var FunctionWindow = GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionWindow.createInstance("FunctionWindow", pox, poy, true, "mob")
+    var FunctionWindow = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionWindow.createInstance("FunctionWindow", pox, poy, true, "mob")
 
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable = true;
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID = windowID;
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = 1;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable = true;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID = windowID;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = 1;
 
     console.log(FunctionWindow);
     console.log(FunctionWindow.getChildAt(0)?.uid);
@@ -566,17 +569,17 @@ function GTBUID(UID: number): InstanceType.FunctionOPT {
 
     console.log(UID);
     //@ts-ignore
-    return GetChunchunFuckWayfarerccSDK.Runtime.getInstanceByUid(UID);
+    return pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.getInstanceByUid(UID);
 }
 
 
 function CloseFunctionWindow() {
-    var FunctionWindow = GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionWindow.getFirstInstance();
+    var FunctionWindow = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionWindow.getFirstInstance();
     FunctionWindow?.destroy();
 
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowEnable = false;
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_WindowID = 0;
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Function_ID = 0;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable = false;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID = 0;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = 0;
     if (FunctionWindow_LABLES) {
         FunctionWindow_LABLES.length = 0;
     }
@@ -586,7 +589,7 @@ function CloseFunctionWindow() {
 
 function CheckOPTCount() {
 
-    for (var Lables of GetChunchunFuckWayfarerccSDK.Runtime.objects.FunctionOPT.instances()) {
+    for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
 
         if (Lables.instVars.isEnable) {
             FunctionWindow_LABLES.push(Lables);
@@ -607,12 +610,12 @@ function CheckOPTCount() {
 //
 var GameVariblesInstance: InstanceType.GameVariables;
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutFirstFrame(() => {
-    GameVariblesInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.GameVariables.getFirstInstance()!;
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
+    GameVariblesInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.GameVariables.getFirstInstance()!;
 
 })
 
-GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.fl_ubu_update$$LEVEL(async () => {
 
     if (GameVariblesInstance == null) return;
     var map = GameVariblesInstance.getDataMap();
@@ -620,12 +623,12 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(async () => {
         return
     } else {
 
-        if (!GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd) {
+        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_TriggerEnd) {
 
-            GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd = true;
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_TriggerEnd = true;
             LayoutTransitionScreenEffect.EmptyToBlackEffect(2, 3)
-            await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(3500)
-            GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("End");
+            await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(3500)
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.goToLayout("End");
 
         }
 
@@ -639,16 +642,16 @@ GetChunchunFuckWayfarerccSDK.OnLevelLayoutEveryTickFrame(async () => {
 
 var EndingTitleTextInstance: InstanceType.EndTitle;
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
 
-    GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_TriggerEnd = false;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_TriggerEnd = false;
 })
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
-    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "End") return;
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "End") return;
 
     //@ts-ignoreleta
-    EndingTitleTextInstance = GetChunchunFuckWayfarerccSDK.Runtime.objects.EndTitle.getFirstPickedInstance();
+    EndingTitleTextInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.EndTitle.getFirstPickedInstance();
 
     if (GameVariblesInstance == null) return;
     var map = GameVariblesInstance.getDataMap();
@@ -657,38 +660,38 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
 
     if (endindex != 0) {
         if (endindex == 1) {
-            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text1, 8)
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text1, 8)
         }
 
         if (endindex == 2) {
-            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text2, 12)
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text2, 12)
         }
 
         if (endindex == 3) {
-            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text3, 8)
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text3, 8)
         }
         if (endindex == 4) {
-            EndingTitleTextInstance.typewriterText(GetChunchunFuckWayfarerccSDK.Runtime.globalVars.End_Des_Text4, 8)
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text4, 8)
         }
     }
 
 })
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(async () => {
 
-    if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "End") return;
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "End") return;
     //console.log(ENGINE_MUST.EVENT_HANDLER)
-    await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(2000);
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(2000);
 
 // @ts-ignore
-    await (GetChunchunFuckWayfarerccSDK.GetConstruct3EventHandlerInstance.addEventListener as any)("input_anykey_keydown", async () => {
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.GameType != "End") return;
+    await (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener as any)("input_anykey_keydown", async () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "End") return;
 
-        if (GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading) return;
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Fade_is_Fading) return;
 
         LayoutTransitionScreenEffect.EmptyToBlackEffect(1, 3);
-        await GetChunchunFuckWayfarerccSDK.HaaWaitSomeTime(3000);
-        GetChunchunFuckWayfarerccSDK.Runtime.goToLayout("MENU");
+        await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(3000);
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.goToLayout("MENU");
 
     })
 

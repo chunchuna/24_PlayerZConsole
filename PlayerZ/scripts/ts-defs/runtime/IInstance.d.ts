@@ -1,47 +1,54 @@
-
 interface InstanceEvent<InstType = IInstance> extends ConstructEvent {
-	instance: InstType;
+    instance: InstType;
 }
 
 interface InstanceDestroyEvent<InstType> extends InstanceEvent<InstType> {
-	isEndingLayout: boolean;
+    isEndingLayout: boolean;
 }
 
 interface InstanceEventMap<InstType> {
-	"destroy": InstanceDestroyEvent<InstType>;
+    "destroy": InstanceDestroyEvent<InstType>;
 }
 
 /** Represents a single instance of an object type.
  * @see {@link https://www.construct.net/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance | IInstance documentation } */
-declare class IInstance
-{
-	// Note IInstance does not derive from ConstructEventTargetDispatcher - it implements it
-	// separately to make use of <this> in its type definition.
-	addEventListener<K extends keyof InstanceEventMap<this>>(type: K, listener: (ev: InstanceEventMap<this>[K]) => any): void;
-	removeEventListener<K extends keyof InstanceEventMap<this>>(type: K, listener: (ev: InstanceEventMap<this>[K]) => any): void;
-	dispatchEvent(evt: ConstructEvent): void;
-	
-	readonly runtime: IRuntime;
-	readonly objectType: IObjectType<this>;
-	readonly plugin: IPlugin_;
+declare class IInstance {
+    // Note IInstance does not derive from ConstructEventTargetDispatcher - it implements it
+    // separately to make use of <this> in its type definition.
+    addEventListener<K extends keyof InstanceEventMap<this>>(type: K, listener: (ev: InstanceEventMap<this>[K]) => any): void;
 
-	readonly uid: number;
-	readonly iid: number;
-	readonly templateName: string;
+    removeEventListener<K extends keyof InstanceEventMap<this>>(type: K, listener: (ev: InstanceEventMap<this>[K]) => any): void;
 
-	timeScale: number;
-	restoreTimeScale(): void;
-	readonly dt: number;
+    dispatchEvent(evt: ConstructEvent): void;
 
-	hasTags(...tagsArray: string[]): boolean;
-	setAllTags(tagsSet: Set<string>): void;
-	getAllTags(): Set<string>;
+    readonly runtime: IRuntime;
+    readonly objectType: IObjectType<this>;
+    readonly plugin: IPlugin_;
 
-	destroy(): void;
+    readonly uid: number;
+    readonly iid: number;
+    readonly templateName: string;
 
-	getOtherContainerInstances(): IInstance[];
-	otherContainerInstances(): Iterable<IInstance>;
+    timeScale: number;
 
-	signal(tag: string): void;
-	waitForSignal(tag: string): Promise<void>;
+    restoreTimeScale(): void;
+
+    readonly dt: number;
+
+    hasTags(...tagsArray: string[]): boolean;
+
+    setAllTags(tagsSet: Set<string>): void;
+
+    getAllTags(): Set<string>;
+
+    destroy(): void;
+
+    getOtherContainerInstances(): IInstance[];
+
+    otherContainerInstances(): Iterable<IInstance>;
+
+    signal(tag: string): void;
+
+    waitForSignal(tag: string): Promise<void>;
+
 }

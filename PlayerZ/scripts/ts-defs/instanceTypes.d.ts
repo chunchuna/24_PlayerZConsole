@@ -169,6 +169,8 @@ declare namespace InstanceType {
 	}
 	class Mouse extends IInstance {
 	}
+	class Dirt_03 extends ITiledBackgroundInstance {
+	}
 	class InGameConsole extends C3.Plugins.MixonGames_EasyInGameConsole.Instance {
 	}
 	class BackpackManNPCUse extends IWorldInstance {
@@ -180,6 +182,14 @@ declare namespace InstanceType {
 	class ManWithBackpackNPCUse extends IWorldInstance {
 	}
 	class RolePlayerUse extends IWorldInstance {
+	}
+	class TreeObject extends IWorldInstance {
+	}
+	class TreeObject2 extends IWorldInstance {
+	}
+	class NongChangShuiJingObject extends IWorldInstance {
+	}
+	class JunYongPiKa3DObject extends IWorldInstance {
 	}
 	class __f_3d_solidBehaviors<InstType> {
 		Solid: ISolidBehaviorInstance<InstType>;

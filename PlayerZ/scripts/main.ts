@@ -4,13 +4,14 @@
 
 import "./engine.js"
 
-import "./Grailux/GLMenu.js"
+
 import "./Grailux/GLEventTrigger.js"
 import "./Grailux/GLevel.js"
 import "./Grailux/GLEvent.js"
 import "./Grailux/GLFade.js"
 import "./Grailux/GLConsole.js"
 import "./Grailux/GLMenu.js"
+
 
 
 
@@ -31,5 +32,5 @@ async function OnBeforeProjectStart(runtime: IRuntime) {
 
 function Tick(runtime: IRuntime) {
 	// Code to run every tick
-	
+
 }

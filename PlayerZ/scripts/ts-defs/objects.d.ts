@@ -44,12 +44,17 @@ declare class IConstructProjectObjects {
 	readonly wall: IObjectType<InstanceType.wall>;
 	readonly GroundGrid: IObjectType<InstanceType.GroundGrid>;
 	readonly Mouse: IMouseObjectType<InstanceType.Mouse>;
+	readonly Dirt_03: IObjectType<InstanceType.Dirt_03>;
 	readonly InGameConsole: C3.Plugins.MixonGames_EasyInGameConsole.Type<InstanceType.InGameConsole>;
 	readonly BackpackManNPCUse: IObjectType<InstanceType.BackpackManNPCUse>;
 	readonly BigHouse1: IObjectType<InstanceType.BigHouse1>;
 	readonly BigHouse2: IObjectType<InstanceType.BigHouse2>;
 	readonly ManWithBackpackNPCUse: IObjectType<InstanceType.ManWithBackpackNPCUse>;
 	readonly RolePlayerUse: IObjectType<InstanceType.RolePlayerUse>;
+	readonly TreeObject: IObjectType<InstanceType.TreeObject>;
+	readonly TreeObject2: IObjectType<InstanceType.TreeObject2>;
+	readonly NongChangShuiJingObject: IObjectType<InstanceType.NongChangShuiJingObject>;
+	readonly JunYongPiKa3DObject: IObjectType<InstanceType.JunYongPiKa3DObject>;
 	readonly f_3d_solid: IFamily<InstanceType.f_3d_solid>;
 	readonly f_3d_solid2: IFamily<InstanceType.f_3d_solid2>;
 	readonly f_3d: IFamily<InstanceType.f_3d>;

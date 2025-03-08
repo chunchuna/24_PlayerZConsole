@@ -1,18 +1,18 @@
-import { GetChunchunFuckWayfarerccSDK } from "../engine.js";
+import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../engine.js";
 
 var FadeSprite
 
-GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
-    FadeSprite = GetChunchunFuckWayfarerccSDK.Runtime.objects.FadeSprite.getFirstInstance();
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
+    FadeSprite = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FadeSprite.getFirstInstance();
     if (FadeSprite == null) return;
     FadeSprite?.behaviors.Fading.addEventListener("fadeinend", () => {
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading = false;
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Fade_is_Fading = false;
         console.log("[LayoutTransitionScreenEffect] Fadein is end")
 
     })
 
     FadeSprite?.behaviors.Fading.addEventListener("fadeoutend", () => {
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading = false;
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Fade_is_Fading = false;
         console.log("[LayoutTransitionScreenEffect] Fade out is end")
 
     })
@@ -23,7 +23,7 @@ GetChunchunFuckWayfarerccSDK.OntheFuckFirstFrame(() => {
 export class LayoutTransitionScreenEffect {
 
     static BlackToEmptyEffect(time: number, waittime: number) {
-        FadeSprite = GetChunchunFuckWayfarerccSDK.Runtime.objects.FadeSprite.getFirstInstance();
+        FadeSprite = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FadeSprite.getFirstInstance();
         if (FadeSprite == null) {
             console.log("[LayoutTransitionScreenEffect] FadeSprite not found");
             return
@@ -35,12 +35,12 @@ export class LayoutTransitionScreenEffect {
         }
         FadeSprite.opacity = 100;
         FadeSprite.behaviors.Fading.restartFade();
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading = true;
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Fade_is_Fading = true;
     }
 
     static EmptyToBlackEffect(time: number, waittime: number) {
 
-        FadeSprite = GetChunchunFuckWayfarerccSDK.Runtime.objects.FadeSprite.getFirstInstance();
+        FadeSprite = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FadeSprite.getFirstInstance();
         if (FadeSprite == null) {
             console.log("[LayoutTransitionScreenEffect] FadeSprite not found");
             return
@@ -54,7 +54,7 @@ export class LayoutTransitionScreenEffect {
         FadeSprite.opacity = 0;
 
         FadeSprite.behaviors.Fading.restartFade();
-        GetChunchunFuckWayfarerccSDK.Runtime.globalVars.Fade_is_Fading = true;
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Fade_is_Fading = true;
     }
 
 }
