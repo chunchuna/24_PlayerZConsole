@@ -40,17 +40,7 @@
 									"sid": 535541748289447
 								}
 							],
-							"actions": [
-								{
-									"id": "play-animation",
-									"objectClass": "RolePlayerUse",
-									"sid": 622339226797332,
-									"parameters": {
-										"animation": "\"idle\"",
-										"loop": true
-									}
-								}
-							],
+							"actions": [],
 							"sid": 269519172220846,
 							"children": [
 								{
@@ -205,7 +195,7 @@
 										{
 											"id": "play-animation",
 											"objectClass": "RolePlayerUse",
-											"sid": 541808658309215,
+											"sid": 307128499849916,
 											"parameters": {
 												"animation": "\"idle\"",
 												"loop": true
