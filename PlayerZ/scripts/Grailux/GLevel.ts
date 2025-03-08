@@ -22,6 +22,13 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(()
 })
 
 
+
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(()=>{
+    
+})
+
+
+
 // VFX
 
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
@@ -44,8 +51,8 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
     ExponentialEffect?.setParameter(2, 1800);
     ExponentialEffect?.setParameter(0, RGB_DAY)
 
-    GL_COMMAND_._LOG("[Fog exponential] 重新设置场景雾距离参数")
-    GL_COMMAND_._LOG(String(ExponentialEffect?.getParameter(2)));
+    GL_COMMAND_._draw("[Fog exponential] 重新设置场景雾距离参数")
+    GL_COMMAND_._draw(String(ExponentialEffect?.getParameter(2)));
 
 
 

@@ -7,7 +7,7 @@ export class GL_COMMAND_ {
     static ACTION_CLOSE_() {
         pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("ConsoleClose");
     }
-    static _LOG(cont) {
+    static _draw(cont) {
         pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("ConsolePrint", cont);
     }
     static _REGISTER_COMMAND_(command, par, des, help) {

@@ -411,6 +411,14 @@
 							"script-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "GLLanguage.js",
+							"type": "application/javascript",
+							"sid": 851364128761266,
+							"script-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],

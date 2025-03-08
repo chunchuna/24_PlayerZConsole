@@ -1,16 +1,18 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../engine.js";
 import { GL_COMMAND_ } from "./GLConsole.js";
 import { LayoutTransitionScreenEffect } from "./GLFade.js";
+import { GLLanguageClass } from "./GLLanguage.js";
 
 var gl_init = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init;
 var gl_update = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_update;
+var gl_lan = GLLanguageClass.GetTranslatedStringByKEY;
 
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(() => {
     //GL_COMMAND_._LOG("[GLGameGroupMenuClass] Testasdasdasdasdasdasdasdasdasdasd")
 })
 
 
-gl_init(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(() => {
     if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "Menu") return;
     GL_COMMAND_.ACTION_OPEN_();
     //CommandPlatform.Print("new file name active")
@@ -26,7 +28,7 @@ export class GLGameGroupMenuClass {
         pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.goToLayout("Level")
 
         pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(2500)
-        GL_COMMAND_._LOG("正在讀取關卡....")
+        GL_COMMAND_._draw(gl_lan("K_IS_LOADING_LEVEL", ""))
         GL_COMMAND_._CLEAR_ALL_CONTENT_FROM_COMMAND();
         GL_COMMAND_.ACTION_CLOSE_();
         await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(1000)
@@ -41,7 +43,7 @@ export class GLGameGroupMenuClass {
         pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.goToLayout("Level")
 
         pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(2500)
-        GL_COMMAND_._LOG("正在讀取關卡....")
+        GL_COMMAND_._draw(gl_lan("K_IS_LOADING_LEVEL", ""))
         GL_COMMAND_._CLEAR_ALL_CONTENT_FROM_COMMAND();
 
         GL_COMMAND_.ACTION_CLOSE_();
@@ -57,18 +59,19 @@ export class GLGameGroupMenuClass {
 
 
 // Command
-gl_init(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(() => {
 
-    GL_COMMAND_._LOG("[background=blue] [action name=m_start color=red] m_start -> 開始游戲[/action][/background]")
-    GL_COMMAND_._LOG("[background=blue][action name=m_laod color=red] m_load -> 讀取上一個存檔 [/action][/background]")
-    GL_COMMAND_._LOG("[background=blue] [action name=m_setting color=red] m_setting -> 設置[/action] [/background]")
+
+    GL_COMMAND_._draw(`[background=blue] [action name=m_start color=red] m_start -> ${gl_lan("K_START_GAME", "")}[/action][/background]`);
+    GL_COMMAND_._draw(`[background=blue][action name=m_laod color=red] m_load -> ${gl_lan("K_LOAD_GAME", "")} [/action][/background]`);
+    GL_COMMAND_._draw(`[background=blue] [action name=m_setting color=red] m_setting -> ${gl_lan("K_GAME_SETTING", "")}[/action] [/background]`);
 
     GL_COMMAND_._REGISTER_COMMAND_("m_start", "", "", "");
     GL_COMMAND_._REGISTER_COMMAND_("m_setting", "", "", "");
     GL_COMMAND_._REGISTER_COMMAND_("m_load", "", "", "",);
 })
 
-gl_init(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(async () => {
     if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "Menu") return;
 
     pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_call_eventhandle_("COMMAND_M_START", async () => {

@@ -12,6 +12,8 @@ import "./Grailux/GLFade.js"
 import "./Grailux/GLConsole.js"
 import "./Grailux/GLMenu.js"
 
+import "./Grailux/GLLanguage.js"
+
 
 
 

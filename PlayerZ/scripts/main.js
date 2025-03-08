@@ -7,6 +7,7 @@ import "./Grailux/GLEvent.js";
 import "./Grailux/GLFade.js";
 import "./Grailux/GLConsole.js";
 import "./Grailux/GLMenu.js";
+import "./Grailux/GLLanguage.js";
 runOnStartup(async (runtime) => {
     // Code to run on the loading screen.
     // Note layouts, objects etc. are not yet available.
