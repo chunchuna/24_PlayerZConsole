@@ -7,13 +7,14 @@ import { GL_COMMAND_ } from "./GLConsole.js";
 //
 // 
 // 
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
+    console.log("[Level Layout] Level Init Now");
+});
 // Fade 
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
     LayoutTransitionScreenEffect.BlackToEmptyEffect(2, 2);
 });
-pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
-    console.log("[Level Layout] Level Init Now");
-});
+// 做实验
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(() => {
 });
 // VFX
@@ -22,9 +23,9 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
     var RGB_DAY = [255 / 255, 255 / 255, 255 / 255];
     var RGB_NIGHT = [0 / 255, 0 / 255, 0 / 255];
     var RGB_Cyberpunk = [255 / 255, 255 / 2555, 255 / 255];
-    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "Level")
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.GameType != "Level")
         return;
-    var LevelLayer = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.layout.getLayer("level");
+    var LevelLayer = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.layout.getLayer("level");
     if (LevelLayer == null)
         return;
     // @ts-ignore
@@ -36,7 +37,7 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
     GL_COMMAND_._draw(String(ExponentialEffect?.getParameter(2)));
     /** VIGNETTE **/
     var RGB_NIGHT_FORVIGNETTE = [69 / 255, 69 / 255, 69 / 255];
-    var vignetteLayer = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.layout.getLayer("vignette");
+    var vignetteLayer = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.layout.getLayer("vignette");
     if (vignetteLayer == null)
         return;
     // @ts-ignore
@@ -50,7 +51,7 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
 // 
 export var PlayerMainInstance; // player
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
-    PlayerMainInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.PlayerRoleInstanceMain.getFirstInstance();
+    PlayerMainInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.PlayerRoleInstanceMain.getFirstInstance();
 });
 //-----------------------------------------------------------------------------
 // Save & Load
@@ -60,15 +61,15 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(()
 var Save_Load_key = "game_save_key_default";
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_number0_keydown", () => {
-        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("SaveGame", Save_Load_key);
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_number0_keydown", () => {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.callFunction("SaveGame", Save_Load_key);
         console.log("[Load] Game already save");
     });
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
-    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Load_is_LoadingState) {
-        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("LoadGame", Save_Load_key);
-        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Load_is_LoadingState = false;
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Load_is_LoadingState) {
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.callFunction("LoadGame", Save_Load_key);
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Load_is_LoadingState = false;
         console.log("[Load] Game already load");
     }
 });
@@ -84,29 +85,29 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(async () 
 // Dialogue 
 //
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_IsRunning = false;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Dialogue_IsRunning = false;
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_space_keydown", () => {
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_IsRunning) {
-            if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_WaitForInput == 1) {
-                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_Continue");
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_space_keydown", () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Dialogue_IsRunning) {
+            if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Dialogue_WaitForInput == 1) {
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.callFunction("Dialogue_Continue");
             }
             else {
-                if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_WaitForChoice == 1) {
-                    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_ChoiceSelect", -1);
+                if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Dialogue_WaitForChoice == 1) {
+                    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.callFunction("Dialogue_ChoiceSelect", -1);
                 }
                 else {
-                    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_SkipSequence");
+                    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.callFunction("Dialogue_SkipSequence");
                 }
             }
         }
     });
 });
 export async function StartDialogue(key, npc_uid) {
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(1);
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.callFunction("Dialogue_StartDialogue", key);
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.WAIT_TIME_FORM_PROMISE(1);
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.callFunction("Dialogue_StartDialogue", key);
 }
 //-----------------------------------------------------------------------------
 // Camera 3D
@@ -118,25 +119,25 @@ var CAMERA_Y_OFFSET;
 var CAMERA_Z;
 export class GL3DCameraManager {
     static JsutHookCameraAngelSettingForFun(X, Y, Z) {
-        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest = X;
-        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest = Y;
-        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z = Z;
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest = X;
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest = Y;
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z = Z;
     }
     static CameraFocusPlayerWithDistanceAndAngle() {
-        CAMERA_Z = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z;
-        CAMERA_Y_OFFSET = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest;
-        CAMERA_X_OFFSET = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
-        var CameraMain = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.CameraMain;
+        CAMERA_Z = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z;
+        CAMERA_Y_OFFSET = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest;
+        CAMERA_X_OFFSET = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest;
+        var CameraMain = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.CameraMain;
         if (PlayerMainInstance == null)
             return;
-        var CameraOver = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.camera_cover.getFirstInstance();
+        var CameraOver = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.camera_cover.getFirstInstance();
         if (CameraMain) {
             //console.log("camera tick")
             CameraMain.lookAtPosition(PlayerMainInstance.x + CAMERA_X_OFFSET, PlayerMainInstance.y + CAMERA_Y_OFFSET, CAMERA_Z, PlayerMainInstance.x, PlayerMainInstance.y, 50, 0, 0, 1);
         }
     }
 }
-pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.fl_ubu_update$$LEVEL(() => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_update$$LEVEL(() => {
     GL3DCameraManager.CameraFocusPlayerWithDistanceAndAngle();
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
@@ -150,10 +151,10 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(()
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
     // 记录相机默认参数
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Angel_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Angel;
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest;
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Angel_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Angel;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z_De = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z;
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
     // debug 
@@ -181,8 +182,8 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(as
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(async () => {
     // 一个DEBUG窗口 用于相机的参数设置
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_q_keydown", () => {
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 999) {
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_q_keydown", () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowID == 999) {
             CloseFunctionWindow();
         }
         else {
@@ -197,9 +198,9 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(as
             var OPT4 = CameraDebugWindowOPT[4];
             //@ts-ignoreleta
             var OPT5 = CameraDebugWindowOPT[5];
-            OPT1.text = "SET CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
-            OPT2.text = "SET CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest;
-            OPT3.text = "SET CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z;
+            OPT1.text = "SET CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest;
+            OPT2.text = "SET CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest;
+            OPT3.text = "SET CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z;
             OPT4.instVars.isEnable = false;
             OPT5.instVars.isEnable = false;
             CheckOPTCount();
@@ -207,53 +208,53 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(as
     });
     var Scale = 60;
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_a_keydown", () => {
-        var ChooseID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID;
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 999) {
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_a_keydown", () => {
+        var ChooseID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID;
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowID == 999) {
             if (ChooseID == 1) {
-                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest -= Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest -= Scale;
             }
             if (ChooseID == 2) {
-                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest -= Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest -= Scale;
             }
             if (ChooseID == 3) {
-                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z -= Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z -= Scale;
             }
-            for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
+            for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.FunctionOPT.instances()) {
                 if (Lables.instVars.id == 1) {
-                    Lables.text = "Set CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
+                    Lables.text = "Set CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest;
                 }
                 if (Lables.instVars.id == 2) {
-                    Lables.text = "Set CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest;
+                    Lables.text = "Set CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest;
                 }
                 if (Lables.instVars.id == 3) {
-                    Lables.text = "Set CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z;
+                    Lables.text = "Set CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z;
                 }
             }
         }
     });
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_d_keydown", () => {
-        var ChooseID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID;
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 999) {
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_d_keydown", () => {
+        var ChooseID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID;
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowID == 999) {
             if (ChooseID == 1) {
-                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest += Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest += Scale;
             }
             if (ChooseID == 2) {
-                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest += Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest += Scale;
             }
             if (ChooseID == 3) {
-                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z += Scale;
+                pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z += Scale;
             }
-            for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
+            for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.FunctionOPT.instances()) {
                 if (Lables.instVars.id == 1) {
-                    Lables.text = "Set CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_X_Offest;
+                    Lables.text = "Set CAMERA_X  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_X_Offest;
                 }
                 if (Lables.instVars.id == 2) {
-                    Lables.text = "Set CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Y_Offest;
+                    Lables.text = "Set CAMERA_Y  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Y_Offest;
                 }
                 if (Lables.instVars.id == 3) {
-                    Lables.text = "Set CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Camera_Z;
+                    Lables.text = "Set CAMERA_Z  " + pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Camera_Z;
                 }
             }
         }
@@ -344,42 +345,42 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(()
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(async () => {
     FunctionWindow_LABLES = [];
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_w_keydown", () => {
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 0)
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_w_keydown", () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowID == 0)
             return;
-        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable)
+        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowEnable)
             return;
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID > 1) {
-            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID -= 1;
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID > 1) {
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID -= 1;
         }
         else {
-            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_OPT_Count;
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_OPT_Count;
         }
     });
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_s_keydown", () => {
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID == 0)
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_s_keydown", () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowID == 0)
             return;
-        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable)
+        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowEnable)
             return;
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID < pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_OPT_Count) {
-            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID += 1;
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID < pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_OPT_Count) {
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID += 1;
         }
         else {
-            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = 1;
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID = 1;
         }
     });
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_update(() => {
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_OPT_Count = FunctionWindow_LABLES.length;
-    for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_OPT_Count = FunctionWindow_LABLES.length;
+    for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.FunctionOPT.instances()) {
         if (Lables.instVars.isEnable) {
             Lables.isVisible = true;
         }
         else {
             Lables.isVisible = false;
         }
-        if (Lables.instVars.id == pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID) {
+        if (Lables.instVars.id == pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID) {
             Lables.fontColor = [241 / 256, 254 / 256, 52 / 256];
         }
         else {
@@ -388,14 +389,14 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_update(() => {
     }
 });
 function CreatFunctionWindow(pox, poy, windowID) {
-    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable)
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowEnable)
         return;
-    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Dialogue_IsRunning)
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Dialogue_IsRunning)
         return;
-    var FunctionWindow = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionWindow.createInstance("FunctionWindow", pox, poy, true, "mob");
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable = true;
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID = windowID;
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = 1;
+    var FunctionWindow = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.FunctionWindow.createInstance("FunctionWindow", pox, poy, true, "mob");
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowEnable = true;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowID = windowID;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID = 1;
     console.log(FunctionWindow);
     console.log(FunctionWindow.getChildAt(0)?.uid);
     //@ts-ignoreleta
@@ -418,20 +419,20 @@ function GTBUID(UID) {
     }
     console.log(UID);
     //@ts-ignore
-    return pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.getInstanceByUid(UID);
+    return pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.getInstanceByUid(UID);
 }
 function CloseFunctionWindow() {
-    var FunctionWindow = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionWindow.getFirstInstance();
+    var FunctionWindow = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.FunctionWindow.getFirstInstance();
     FunctionWindow?.destroy();
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowEnable = false;
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_WindowID = 0;
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Function_ID = 0;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowEnable = false;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_WindowID = 0;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Function_ID = 0;
     if (FunctionWindow_LABLES) {
         FunctionWindow_LABLES.length = 0;
     }
 }
 function CheckOPTCount() {
-    for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.FunctionOPT.instances()) {
+    for (var Lables of pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.FunctionOPT.instances()) {
         if (Lables.instVars.isEnable) {
             FunctionWindow_LABLES.push(Lables);
         }
@@ -449,9 +450,9 @@ function CheckOPTCount() {
 //
 var GameVariblesInstance;
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_init_$$LEVEL(() => {
-    GameVariblesInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.GameVariables.getFirstInstance();
+    GameVariblesInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.GameVariables.getFirstInstance();
 });
-pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.fl_ubu_update$$LEVEL(async () => {
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl_ubu_update$$LEVEL(async () => {
     if (GameVariblesInstance == null)
         return;
     var map = GameVariblesInstance.getDataMap();
@@ -459,56 +460,56 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.fl_ubu_update$$LEVEL(a
         return;
     }
     else {
-        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_TriggerEnd) {
-            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_TriggerEnd = true;
+        if (!pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.End_TriggerEnd) {
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.End_TriggerEnd = true;
             LayoutTransitionScreenEffect.EmptyToBlackEffect(2, 3);
-            await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(3500);
-            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.goToLayout("End");
+            await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.WAIT_TIME_FORM_PROMISE(3500);
+            pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.goToLayout("End");
         }
     }
 });
 // End Layout
 var EndingTitleTextInstance;
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
-    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_TriggerEnd = false;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.End_TriggerEnd = false;
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
-    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "End")
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.GameType != "End")
         return;
     //@ts-ignoreleta
-    EndingTitleTextInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.objects.EndTitle.getFirstPickedInstance();
+    EndingTitleTextInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.EndTitle.getFirstPickedInstance();
     if (GameVariblesInstance == null)
         return;
     var map = GameVariblesInstance.getDataMap();
     var endindex = map.get("EndingIndex");
     if (endindex != 0) {
         if (endindex == 1) {
-            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text1, 8);
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.End_Des_Text1, 8);
         }
         if (endindex == 2) {
-            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text2, 12);
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.End_Des_Text2, 12);
         }
         if (endindex == 3) {
-            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text3, 8);
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.End_Des_Text3, 8);
         }
         if (endindex == 4) {
-            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.End_Des_Text4, 8);
+            EndingTitleTextInstance.typewriterText(pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.End_Des_Text4, 8);
         }
     }
 });
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(async () => {
-    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "End")
+    if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.GameType != "End")
         return;
     //console.log(ENGINE_MUST.EVENT_HANDLER)
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(2000);
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.WAIT_TIME_FORM_PROMISE(2000);
     // @ts-ignore
-    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GetConstruct3EventHandlerInstance.addEventListener("input_anykey_keydown", async () => {
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.GameType != "End")
+    await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.GET_CONSTRUCT3_EVENTHANDL_INSTANCE.addEventListener("input_anykey_keydown", async () => {
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.GameType != "End")
             return;
-        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.globalVars.Fade_is_Fading)
+        if (pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.globalVars.Fade_is_Fading)
             return;
         LayoutTransitionScreenEffect.EmptyToBlackEffect(1, 3);
-        await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.HaaWaitSomeTime(3000);
-        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.runtime.goToLayout("MENU");
+        await pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.WAIT_TIME_FORM_PROMISE(3000);
+        pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.goToLayout("MENU");
     });
 });
