@@ -24,61 +24,74 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
 
 // 做实验
 
-pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(() => {
-
-    // @ts-ignore
-    //console.log(self.c3._runtime);
-
-    // @ts-ignore
-    console.log(C3.Plugins.MixonGames_EasyInGameConsole.Instance)
-    // @ts-ignore
-    console.log(self.C3.Plugins.Mikal_3DObject);
-
-
-    var BigHouse13dObjectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.BigHouse1.getFirstInstance()?.objectType;
-
-    // @ts-ignore
-    var BackPackNudeMan3DObkectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.getInstanceByUid(194)
-
-    var IdleMan3DObjectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.getInstanceByUid(20);
-    // @ts-ignore
-    console.log(BackPackNudeMan3DObkectInstance)
-    // @ts-ignore
-    console.log(BackPackNudeMan3DObkectInstance.layer)
-
-    // @ts-ignore
-    console.log(BackPackNudeMan3DObkectInstance.gltfPath)
-    // @ts-ignore
-    BackPackNudeMan3DObkectInstance.wireframe = true;
-    // @ts-ignore
-    GL_COMMAND_._draw("[3D OBJECT TEST]" + IdleMan3DObjectInstance.animationPlay)
-    // @ts-ignore
-    console.log("[3D OBJECT TEST]" + IdleMan3DObjectInstance.animationPlay)
-    // @ts-ignore
-    console.log("[3D OBJECT TEST]" + IdleMan3DObjectInstance.animationSpeed)
-    // @ts-ignore
-    console.log(IdleMan3DObjectInstance.getAnimationNames())
-    // @ts-ignore
-    IdleMan3DObjectInstance.debug = true;
-    // @ts-ignore
-    IdleMan3DObjectInstance.animationPlay = "run"
-    // @ts-ignore
-    IdleMan3DObjectInstance.wireframe = true;
-
-    var Player3DObjectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.getInstanceByUid(2);
-    // @ts-ignore
-    Player3DObjectInstance.animationPlay = "walk"
-     // @ts-ignore
-    console.log(Player3DObjectInstance.animationName)
+// pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(async () => {
 
 
 
-    // @ts-ignore
-    //self.C3.Plugins.Mikal_3DObject.Acts.SetZElevation0.call(BigHouse13dObjectInstanceTest2, 20)
+//     // @ts-ignore
+//     //console.log(self.c3._runtime);
 
-    //console.log(BigHouse13dObjectInstance._sdkInst)
+//     // @ts-ignore
+//     console.log(C3.Plugins.MixonGames_EasyInGameConsole.Instance)
+//     // @ts-ignore
+//     console.log(self.C3.Plugins.Mikal_3DObject);
 
-})
+
+//     var BigHouse13dObjectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.BigHouse1.getFirstInstance()?.objectType;
+
+//     // @ts-ignore
+//     var BackPackNudeMan3DObkectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.getInstanceByUid(194)
+
+//     var IdleMan3DObjectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.getInstanceByUid(20);
+
+
+
+//     // @ts-ignore
+//     console.log(BackPackNudeMan3DObkectInstance)
+//     // @ts-ignore
+//     console.log(BackPackNudeMan3DObkectInstance.layer)
+
+//     // @ts-ignore
+//     console.log(BackPackNudeMan3DObkectInstance.gltfPath)
+//     // @ts-ignore
+//     BackPackNudeMan3DObkectInstance.wireframe = true;
+//     // @ts-ignore
+//     GL_COMMAND_._draw("[3D OBJECT TEST]" + IdleMan3DObjectInstance.animationPlay)
+//     // @ts-ignore
+//     console.log("[3D OBJECT TEST]" + IdleMan3DObjectInstance.animationPlay)
+//     // @ts-ignore
+//     console.log("[3D OBJECT TEST]" + IdleMan3DObjectInstance.animationSpeed)
+//     // @ts-ignore
+//     IdleMan3DObjectInstance.debug = true;
+//     // @ts-ignore
+//     pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.WAIT_TIME_FORM_PROMISE(5000).then(() => {
+//         // @ts-ignore
+//         IdleMan3DObjectInstance.animationName = "idle"
+//         // @ts-ignore
+//         console.log(IdleMan3DObjectInstance.getAnimationNames())
+//         // @ts-ignore
+//         IdleMan3DObjectInstance.wireframe = true;
+//         alert("延迟执行")
+//     })
+
+//     var Player3DObjectInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.getInstanceByUid(2);
+
+//     pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.WAIT_TIME_FORM_PROMISE(10000).then(() => {
+//         // @ts-ignore
+//         //Player3DObjectInstance.animationName = "walk"
+//         // @ts-ignore
+//         console.log(Player3DObjectInstance.animationName)
+//         alert("延迟执行")
+//     })
+
+
+
+//     // @ts-ignore
+//     //self.C3.Plugins.Mikal_3DObject.Acts.SetZElevation0.call(BigHouse13dObjectInstanceTest2, 20)
+
+//     //console.log(BigHouse13dObjectInstance._sdkInst)
+
+// })
 
 
 // VFX
