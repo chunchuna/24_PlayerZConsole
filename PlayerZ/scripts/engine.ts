@@ -15,6 +15,8 @@ export class pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit {
     //This variable will be initialized at engine startup through the ` CONSTRUCT3-INGINEENTERYPOINT `.
     public static RUN_TIME_: IRuntime;
 
+    public static OBJECT: IConstructProjectObjects | any
+
     //The entry point function of Construct 3 engine, used to register callbacks at startup.
     //This function will be called at engine startup, passing in the current runtime environment (` IRuntime `).
     //Developers can register initialization logic or event listeners through this function.
@@ -29,6 +31,10 @@ export class pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit {
     //This function is typically used to implement asynchronous wait logic, such as delaying the execution of certain operations or simulating asynchronous tasks.
     //The parameter 'ms' represents the delay time (in milliseconds).
     public static WAIT_TIME_FORM_PROMISE = (ms: number) => new Promise(res => setTimeout(res, ms));
+
+
+
+
 
 
 
@@ -108,7 +114,9 @@ export class pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit {
 
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.CONSTRUCT3_ENGINE_ENTRY_POINT(async runtime => {
     pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_ = runtime;
+    pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.OBJECT = runtime.objects;
     pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.TryGetHandlerAgainFuckThisHandler();
+
 });
 
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {

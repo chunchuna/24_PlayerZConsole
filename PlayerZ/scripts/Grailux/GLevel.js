@@ -64,6 +64,36 @@ pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
 //     //self.C3.Plugins.Mikal_3DObject.Acts.SetZElevation0.call(BigHouse13dObjectInstanceTest2, 20)
 //     //console.log(BigHouse13dObjectInstance._sdkInst)
 // })
+// @ts-ignore
+var InGameConsoleAddonInstance;
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(() => {
+    InGameConsoleAddonInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.InGameConsole.getFirstInstance();
+    console.log(InGameConsoleAddonInstance);
+    if (InGameConsoleAddonInstance._lastAction == "m_setting") {
+        alert("on action");
+    }
+    // @ts-ignore
+    InGameConsoleAddonInstance.OnAction("m_setting", (actionData) => {
+        alert("Action triggered:" + actionData);
+    });
+});
+var lastAction = "";
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_update(() => {
+    // @ts-ignore
+    if (InGameConsoleAddonInstance._lastAction == "m_setting" && lastAction != "m_setting") {
+        alert("on action");
+        lastAction = "m_setting";
+    }
+    // @ts-ignore
+    if (InGameConsoleAddonInstance._lastAction == "m_start" && lastAction != "m_start") {
+        alert("on action start");
+        lastAction = "m_start";
+    }
+});
+pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.UBU_CLIENT_DRAW_FRAME.gl$_ubu_init(() => {
+    var Camera3dInstance = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.objects.CameraMain.getFirstInstance();
+    console.log(Camera3dInstance);
+});
 // VFX
 pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init(() => {
     /** FOG **/
