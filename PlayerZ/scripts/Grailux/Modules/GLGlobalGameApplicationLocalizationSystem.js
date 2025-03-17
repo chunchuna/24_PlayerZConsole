@@ -1,5 +1,5 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
-import { GL_COMMAND_ } from "./GLConsole.js";
+import { GL_COMMAND_ } from "./GLGameplayInputCommandConsoleMechanism.js";
 export class GLLanguageClass {
     static GetTranslatedStringByKEY(Key, Lan) {
         if (Lan == null || Lan == "") {

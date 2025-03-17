@@ -1,7 +1,7 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
-import { GL_COMMAND_ } from "./GLConsole.js";
-import { LayoutTransitionScreenEffect } from "./GLFade.js";
-import { GLLanguageClass } from "./GLLanguage.js";
+import { GL_COMMAND_ } from "./GLGameplayInputCommandConsoleMechanism.js";
+import { LayoutTransitionScreenEffect } from "./GLOverallGameScreenFadeInOutHandler.js";
+import { GLLanguageClass } from "./GLGlobalGameApplicationLocalizationSystem.js";
 var gl_init = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_init;
 var gl_update = pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.gl$_ubu_update;
 var gl_lan = GLLanguageClass.GetTranslatedStringByKEY;

@@ -2,12 +2,12 @@
 // import * as myModule from "./mymodule.js";
 import "./engine.js";
 import "./Grailux/Modules/GLEventTrigger.js";
-import "./Grailux/Modules/GLevel.js";
-import "./Grailux/Modules/GLEvent.js";
-import "./Grailux/Modules/GLFade.js";
-import "./Grailux/Modules/GLConsole.js";
-import "./Grailux/Modules/GLMenu.js";
-import "./Grailux/Modules/GLLanguage.js";
+import "./Grailux/Modules/GLComprehensiveGameWorldCentralProcessManagementService.js";
+import "./Grailux/Modules/GLGameEventTriggerActionDispatcherList.js";
+import "./Grailux/Modules/GLOverallGameScreenFadeInOutHandler.js";
+import "./Grailux/Modules/GLGameplayInputCommandConsoleMechanism.js";
+import "./Grailux/Modules/GLPrimaryGameApplicationMainMenuController.js";
+import "./Grailux/Modules/GLGlobalGameApplicationLocalizationSystem.js";
 runOnStartup(async (runtime) => {
     // Code to run on the loading screen.
     // Note layouts, objects etc. are not yet available.

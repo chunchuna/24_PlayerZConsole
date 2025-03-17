@@ -1,7 +1,7 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
-import { PlayerMainInstance } from "./GLevel.js";
-import { ConfigExecutor } from "./GLEvent.js";
-import { StartDialogue } from "./GLevel.js";
+import { PlayerMainInstance } from "./GLComprehensiveGameWorldCentralProcessManagementService.js";
+import { ConfigExecutor } from "./GLGameEventTriggerActionDispatcherList.js";
+import { StartDialogue } from "./GLComprehensiveGameWorldCentralProcessManagementService.js";
 //-----------------------------------------------------------------------------
 // TouchBehaviorZone
 //

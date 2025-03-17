@@ -1,6 +1,6 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
-import { StartDialogue } from "./GLevel.js";
-import { LayoutTransitionScreenEffect } from "./GLFade.js";
+import { StartDialogue } from "./GLComprehensiveGameWorldCentralProcessManagementService.js";
+import { LayoutTransitionScreenEffect } from "./GLOverallGameScreenFadeInOutHandler.js";
 const functionMap = {
 //'guard:config:1': GUARD[1],
 };

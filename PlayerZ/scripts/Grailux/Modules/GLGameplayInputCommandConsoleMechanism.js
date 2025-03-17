@@ -1,5 +1,5 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
-import { LayoutTransitionScreenEffect } from "./GLFade.js";
+import { LayoutTransitionScreenEffect } from "./GLOverallGameScreenFadeInOutHandler.js";
 export class GL_COMMAND_ {
     static ACTION_OPEN_() {
         pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit.RUN_TIME_.callFunction("ConsoleOpen");

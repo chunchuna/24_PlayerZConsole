@@ -1,5 +1,5 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
-import { GL_COMMAND_ } from "./GLConsole.js";
+import { GL_COMMAND_ } from "./GLGameplayInputCommandConsoleMechanism.js";
 
 export class GLLanguageClass {
     public static GLOB_CurrentLanguage: string = "LAN_CN";

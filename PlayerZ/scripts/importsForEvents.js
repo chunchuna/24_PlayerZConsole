@@ -1,2 +1,2 @@
-import { ConfigExecutor } from "./Grailux/Modules/GLEvent.js";
+import { ConfigExecutor } from "./Grailux/Modules/GLGameEventTriggerActionDispatcherList.js";
 var _configExecutor = ConfigExecutor;

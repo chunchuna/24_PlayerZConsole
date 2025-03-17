@@ -1,7 +1,7 @@
 import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
-import { ConfigExecutor } from "./GLEvent.js";
-import { LayoutTransitionScreenEffect } from "./GLFade.js"
-import { GL_COMMAND_ } from "./GLConsole.js";
+import { ConfigExecutor } from "./GLGameEventTriggerActionDispatcherList.js";
+import { LayoutTransitionScreenEffect } from "./GLOverallGameScreenFadeInOutHandler.js"
+import { GL_COMMAND_ } from "./GLGameplayInputCommandConsoleMechanism.js";
 
 
 //-----------------------------------------------------------------------------
