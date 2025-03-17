@@ -363,65 +363,81 @@
 			],
 			"subfolders": [
 				{
-					"items": [
+					"items": [],
+					"subfolders": [
 						{
-							"name": "GLConsole.js",
-							"type": "application/javascript",
-							"sid": 283973774179630,
-							"script-info": {
-								"purpose": "none"
-							}
+							"items": [],
+							"subfolders": [],
+							"name": "Entity"
 						},
 						{
-							"name": "GLevel.js",
-							"type": "application/javascript",
-							"sid": 266329044745523,
-							"script-info": {
-								"purpose": "none"
-							}
+							"items": [
+								{
+									"name": "GLConsole.js",
+									"type": "application/javascript",
+									"sid": 571087128738637,
+									"script-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "GLEvent.js",
+									"type": "application/javascript",
+									"sid": 838068370691813,
+									"script-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "GLevel.js",
+									"type": "application/javascript",
+									"sid": 509594446010680,
+									"script-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "GLEventTrigger.js",
+									"type": "application/javascript",
+									"sid": 231529284383699,
+									"script-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "GLFade.js",
+									"type": "application/javascript",
+									"sid": 564824688718396,
+									"script-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "GLLanguage.js",
+									"type": "application/javascript",
+									"sid": 163587391649580,
+									"script-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "GLMenu.js",
+									"type": "application/javascript",
+									"sid": 494366309694669,
+									"script-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Modules"
 						},
 						{
-							"name": "GLEvent.js",
-							"type": "application/javascript",
-							"sid": 435436022378369,
-							"script-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "GLEventTrigger.js",
-							"type": "application/javascript",
-							"sid": 882060903627109,
-							"script-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "GLFade.js",
-							"type": "application/javascript",
-							"sid": 319023356949140,
-							"script-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "GLMenu.js",
-							"type": "application/javascript",
-							"sid": 213513296797957,
-							"script-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "GLLanguage.js",
-							"type": "application/javascript",
-							"sid": 851364128761266,
-							"script-info": {
-								"purpose": "none"
-							}
+							"items": [],
+							"subfolders": [],
+							"name": "Prototyping"
 						}
 					],
-					"subfolders": [],
 					"name": "Grailux"
 				}
 			],

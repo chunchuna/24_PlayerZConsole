@@ -1,2 +1,2 @@
-import { ConfigExecutor } from "./Grailux/GLEvent.js";
+import { ConfigExecutor } from "./Grailux/Modules/GLEvent.js";
 var _configExecutor = ConfigExecutor;

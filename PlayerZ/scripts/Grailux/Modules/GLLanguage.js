@@ -1,4 +1,4 @@
-import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../engine.js";
+import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
 import { GL_COMMAND_ } from "./GLConsole.js";
 export class GLLanguageClass {
     static GetTranslatedStringByKEY(Key, Lan) {

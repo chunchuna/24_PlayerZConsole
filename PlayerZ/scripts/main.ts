@@ -5,14 +5,14 @@
 import "./engine.js"
 
 
-import "./Grailux/GLEventTrigger.js"
-import "./Grailux/GLevel.js"
-import "./Grailux/GLEvent.js"
-import "./Grailux/GLFade.js"
-import "./Grailux/GLConsole.js"
-import "./Grailux/GLMenu.js"
+import "./Grailux/Modules/GLEventTrigger.js"
+import "./Grailux/Modules/GLevel.js"
+import "./Grailux/Modules/GLEvent.js"
+import "./Grailux/Modules/GLFade.js"
+import "./Grailux/Modules/GLConsole.js"
+import "./Grailux/Modules/GLMenu.js"
 
-import "./Grailux/GLLanguage.js"
+import "./Grailux/Modules/GLLanguage.js"
 
 
 

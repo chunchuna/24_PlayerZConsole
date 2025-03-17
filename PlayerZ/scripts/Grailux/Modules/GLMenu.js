@@ -1,4 +1,4 @@
-import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../engine.js";
+import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
 import { GL_COMMAND_ } from "./GLConsole.js";
 import { LayoutTransitionScreenEffect } from "./GLFade.js";
 import { GLLanguageClass } from "./GLLanguage.js";

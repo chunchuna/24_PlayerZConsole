@@ -1,4 +1,4 @@
-import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../engine.js";
+import { pmlsdk$ProceduralStorytellingSandboxRPGDevelopmentToolkit } from "../../engine.js";
 import { StartDialogue } from "./GLevel.js";
 import { LayoutTransitionScreenEffect } from "./GLFade.js";
 const functionMap = {
